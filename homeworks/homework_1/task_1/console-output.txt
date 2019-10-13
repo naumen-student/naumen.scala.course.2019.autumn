@@ -1,0 +1,22 @@
+C:\Users\julia>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_221).
+Type in expressions for evaluation. Or try :help.
+
+scala> def greet(greeting: String = "Hello", name: String = "me") = println(greeting + " Scala! This is " + name)
+greet: (greeting: String, name: String)Unit
+
+scala> val greetings = Array("Hello", "Salaam Alaikum", "Bonjour")
+greetings: Array[String] = Array(Hello, Salaam Alaikum, Bonjour)
+
+scala> val name = "Julia Osintseva"
+name: String = Julia Osintseva
+
+scala> for (greeting <- greetings) greet(greeting, name)
+Hello Scala! This is Julia Osintseva
+Salaam Alaikum Scala! This is Julia Osintseva
+Bonjour Scala! This is Julia Osintseva
+
+scala> for (greeting <- greetings) greet(greeting, name.reverse)
+Hello Scala! This is avestnisO ailuJ
+Salaam Alaikum Scala! This is avestnisO ailuJ
+Bonjour Scala! This is avestnisO ailuJ
