@@ -1,0 +1,5 @@
+[debug] [watch] [task_3 / Compile / run] Found inputs: D:\Projects\IdeaProjects\ScalaNaumenCourse\homeworks\homework_1\task_3\*.{java,scala},D:\Projects\IdeaProjects\ScalaNaumenCourse\homeworks\homework_1\task_3\src\main\java\**\*.{java,scala},D:\Projects\IdeaProjects\ScalaNaumenCourse\homeworks\homework_1\task_3\src\main\resources\**\*,D:\Projects\IdeaProjects\ScalaNaumenCourse\homeworks\homework_1\task_3\src\main\scala\**\*.{java,scala},D:\Projects\IdeaProjects\ScalaNaumenCourse\homeworks\homework_1\task_3\src\main\scala-2.13\**\*.{java,scala}
+[info] 1. Monitoring source files for task_3/run...
+[info]    Press <enter> to interrupt or '?' for more options.
+[debug] [watch] [debug] Received input event: Run().
+[debug] [watch] [debug] Received input event: Run().
