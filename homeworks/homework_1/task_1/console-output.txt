@@ -1,0 +1,42 @@
+Microsoft Windows [Version 10.0.18362.418]
+(c) Корпорация Майкрософт (Microsoft Corporation), 2019. Все права защищены.
+
+C:\Users\sasha>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_221).
+Type in expressions for evaluation. Or try :help.
+
+scala> val a = "Alexandr Gurin"
+a: String = Alexandr Gurin
+
+scala> val b = "Hello"
+b: String = Hello
+
+scala> val c = "Hola"
+c: String = Hola
+
+scala> val d = "Guten tag"
+d: String = Guten tag
+
+scala> def hello(s: String,st: String): Unit = {
+     |  println(s + " world! This is " + st)}
+hello: (s: String, st: String)Unit
+
+scala> hello(b,a)
+Hello world! This is Alexandr Gurin
+
+scala> hello(c,a)
+Hola world! This is Alexandr Gurin
+
+scala> hello(d,a)
+Guten tag world! This is Alexandr Gurin
+
+scala> hello(b,a.reverse)
+Hello world! This is niruG rdnaxelA
+
+scala> hello(c,a.reverse)
+Hola world! This is niruG rdnaxelA
+
+scala> hello(d,a.reverse)
+Guten tag world! This is niruG rdnaxelA
+
+scala>
