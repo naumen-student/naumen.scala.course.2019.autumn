@@ -1,0 +1,35 @@
+➜  naumen.scala.course.2019.autumn git:(master) ✗ amm
+Loading...
+Compiling (synthetic)/ammonite/predef/sourceBridge.sc
+Compiling (synthetic)/ammonite/predef/frontEndBridge.sc
+Welcome to the Ammonite Repl 1.7.4
+(Scala 2.13.1 Java 11.0.4)
+If you like Ammonite, please support our development at www.patreon.com/lihaoyi
+@ def GreetWithName(greetWord: String, name: String): Unit = {
+    Console.println(s"${greetWord} Scala! This is ${name}")
+  } 
+defined function GreetWithName
+@
+@ def GreetWithNameReverse(greetWord: String, name: String): Unit = {
+    GreetWithName(greetWord, name.reverse)
+  } 
+defined function GreetWithNameReverse
+@
+@ val name = "Maxim Fominykh"
+name: String = "Maxim Fominykh"
+@ val greetWords = List("Hello", "Hola", "Guten tag")
+greetWords: List[String] = List("Hello", "Hola", "Guten tag")
+@
+@ for (greetWord <- greetWords) {
+    GreetWithName(greetWord, name)
+    GreetWithNameReverse(greetWord, name)
+  } 
+Hello Scala! This is Maxim Fominykh
+Hello Scala! This is hkynimoF mixaM
+Hola Scala! This is Maxim Fominykh
+Hola Scala! This is hkynimoF mixaM
+Guten tag Scala! This is Maxim Fominykh
+Guten tag Scala! This is hkynimoF mixaM
+
+
+@  

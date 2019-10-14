@@ -1,0 +1,53 @@
+[debug] 
+[debug] Initial source changes: 
+[debug] 	removed:Set(/home/max/IdeaProjects/homework/src/main/scala/homework1/Main.scala)
+[debug] 	added: Set(/home/max/IdeaProjects/naumen.scala.course.2019.autumn/homeworks/homework_1/task_3/homework/src/main/scala/Main.scala)
+[debug] 	modified: Set()
+[debug] Invalidated products: Set(/home/max/IdeaProjects/homework/target/scala-2.13/classes/homework1/Main$.class, /home/max/IdeaProjects/homework/target/scala-2.13/classes/homework1/Main$delayedInit$body.class, /home/max/IdeaProjects/homework/target/scala-2.13/classes/homework1/Main.class)
+[debug] External API changes: API Changes: Set()
+[debug] Modified binary dependencies: Set()
+[debug] Initial directly invalidated classes: Set(homework1.Main)
+[debug] 
+[debug] Sources indirectly invalidated by:
+[debug] 	product: Set(/home/max/IdeaProjects/homework/src/main/scala/homework1/Main.scala)
+[debug] 	binary dep: Set()
+[debug] 	external source: Set()
+[debug] All initially invalidated classes: Set(homework1.Main)
+[debug] All initially invalidated sources:Set(/home/max/IdeaProjects/naumen.scala.course.2019.autumn/homeworks/homework_1/task_3/homework/src/main/scala/Main.scala, /home/max/IdeaProjects/homework/src/main/scala/homework1/Main.scala)
+[debug] Initial set of included nodes: homework1.Main
+[debug] Recompiling all sources: number of invalidated sources > 50.0% of all sources
+[info] Compiling 1 Scala source to /home/max/IdeaProjects/naumen.scala.course.2019.autumn/homeworks/homework_1/task_3/homework/target/scala-2.13/classes ...
+[debug] Getting org.scala-sbt:compiler-bridge_2.13:1.3.1:compile for Scala 2.13.1
+[debug] Getting org.scala-sbt:compiler-bridge_2.13:1.3.1:compile for Scala 2.13.1
+[debug] [zinc] Running cached compiler 561aeb18 for Scala compiler version 2.13.1
+[debug] [zinc] The Scala compiler is invoked with:
+[debug] 	-bootclasspath
+[debug] 	/home/max/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.1/scala-library-2.13.1.jar
+[debug] 	-classpath
+[debug] 	/home/max/IdeaProjects/naumen.scala.course.2019.autumn/homeworks/homework_1/task_3/homework/target/scala-2.13/classes
+[debug] Scala compilation took 2.388747745 s
+[info] Done compiling.
+[debug] Invalidating (transitively) by inheritance from homework1.Main...
+[debug] Initial set of included nodes: homework1.Main
+[debug] Invalidated by transitive inheritance dependency: Set(homework1.Main)
+[debug] Change NamesChange(homework1.Main,ModifiedNames(changes = UsedName(##,[Default]), UsedName($isInstanceOf,[Default]), UsedName(asInstanceOf,[Default]), UsedName(==,[Default]), UsedName(args,[Default]), UsedName(main,[Default]), UsedName(getClass,[Default]), UsedName(delayedInit,[Default]), UsedName(Main,[Default]), UsedName(GreetWithNameReverse,[Default]), UsedName(!=,[Default]), UsedName(clone,[Default]), UsedName(hashCode,[Default]), UsedName(greetWords,[Default]), UsedName(wait,[Default]), UsedName(ne,[Default]), UsedName(GreetWithName,[Default]), UsedName(notify,[Default]), UsedName(notifyAll,[Default]), UsedName(executionStart,[Default]), UsedName($init$,[Default]), UsedName(eq,[Default]), UsedName(finalize,[Default]), UsedName(isInstanceOf,[Default]), UsedName(name,[Default]), UsedName(equals,[Default]), UsedName($asInstanceOf,[Default]), UsedName(synchronized,[Default]), UsedName(toString,[Default]))) invalidates 1 classes due to The homework1.Main has the following regular definitions changed:
+[debug] 	UsedName(##,[Default]), UsedName($isInstanceOf,[Default]), UsedName(asInstanceOf,[Default]), UsedName(==,[Default]), UsedName(args,[Default]), UsedName(main,[Default]), UsedName(getClass,[Default]), UsedName(delayedInit,[Default]), UsedName(Main,[Default]), UsedName(GreetWithNameReverse,[Default]), UsedName(!=,[Default]), UsedName(clone,[Default]), UsedName(hashCode,[Default]), UsedName(greetWords,[Default]), UsedName(wait,[Default]), UsedName(ne,[Default]), UsedName(GreetWithName,[Default]), UsedName(notify,[Default]), UsedName(notifyAll,[Default]), UsedName(executionStart,[Default]), UsedName($init$,[Default]), UsedName(eq,[Default]), UsedName(finalize,[Default]), UsedName(isInstanceOf,[Default]), UsedName(name,[Default]), UsedName(equals,[Default]), UsedName($asInstanceOf,[Default]), UsedName(synchronized,[Default]), UsedName(toString,[Default]).
+[debug] 	> by transitive inheritance: Set(homework1.Main)
+[debug] 	> 
+[debug] 	> 
+[debug]         
+[debug] Invalidating (transitively) by inheritance from Main...
+[debug] Initial set of included nodes: Main
+[debug] Invalidated by transitive inheritance dependency: Set(Main)
+[debug] Change NamesChange(Main,ModifiedNames(changes = UsedName(##,[Default]), UsedName($isInstanceOf,[Default]), UsedName(asInstanceOf,[Default]), UsedName(==,[Default]), UsedName(args,[Default]), UsedName(main,[Default]), UsedName(getClass,[Default]), UsedName(delayedInit,[Default]), UsedName(Main,[Default]), UsedName(GreetWithNameReverse,[Default]), UsedName(!=,[Default]), UsedName(clone,[Default]), UsedName(hashCode,[Default]), UsedName(greetWords,[Default]), UsedName(wait,[Default]), UsedName(ne,[Default]), UsedName(GreetWithName,[Default]), UsedName(notify,[Default]), UsedName(notifyAll,[Default]), UsedName(executionStart,[Default]), UsedName($init$,[Default]), UsedName(eq,[Default]), UsedName(finalize,[Default]), UsedName(isInstanceOf,[Default]), UsedName(name,[Default]), UsedName(equals,[Default]), UsedName($asInstanceOf,[Default]), UsedName(synchronized,[Default]), UsedName(toString,[Default]))) invalidates 1 classes due to The Main has the following regular definitions changed:
+[debug] 	UsedName(##,[Default]), UsedName($isInstanceOf,[Default]), UsedName(asInstanceOf,[Default]), UsedName(==,[Default]), UsedName(args,[Default]), UsedName(main,[Default]), UsedName(getClass,[Default]), UsedName(delayedInit,[Default]), UsedName(Main,[Default]), UsedName(GreetWithNameReverse,[Default]), UsedName(!=,[Default]), UsedName(clone,[Default]), UsedName(hashCode,[Default]), UsedName(greetWords,[Default]), UsedName(wait,[Default]), UsedName(ne,[Default]), UsedName(GreetWithName,[Default]), UsedName(notify,[Default]), UsedName(notifyAll,[Default]), UsedName(executionStart,[Default]), UsedName($init$,[Default]), UsedName(eq,[Default]), UsedName(finalize,[Default]), UsedName(isInstanceOf,[Default]), UsedName(name,[Default]), UsedName(equals,[Default]), UsedName($asInstanceOf,[Default]), UsedName(synchronized,[Default]), UsedName(toString,[Default]).
+[debug] 	> by transitive inheritance: Set(Main)
+[debug] 	> 
+[debug] 	> 
+[debug]         
+[debug] New invalidations:
+[debug] 	Set()
+[debug] Initial set of included nodes: 
+[debug] Previously invalidated, but (transitively) depend on new invalidations:
+[debug] 	Set()
+[debug] No classes were invalidated.
