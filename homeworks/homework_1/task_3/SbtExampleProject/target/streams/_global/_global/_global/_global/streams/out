@@ -1,0 +1,85 @@
+[debug] [watch] [sbtexampleproject / Compile / run] Found inputs: D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\*.{java,scala},D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\java\**\*.{java,scala},D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\resources\**\*,D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\**\*.{java,scala},D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala-2.13\**\*.{java,scala}
+[info] 1. Monitoring source files for sbtexampleproject/run...
+[info]    Press <enter> to interrupt or '?' for more options.
+[debug] sbtexampleproject / Compile / run - Accepted event for D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] Received Update(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] Received event for path D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] Received event for path D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] sbtexampleproject / Compile / run - Accepted event for D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] Received Update(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] Creating update event for modified D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala (previous stamp: Hash(7884f2ff49329b18d0f5e4f12b19c798601292b9), current stamp: Hash(cdb6e2f88ed466b4e36d05e79767f8a529eb27f9))
+[debug] Received file event actions: D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala -> Trigger. Returning: (Update(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala, 2019-окт.-15 00:34:53.214 YEKT),Trigger)
+[info] Build triggered by D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala. Running 'run'.
+[debug] [watch] [debug] Received file event Trigger for Update(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala, 2019-окт.-15 00:34:53.214 YEKT).
+[info] 2. Monitoring source files for sbtexampleproject/run...
+[info]    Press <enter> to interrupt or '?' for more options.
+[debug] Discarding entry for recently updated path D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala. This event occurred 6 ms since the last event for this path.
+[debug] sbtexampleproject / Compile / run - Accepted event for D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] Received Update(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] Received event for path D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] Received event for path D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] sbtexampleproject / Compile / run - Accepted event for D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] Received Update(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] Creating update event for modified D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala (previous stamp: Hash(cdb6e2f88ed466b4e36d05e79767f8a529eb27f9), current stamp: Hash(7884f2ff49329b18d0f5e4f12b19c798601292b9))
+[debug] Received file event actions: D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala -> Trigger. Returning: (Update(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala, 2019-окт.-15 00:35:03.551 YEKT),Trigger)
+[info] Build triggered by D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala. Running 'run'.
+[debug] [watch] [debug] Received file event Trigger for Update(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala, 2019-окт.-15 00:35:03.551 YEKT).
+[info] 3. Monitoring source files for sbtexampleproject/run...
+[info]    Press <enter> to interrupt or '?' for more options.
+[debug] Discarding entry for recently updated path D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala. This event occurred 4 ms since the last event for this path.
+[debug] sbtexampleproject / Compile / run - Accepted event for D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] Received Deletion(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] Quarantining deletion event for path D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala for 500 milliseconds
+[debug] sbtexampleproject / Compile / run - Accepted event for D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] Received Creation(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] Triggering event for newly created path D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala that was previously quarantined.
+[debug] Received event for path D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] Creating update event for modified D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala (previous stamp: Hash(7884f2ff49329b18d0f5e4f12b19c798601292b9), current stamp: Hash(818fe7942f89cf846de44f896860e24f21c234d0))
+[debug] Received file event actions: D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala -> Trigger. Returning: (Update(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala, 2019-окт.-15 00:37:25.539 YEKT),Trigger)
+[info] Build triggered by D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala. Running 'run'.
+[debug] [watch] [debug] Received file event Trigger for Update(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala, 2019-окт.-15 00:37:25.539 YEKT).
+[info] 4. Monitoring source files for sbtexampleproject/run...
+[info]    Press <enter> to interrupt or '?' for more options.
+[debug] sbtexampleproject / Compile / run - Accepted event for D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] Received Update(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] Received event for path D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] Received event for path D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] sbtexampleproject / Compile / run - Accepted event for D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] Received Update(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] Creating update event for modified D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala (previous stamp: Hash(818fe7942f89cf846de44f896860e24f21c234d0), current stamp: Hash(4366f5d5a5ee8c4700c38a574dd78a2cd3f340be))
+[debug] Received file event actions: D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala -> Trigger. Returning: (Update(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala, 2019-окт.-15 00:39:21.957 YEKT),Trigger)
+[info] Build triggered by D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala. Running 'run'.
+[debug] [watch] [debug] Received file event Trigger for Update(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala, 2019-окт.-15 00:39:21.957 YEKT).
+[info] 5. Monitoring source files for sbtexampleproject/run...
+[info]    Press <enter> to interrupt or '?' for more options.
+[debug] Discarding entry for recently updated path D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala. This event occurred 3 ms since the last event for this path.
+[debug] sbtexampleproject / Compile / run - Accepted event for D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] Received Deletion(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] Quarantining deletion event for path D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala for 500 milliseconds
+[debug] sbtexampleproject / Compile / run - Accepted event for D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] Received Creation(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] Triggering event for newly created path D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala that was previously quarantined.
+[debug] Received event for path D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] Creating update event for modified D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala (previous stamp: Hash(4366f5d5a5ee8c4700c38a574dd78a2cd3f340be), current stamp: Hash(818fe7942f89cf846de44f896860e24f21c234d0))
+[debug] Received file event actions: D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala -> Trigger. Returning: (Update(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala, 2019-окт.-15 00:39:33.502 YEKT),Trigger)
+[info] Build triggered by D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala. Running 'run'.
+[debug] [watch] [debug] Received file event Trigger for Update(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala, 2019-окт.-15 00:39:33.502 YEKT).
+[info] 6. Monitoring source files for sbtexampleproject/run...
+[info]    Press <enter> to interrupt or '?' for more options.
+019-окт.-15 00:39:21.956 YEKT).
+[info] 6. Monitoring source files for sbtexampleproject/run...
+[info]    Press <enter> to interrupt or '?' for more options.
+[debug] Discarding entry for recently updated path D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala. This event occurred 3 ms since the last event for this path.
+[debug] sbtexampleproject / Compile / run - Accepted event for D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] Received Update(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] Received event for path D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] Received event for path D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] sbtexampleproject / Compile / run - Accepted event for D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala
+[debug] Received Update(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] Creating update event for modified D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala (previous stamp: Hash(4366f5d5a5ee8c4700c38a574dd78a2cd3f340be), current stamp: Hash(818fe7942f89cf846de44f896860e24f21c234d0))
+[debug] Received file event actions: D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala -> Trigger. Returning: (Update(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala, 2019-окт.-15 00:39:33.503 YEKT),Trigger)
+[info] Build triggered by D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala. Running 'run'.
+[debug] [watch] [debug] Received file event Trigger for Update(D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala, 2019-окт.-15 00:39:33.503 YEKT).
+[info] 7. Monitoring source files for sbtexampleproject/run...
+[info]    Press <enter> to interrupt or '?' for more options.
+[debug] Discarding entry for recently updated path D:\Nur\Documents\УрФУ\4 курс\Лабы\Scala\SbtExampleProject\src\main\scala\example\Main.scala. This event occurred 3 ms since the last event for this path.
