@@ -1,0 +1,5 @@
+[debug] [watch] [sbtexample / Compile / run] Found inputs: C:\Users\julia\IdeaProjects\sbtexample\*.{java,scala},C:\Users\julia\IdeaProjects\sbtexample\src\main\java\**\*.{java,scala},C:\Users\julia\IdeaProjects\sbtexample\src\main\resources\**\*,C:\Users\julia\IdeaProjects\sbtexample\src\main\scala\**\*.{java,scala},C:\Users\julia\IdeaProjects\sbtexample\src\main\scala-2.13\**\*.{java,scala}
+[info] 1. Monitoring source files for sbtexample/run...
+[info]    Press <enter> to interrupt or '?' for more options.
+[debug] [watch] [debug] Received input event: Run().
+[debug] [watch] [debug] Received input event: Run().
