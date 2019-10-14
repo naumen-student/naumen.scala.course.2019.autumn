@@ -1,0 +1,24 @@
+Last login: Mon Oct 14 21:29:43 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) MacBook-Pro-Andrej:~ andrej$ cd Downloads/
+(base) MacBook-Pro-Andrej:Downloads andrej$ cd ScalaHW/
+(base) MacBook-Pro-Andrej:ScalaHW andrej$ amm hw.sc
+Hello Scala! This is Apalikov Andrey
+Hola Scala! This is Apalikov Andrey
+Guten tag Scala! This is Apalikov Andrey
+Hola Scala! This is yerdnA vokilapA
+Guten tag Scala! This is yerdnA vokilapA
+(base) MacBook-Pro-Andrej:ScalaHW andrej$ 
+
+
+
+
+
+
+
+
+
+
