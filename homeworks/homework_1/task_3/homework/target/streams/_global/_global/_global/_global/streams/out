@@ -1,0 +1,3 @@
+[debug] [watch] [homework / Compile / run] Found inputs: /home/max/IdeaProjects/naumen.scala.course.2019.autumn/homeworks/homework_1/task_3/homework/*.{java,scala},/home/max/IdeaProjects/naumen.scala.course.2019.autumn/homeworks/homework_1/task_3/homework/src/main/java/**/*.{java,scala},/home/max/IdeaProjects/naumen.scala.course.2019.autumn/homeworks/homework_1/task_3/homework/src/main/resources/**/*,/home/max/IdeaProjects/naumen.scala.course.2019.autumn/homeworks/homework_1/task_3/homework/src/main/scala/**/*.{java,scala},/home/max/IdeaProjects/naumen.scala.course.2019.autumn/homeworks/homework_1/task_3/homework/src/main/scala-2.13/**/*.{java,scala}
+[info] 1. Monitoring source files for homework/run...
+[info]    Press <enter> to interrupt or '?' for more options.
