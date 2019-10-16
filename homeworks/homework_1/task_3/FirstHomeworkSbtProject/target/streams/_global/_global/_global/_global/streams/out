@@ -1,0 +1,5 @@
+[debug] [watch] [firsthomeworksbtproject / Compile / run] Found inputs: E:\Projects\FirstHomeworkSbtProject\*.{java,scala},E:\Projects\FirstHomeworkSbtProject\src\main\java\**\*.{java,scala},E:\Projects\FirstHomeworkSbtProject\src\main\resources\**\*,E:\Projects\FirstHomeworkSbtProject\src\main\scala\**\*.{java,scala},E:\Projects\FirstHomeworkSbtProject\src\main\scala-2.13\**\*.{java,scala}
+[info] 1. Monitoring source files for firsthomeworksbtproject/run...
+[info]    Press <enter> to interrupt or '?' for more options.
+[debug] [watch] [debug] Received input event: Run().
+[debug] [watch] [debug] Received input event: Run().
