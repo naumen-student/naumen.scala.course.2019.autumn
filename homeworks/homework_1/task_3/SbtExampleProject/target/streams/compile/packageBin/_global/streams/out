@@ -1,0 +1,13 @@
+[debug] Packaging C:\лабы\SbtExampleProject\target\scala-2.13\sbtexampleproject_2.13-0.1.jar ...
+[debug] Input file mappings:
+[debug] 	
+[debug] 	  C:\лабы\SbtExampleProject\target\scala-2.13\classes
+[debug] 	Example
+[debug] 	  C:\лабы\SbtExampleProject\target\scala-2.13\classes\Example
+[debug] 	Example\Main$.class
+[debug] 	  C:\лабы\SbtExampleProject\target\scala-2.13\classes\Example\Main$.class
+[debug] 	Example\Main$delayedInit$body.class
+[debug] 	  C:\лабы\SbtExampleProject\target\scala-2.13\classes\Example\Main$delayedInit$body.class
+[debug] 	Example\Main.class
+[debug] 	  C:\лабы\SbtExampleProject\target\scala-2.13\classes\Example\Main.class
+[debug] Done packaging.
