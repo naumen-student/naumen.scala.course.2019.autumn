@@ -1,0 +1,48 @@
+C:\Users\skail>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_212).
+Type in expressions for evaluation. Or try :help.
+
+scala> val Name = "Vladislav Sivirukhin"
+Name: String = Vladislav Sivirukhin
+
+scala>
+
+scala>     val WordsHello = Array("Salam", "Aloha", "Hola", "??", "Guten tag", "Здраво")
+WordsHello: Array[String] = Array(Salam, Aloha, Hola, ??, Guten tag, ╟фЁртю)
+
+scala>
+
+scala>     val ReverseName = Name.reverse
+ReverseName: String = nihkuriviS valsidalV
+
+scala>
+
+scala>     for (Privet <- WordsHello) {
+     |       println(Privet + " Scala! This is " + Name)
+     |     }
+Salam Scala! This is Vladislav Sivirukhin
+Aloha Scala! This is Vladislav Sivirukhin
+Hola Scala! This is Vladislav Sivirukhin
+?? Scala! This is Vladislav Sivirukhin
+Guten tag Scala! This is Vladislav Sivirukhin
+Здраво Scala! This is Vladislav Sivirukhin
+
+scala>
+
+scala>     println("\n")
+
+
+
+scala>
+
+scala>     for (Privet <- WordsHello) {
+     |       println(Privet + " Scala! This is " + ReverseName)
+     |     }
+Salam Scala! This is nihkuriviS valsidalV
+Aloha Scala! This is nihkuriviS valsidalV
+Hola Scala! This is nihkuriviS valsidalV
+?? Scala! This is nihkuriviS valsidalV
+Guten tag Scala! This is nihkuriviS valsidalV
+Здраво Scala! This is nihkuriviS valsidalV
+
+scala>
