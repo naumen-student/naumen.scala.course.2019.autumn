@@ -1,0 +1,40 @@
+Microsoft Windows [Version 10.0.17134.765]
+(c) Корпорация Майкрософт (Microsoft Corporation), 2018. Все права защищены.
+
+C:\Users\Naron>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_231).
+Type in expressions for evaluation. Or try :help.
+
+scala>  var name = "Nikita Tokarev"
+name: String = Nikita Tokarev
+
+scala>     var mid = " Scala! This is "
+mid: String = " Scala! This is "
+
+scala>     val fast1 = "Hello"
+fast1: String = Hello
+
+scala>     val fast2 = "Ohha"
+fast2: String = Ohha
+
+scala>     val fast3 = "Wagwan"
+fast3: String = Wagwan
+
+scala>     val rename = name.reverse
+rename: String = verakoT atikiN
+
+scala>     println(fast1 + mid + name)
+Hello Scala! This is Nikita Tokarev
+
+scala>     println(fast2 + mid + name)
+Ohha Scala! This is Nikita Tokarev
+
+scala>     println(fast3 + mid + name)
+Wagwan Scala! This is Nikita Tokarev
+
+scala>     println(fast1 + mid + rename + "\n"
+     |       + fast2 + mid + rename + "\n"
+     |       + fast3 + mid + rename)
+Hello Scala! This is verakoT atikiN
+Ohha Scala! This is verakoT atikiN
+Wagwan Scala! This is verakoT atikiN
