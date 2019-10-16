@@ -1,0 +1,42 @@
+➜  ~ amm
+Loading...
+Welcome to the Ammonite Repl 1.7.4
+(Scala 2.12.10 Java 1.8.0_222)
+If you like Ammonite, please support our development at www.patreon.com/lihaoyi
+
+@ def printPhrase(phrase: String, name : String) {  
+  println (phrase + ", " + name)
+  }   
+defined function printPhrase
+
+@ val scalaPhrase = "Hello Scala! This is " 
+scalaPhrase: String = "Hello Scala! This is "
+
+@ val name = "Boris Liskov" 
+name: String = "Boris Liskov"
+
+@ println(scalaPhrase + name) 
+Hello Scala! This is Boris Liskov
+
+
+@ val phrases: List[String] = List("Hola", "Guten tag", "Sälem") 
+phrases: List[String] = List("Hola", "Guten tag", "S\u00e4lem")
+
+@ for (p <- phrases)
+  {
+  	printPhrase(p, name)
+  } 
+Hola, Boris Liskov
+Guten tag, Boris Liskov
+Sälem, Boris Liskov
+
+
+@ for (p <- phrases)
+  {
+  	printPhrase(p, name.reverse)
+  } 
+Hola, voksiL siroB
+Guten tag, voksiL siroB
+Sälem, voksiL siroB
+
+@  
