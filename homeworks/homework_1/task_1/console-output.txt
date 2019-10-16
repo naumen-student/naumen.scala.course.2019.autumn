@@ -1,0 +1,45 @@
+Last login: Wed Oct 16 00:25:43 on ttys002
+➜  ScalaLabs amm 
+Loading...
+Welcome to the Ammonite Repl 1.7.4
+(Scala 2.12.10 Java 11.0.2)
+If you like Ammonite, please support our development at www.patreon.com/lihaoyi
+@ val myName = "George Guba" 
+myName: String = "George Guba"
+
+
+@ 
+val greetingFunc = (greeting: String, name: String) => println(greeting + name) 
+greetingFunc: (String, String) => Unit = ammonite.$sess.cmd2$$$Lambda$1631/0x0000000800932040@7103ab0
+                                   
+
+@ greetingFunc("Hello Scala! This is ", myName) 
+Hello Scala! This is George Guba
+
+
+@ greetingFunc("Hola Scala! este es ", myName) 
+Hola Scala! este es George Guba
+
+
+@ greetingFunc("Guten tag, das ist ", myName) 
+Guten tag, das ist George Guba
+
+
+@ val myNameReverse = myName.reverse 
+myNameReverse: String = "abuG egroeG"
+
+@ greetingFunc("Hello Scala! This is ", myNameReverse) 
+Hello Scala! This is abuG egroeG
+
+
+@ greetingFunc("Hola Scala! este es ", myNameReverse) 
+Hola Scala! este es abuG egroeG
+
+
+@ greetingFunc("Guten tag, das ist ", myNameReverse) 
+Guten tag, das ist abuG egroeG
+
+
+@ exit 
+Bye!
+➜  ScalaLabs 
