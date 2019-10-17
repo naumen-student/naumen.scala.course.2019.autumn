@@ -1,0 +1,39 @@
+Microsoft Windows [Version 10.0.17134.1069]
+(c) Корпорация Майкрософт (Microsoft Corporation), 2018. Все права защищены.
+
+C:\Users\Олег>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_211).
+Type in expressions for evaluation. Or try :help.
+
+scala> def hello(name: String) = println(s"Hello Scala! This is $name")
+hello: (name: String)Unit
+
+scala> hello("Oleg Glukhikh")
+Hello Scala! This is Oleg Glukhikh
+
+scala> def greeting(greet_word: String = "Hello", name: String = "Oleg Glukhikh") = println(s"$greet_word Scala! This is $name")
+greeting: (greet_word: String, name: String)Unit
+
+scala> greeting(greet_word="Hola")
+Hola Scala! This is Oleg Glukhikh
+
+scala> greeting(greet_word="Guten Morgen")
+Guten Morgen Scala! This is Oleg Glukhikh
+
+scala> val rev_name = "Oleg Glukhikh".reverse
+rev_name: String = hkihkulG gelO
+
+scala> val german_greeting = "Guten Morgen"
+german_greeting: String = Guten Morgen
+
+scala> val spanish_greeting = "Hola"
+spanish_greeting: String = Hola
+
+scala> greeting(name = rev_name)
+Hello Scala! This is hkihkulG gelO
+
+scala> greeting(greet_word=german_greeting, name=rev_name)
+Guten Morgen Scala! This is hkihkulG gelO
+
+scala> greeting(greet_word=spanish_greeting, name=rev_name)
+Hola Scala! This is hkihkulG gelO
