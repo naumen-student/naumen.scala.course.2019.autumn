@@ -1,0 +1,2 @@
+bloop run
+bloop run <hello-world>
