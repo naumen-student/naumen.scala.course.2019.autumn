@@ -10,4 +10,4 @@ layout: default
 
 ### Домашние задания
 * [Задание 1](homeworks/homework_1/homework_1.md) [папка в GitHub](https://github.com/naumen-student/naumen.scala.course.2019.autumn/tree/master/homeworks/homework_1)
-* [Задание 2](homeworks/homework_2/src/main/scala/Exercises.scala) [папка в GitHub](https://github.com/naumen-student/naumen.scala.course.2019.autumn/tree/master/homeworks/homework_2)
+* [Задание 2](homeworks/homework_2/homework_2.md) [папка в GitHub](https://github.com/naumen-student/naumen.scala.course.2019.autumn/tree/master/homeworks/homework_2)
