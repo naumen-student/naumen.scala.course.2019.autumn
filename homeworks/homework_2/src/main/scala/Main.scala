@@ -1,3 +1,5 @@
+import Exercises.Vector2D
+
 object Main extends App{
-    print(Exercises.primeFactor(80))
+    println(Exercises.sortByHeavyweight(Exercises.balls))
 }

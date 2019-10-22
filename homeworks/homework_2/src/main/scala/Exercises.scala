@@ -93,12 +93,12 @@ object Exercises {
         )
 
     def sortByHeavyweight(ballsArray: Map[String, (Int, Double)] = balls): Seq[String] = {
-        def Volume(radius: Int): Double = 4/3 * Math.pow(radius,3) * Math.PI
-        def Weight(radius: Int, density: Double): Double = Volume(radius) * density
+        def volume(radius: Int): Double = 4/3 * Math.pow(radius,3) * Math.PI
+        def weight(radius: Int, density: Double): Double = volume(radius) * density
 
         ballsArray
             .toSeq
-            .sortBy(ball=> Weight(ball._2._1,ball._2._2))
+            .sortBy(ball => weight(ball._2._1,ball._2._2))
             .map(ball => ball._1)
     }
 

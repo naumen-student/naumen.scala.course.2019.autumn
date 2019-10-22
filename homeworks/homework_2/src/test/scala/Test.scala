@@ -1,6 +1,11 @@
+import Exercises.Vector2D
 import utest._
 
 object Test extends TestSuite{
+    val testBalls: Map[String, (Int, Double)] =
+        Map(
+            "3" -> (5,   20), "2" ->  (2,   100), "1" ->  (0,  1000)
+        )
 
     val tests = Tests{
         'test_divBy3Or7 - {
@@ -14,6 +19,18 @@ object Test extends TestSuite{
             assert(Exercises.sumOfDivBy3Or5(0, 2) == 0)
             assert(Exercises.sumOfDivBy3Or5(3, 6) == 14)
         }
+        'test_sumScalars - {
+            assert(Exercises.sumScalars(Vector2D(1,0),Vector2D(0,1),Vector2D(1,1),Vector2D(-1,1)) == 0.0)
+            assert(Exercises.sumScalars(Vector2D(0,1),Vector2D(1,1),Vector2D(1,1),Vector2D(0,1)) == 2.0)
+            assert(Exercises.sumScalars(Vector2D(1,0),Vector2D(-1,1),Vector2D(1,0),Vector2D(0,1)) == -1.0)
+        }
+        'test_sumCosines - {
+            assert(Exercises.sumCosines(Vector2D(1,0),Vector2D(0,1),Vector2D(1,1),Vector2D(-1,1)) == 0.0)
+            assert((Exercises.sumCosines(Vector2D(0,1),Vector2D(1,1),Vector2D(1,1),Vector2D(0,1))
+                - java.lang.Math.sqrt(2)).abs < 0.000001)
+            assert((Exercises.sumCosines(Vector2D(1,0),Vector2D(-1,1),Vector2D(1,0),Vector2D(0,1))
+                - -(java.lang.Math.sqrt(2)/2)).abs < 0.000001)
+        }
         'test_primeFactor - {
             assert(Exercises.primeFactor(80) == Seq(2,5))
             assert(Exercises.primeFactor(98) == Seq(2,7))
@@ -21,5 +38,11 @@ object Test extends TestSuite{
             assert(Exercises.primeFactor(0) == Seq())
             assert(Exercises.primeFactor(13) == Seq(13))
         }
+        'test_sortByHeavyweight - {
+            assert(Exercises.sortByHeavyweight(testBalls) == Seq("1","2","3"))
+            assert(Exercises.sortByHeavyweight(Exercises.balls) == Seq("Tin", "Platinum", "Nickel", "Aluminum", "Titanium", "Lead", "Sodium", "Uranium", "Gold", "Tungsten", "Zirconium", "Chrome", "Iron", "Copper", "Silver", "Plutonium", "Cobalt", "Cesium", "Calcium", "Lithium", "Magnesium", "Potassium", "Graphite"))
+        }
+
+
     }
 }
