@@ -1,3 +1,6 @@
+import scala.collection.mutable
+import scala.collection.mutable.Set
+
 object Exercises {
 
     /*ПРИМЕР*/
@@ -16,7 +19,13 @@ object Exercises {
     /*Реализовать функцию, которая возвращает сумму всех целых чисел в заданном диапазоне (от iForm до iTo), которые делятся
     на 3 или на 5.*/
     /*Реализовать юнит-тесты в src/test/scala для данной функции.*/
-    def sumOfDivBy3Or5(iFrom: Int, iTo: Int): Long = ???
+    def sumOfDivBy3Or5(iFrom: Int, iTo: Int): Long = {
+        var result = 0
+        for {i <- iFrom to iTo
+             if i % 3 == 0 || i % 5 == 0
+             } result += i
+        result
+    }
 
 
 
@@ -25,9 +34,21 @@ object Exercises {
     Число 80 раскладывается на множители 1 * 2 * 2 * 2 * 2 * 5, результат выполнения функции => Seq(2, 5).
     Число 98 можно разложить на множители 1 * 2 * 7 * 7, результат выполнения функции => Seq(2, 7).*/
     /*Реализовать юнит-тесты в src/test/scala для данной функции.*/
-    def primeFactor(number: Int): Seq[Int] = ???
+    def primeFactor(number: Int): Seq[Int] = {
+        val mutableSeq = mutable.MutableList[Int]()
+        var n = number
+        var i = 2
 
+        while(i * i <= n) {
+            if (n % i == 0) mutableSeq+=i
+            while (n % i == 0) n = n / i
+            i += 1
+        }
 
+        if (n > 1) mutableSeq+=n
+
+        mutableSeq
+    }
 
     /*ЗАДАНИЕ III*/
     /*Дано: класс двумерного вектора, а также функции вычисления модуля вектора (abs), вычисления скалярного произведения
