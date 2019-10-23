@@ -1,0 +1,1 @@
+scalac -bootclasspath C:\Users\iwdok1\.sbt\boot\scala-2.12.10\lib\scala-library.jar -classpath D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\target\scala-2.12\classes D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala
