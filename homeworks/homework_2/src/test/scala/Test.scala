@@ -1,3 +1,4 @@
+import Exercises.Vector2D
 import utest._
 
 object Test extends TestSuite{
@@ -21,6 +22,29 @@ object Test extends TestSuite{
             assert(Exercises.primeFactor(503) == Seq(503))
             assert(Exercises.primeFactor(128) == Seq(2))
             assert(Exercises.primeFactor(1050) == Seq(2, 3, 5, 7))
+        }
+
+        'test_sumScalars - {
+            assert(Exercises.sumScalars(Vector2D(5, -4), Vector2D(2, 1), Vector2D(0, 3), Vector2D(7, -1)) == 3.0)
+            assert(Exercises.sumScalars(Vector2D(5, 2), Vector2D(4, -1), Vector2D(0, 3), Vector2D(3, 0)) == 18.0)
+        }
+
+        'test_sumCosines - {
+            assert(Exercises.sumCosines(Vector2D(3, 4), Vector2D(4, 3), Vector2D(3, 0), Vector2D(3, 0)) == 1.96)
+        }
+
+        'test_sumCosines - {
+            val testMap1 = Map("Tin" -> (1,   7.29), "Tungsten" ->  (2,   19.35), "Graphite" ->  (12,  2.1))
+            val correctSortedMap1 = Seq("Tin", "Tungsten", "Graphite")
+            assert(Exercises.sortByHeavyweight(testMap1) == correctSortedMap1)
+
+            val testMap2 = Exercises.balls
+            val correctSortedMap2 = Seq(
+                "Tin","Platinum", "Nickel", "Aluminum", "Titanium", "Lead", "Sodium", "Uranium", "Gold",
+                "Tungsten", "Zirconium", "Chrome", "Iron", "Copper", "Silver", "Plutonium", "Cobalt",
+                "Cesium", "Calcium","Lithium", "Magnesium", "Potassium", "Graphite"
+            )
+            assert(Exercises.sortByHeavyweight(testMap2) == correctSortedMap2)
         }
     }
 }
