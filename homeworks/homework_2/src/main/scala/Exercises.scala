@@ -32,7 +32,7 @@ object Exercises {
     def primeFactor(number: Int): Seq[Int] = {
       var n = number
       var div = 2
-      var set = scala.collection.mutable.Set[Int]()
+      var set = Set[Int]()
       while (n > 1) {
         while (n % div == 0) {
           set += div
