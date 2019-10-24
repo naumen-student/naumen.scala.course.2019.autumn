@@ -54,7 +54,9 @@ object Exercises {
     def abs(vec: Vector2D): Double = java.lang.Math.sqrt(vec.x * vec.x + vec.y * vec.y)
     def scalar(vec0: Vector2D, vec1: Vector2D): Double = vec0.x * vec1.x + vec0.y * vec1.y
     def cosBetween(vec0: Vector2D, vec1: Vector2D): Double = scalar(vec0, vec1) / abs(vec0) / abs(vec1)
-    def sumByFunc(leftVec0: Vector2D, leftVec1: Vector2D, sumFunc: (Vector2D, Vector2D) => Double, rightVec0: Vector2D, rightVec1: Vector2D) = ???
+    def sumByFunc(leftVec0: Vector2D, leftVec1: Vector2D, summFunc: (Vector2D, Vector2D) => Double, rightVec0: Vector2D, rightVec1: Vector2D) = {
+        summFunc(leftVec0, leftVec1) + summFunc(rightVec0, rightVec1)
+    }
     
     def sumScalars(leftVec0: Vector2D, leftVec1: Vector2D, rightVec0: Vector2D, rightVec1: Vector2D): Double =
         sumByFunc(leftVec0, leftVec1, scalar, rightVec0, rightVec1)
@@ -85,10 +87,8 @@ object Exercises {
         Math.PI * Math.pow(r, 3) * d * 4 / 3  
     }
 
-    def sortByHeavyweight(ballsArray: Map[String, (Int, Double)] = balls): Seq[String] = {
+    def sortByHeavyWeight(ballsArray: Map[String, (Int, Double)] = balls): Seq[String] = {
         val formattedMap = ballsArray map {case (k, v) => (k, calculateBallWeight(v._1, v._2))}
         formattedMap.toSeq.sortBy(_._2).map(_._1)
     }
 }
-
-Exercises.sortByHeavyweight(Exercises.balls)
