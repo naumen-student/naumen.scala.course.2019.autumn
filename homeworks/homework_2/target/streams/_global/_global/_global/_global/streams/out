@@ -1,0 +1,40 @@
+[debug] [watch] [homework_2 / Compile / run] Found inputs: D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\*.{java,scala},D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\java\**\*.{java,scala},D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\resources\**\*,D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\**\*.{java,scala},D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala-2.12\**\*.{java,scala}
+[info] 1. Monitoring source files for homework_2/run...
+[info]    Press <enter> to interrupt or '?' for more options.
+[debug] homework_2 / Compile / run - Accepted event for D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala
+[debug] Received Update(D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] homework_2 / Compile / run - Accepted event for D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala
+[debug] Received Update(D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] Received event for path D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala
+[debug] Received event for path D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala
+[debug] Creating update event for modified D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala (previous stamp: Hash(584cd8a5b5d10a6bdf31e48102311e9ba57e7ba5), current stamp: Hash(a5dde1b4d2b5c76336c0fbc423526c6ed2368c64))
+[debug] Received file event actions: D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala -> Trigger. Returning: (Update(D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala, 2019-окт.-23 23:10:46.891 YEKT),Trigger)
+[info] Build triggered by D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala. Running 'run'.
+[debug] [watch] [debug] Received file event Trigger for Update(D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala, 2019-окт.-23 23:10:46.891 YEKT).
+[info] 2. Monitoring source files for homework_2/run...
+[info]    Press <enter> to interrupt or '?' for more options.
+[debug] Discarding entry for recently updated path D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala. This event occurred 5 ms since the last event for this path.
+[debug] homework_2 / Compile / run - Accepted event for D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala
+[debug] Received Update(D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] Received event for path D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala
+[debug] Received event for path D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala
+[debug] Creating update event for modified D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala (previous stamp: Hash(a5dde1b4d2b5c76336c0fbc423526c6ed2368c64), current stamp: Hash(2ab049cde7526b1295983b58f72e2bf2161b5863))
+[debug] homework_2 / Compile / run - Accepted event for D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala
+[debug] Received Update(D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] Received file event actions: D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala -> Trigger. Returning: (Update(D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala, 2019-окт.-23 23:12:14.485 YEKT),Trigger)
+[info] Build triggered by D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala. Running 'run'.
+[debug] [watch] [debug] Received file event Trigger for Update(D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala, 2019-окт.-23 23:12:14.485 YEKT).
+[info] 3. Monitoring source files for homework_2/run...
+[info]    Press <enter> to interrupt or '?' for more options.
+[debug] Discarding entry for recently updated path D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala. This event occurred 1 ms since the last event for this path.
+[debug] homework_2 / Compile / run - Accepted event for D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala
+[debug] Received Deletion(D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] Quarantining deletion event for path D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala for 500 milliseconds
+[debug] Triggering event for previously quarantined deleted file: D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala
+[debug] Quarantining deletion event for path D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala for 500 milliseconds
+[debug] Triggering event for previously quarantined deleted file: D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala
+[debug] Received file event actions: D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala -> Trigger. Returning: (Deletion(D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala, 2019-окт.-23 23:13:42.985 YEKT),Trigger)
+[info] Build triggered by D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala. Running 'run'.
+[debug] [watch] [debug] Received file event Trigger for Deletion(D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala, 2019-окт.-23 23:13:42.985 YEKT).
+[info] 4. Monitoring source files for homework_2/run...
+[info]    Press <enter> to interrupt or '?' for more options.

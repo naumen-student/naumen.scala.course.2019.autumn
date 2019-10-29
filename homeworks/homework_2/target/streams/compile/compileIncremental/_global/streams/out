@@ -1,0 +1,41 @@
+[debug] 
+[debug] Initial source changes: 
+[debug] 	removed:Set(D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\src\main\scala\Exercises.scala)
+[debug] 	added: Set()
+[debug] 	modified: Set()
+[debug] Invalidated products: Set()
+[debug] External API changes: API Changes: Set()
+[debug] Modified binary dependencies: Set()
+[debug] Initial directly invalidated classes: Set(Exercises, Exercises.Vector2D)
+[debug] 
+[debug] Sources indirectly invalidated by:
+[debug] 	product: Set()
+[debug] 	binary dep: Set()
+[debug] 	external source: Set()
+[debug] All sources are invalidated.
+[debug] Initial set of included nodes: Exercises, Exercises.Vector2D
+[debug] Recompiling all sources: number of invalidated sources > 50.0% of all sources
+[debug] Invalidating (transitively) by inheritance from Exercises...
+[debug] Initial set of included nodes: Exercises
+[debug] Invalidated by transitive inheritance dependency: Set(Exercises)
+[debug] Change NamesChange(Exercises,ModifiedNames(changes = UsedName(finalize,[Default]), UsedName(toString,[Default]), UsedName(synchronized,[Default]), UsedName(eq,[Default]), UsedName(sumCosines,[Default]), UsedName($asInstanceOf,[Default]), UsedName(clone,[Default]), UsedName($isInstanceOf,[Default]), UsedName(##,[Default]), UsedName(balls,[Default]), UsedName(ne,[Default]), UsedName(!=,[Default]), UsedName(scalar,[Default]), UsedName(divBy3Or7,[Default]), UsedName(hashCode,[Default]), UsedName(notifyAll,[Default]), UsedName(Vector2D,[Default]), UsedName(isInstanceOf,[Default]), UsedName(primeFactor,[Default]), UsedName(equals,[Default]), UsedName(cosBetween,[Default]), UsedName(sumScalars,[Default]), UsedName(abs,[Default]), UsedName(sortByHeavyweight,[Default]), UsedName(wait,[Default]), UsedName(==,[Default]), UsedName(notify,[Default]), UsedName(sumOfDivBy3Or5,[Default]), UsedName(sumByFunc,[Default]), UsedName(Exercises,[Default]), UsedName(asInstanceOf,[Default]), UsedName(getClass,[Default]), UsedName(sortByHeavyweight$default$1,[Default]))) invalidates 1 classes due to The Exercises has the following regular definitions changed:
+[debug] 	UsedName(finalize,[Default]), UsedName(toString,[Default]), UsedName(synchronized,[Default]), UsedName(eq,[Default]), UsedName(sumCosines,[Default]), UsedName($asInstanceOf,[Default]), UsedName(clone,[Default]), UsedName($isInstanceOf,[Default]), UsedName(##,[Default]), UsedName(balls,[Default]), UsedName(ne,[Default]), UsedName(!=,[Default]), UsedName(scalar,[Default]), UsedName(divBy3Or7,[Default]), UsedName(hashCode,[Default]), UsedName(notifyAll,[Default]), UsedName(Vector2D,[Default]), UsedName(isInstanceOf,[Default]), UsedName(primeFactor,[Default]), UsedName(equals,[Default]), UsedName(cosBetween,[Default]), UsedName(sumScalars,[Default]), UsedName(abs,[Default]), UsedName(sortByHeavyweight,[Default]), UsedName(wait,[Default]), UsedName(==,[Default]), UsedName(notify,[Default]), UsedName(sumOfDivBy3Or5,[Default]), UsedName(sumByFunc,[Default]), UsedName(Exercises,[Default]), UsedName(asInstanceOf,[Default]), UsedName(getClass,[Default]), UsedName(sortByHeavyweight$default$1,[Default]).
+[debug] 	> by transitive inheritance: Set(Exercises)
+[debug] 	> 
+[debug] 	> 
+[debug]         
+[debug] Invalidating (transitively) by inheritance from Exercises.Vector2D...
+[debug] Initial set of included nodes: Exercises.Vector2D
+[debug] Invalidated by transitive inheritance dependency: Set(Exercises.Vector2D)
+[debug] Change NamesChange(Exercises.Vector2D,ModifiedNames(changes = UsedName(finalize,[Default]), UsedName(toString,[Default]), UsedName(tupled,[Default]), UsedName(copy$default$1,[Default]), UsedName(canEqual,[Default]), UsedName(synchronized,[Default]), UsedName(eq,[Default]), UsedName($asInstanceOf,[Default]), UsedName(copy$default$2,[Default]), UsedName(clone,[Default]), UsedName($isInstanceOf,[Default]), UsedName(##,[Default]), UsedName(x,[Default]), UsedName(ne,[Default]), UsedName(!=,[Default]), UsedName(productElement,[Default]), UsedName(y,[Default]), UsedName(hashCode,[Default]), UsedName(unapply,[Default]), UsedName(notifyAll,[Default]), UsedName(Exercises;Vector2D;init;,[Default]), UsedName(productArity,[Default]), UsedName(Vector2D,[Default]), UsedName(isInstanceOf,[Default]), UsedName(productPrefix,[Default]), UsedName(equals,[Default]), UsedName(apply,[Default]), UsedName(copy,[Default]), UsedName(wait,[Default]), UsedName(curried,[Default]), UsedName(==,[Default]), UsedName(notify,[Default]), UsedName(productIterator,[Default]), UsedName($init$,[Default]), UsedName(asInstanceOf,[Default]), UsedName(getClass,[Default]))) invalidates 1 classes due to The Exercises.Vector2D has the following regular definitions changed:
+[debug] 	UsedName(finalize,[Default]), UsedName(toString,[Default]), UsedName(tupled,[Default]), UsedName(copy$default$1,[Default]), UsedName(canEqual,[Default]), UsedName(synchronized,[Default]), UsedName(eq,[Default]), UsedName($asInstanceOf,[Default]), UsedName(copy$default$2,[Default]), UsedName(clone,[Default]), UsedName($isInstanceOf,[Default]), UsedName(##,[Default]), UsedName(x,[Default]), UsedName(ne,[Default]), UsedName(!=,[Default]), UsedName(productElement,[Default]), UsedName(y,[Default]), UsedName(hashCode,[Default]), UsedName(unapply,[Default]), UsedName(notifyAll,[Default]), UsedName(Exercises;Vector2D;init;,[Default]), UsedName(productArity,[Default]), UsedName(Vector2D,[Default]), UsedName(isInstanceOf,[Default]), UsedName(productPrefix,[Default]), UsedName(equals,[Default]), UsedName(apply,[Default]), UsedName(copy,[Default]), UsedName(wait,[Default]), UsedName(curried,[Default]), UsedName(==,[Default]), UsedName(notify,[Default]), UsedName(productIterator,[Default]), UsedName($init$,[Default]), UsedName(asInstanceOf,[Default]), UsedName(getClass,[Default]).
+[debug] 	> by transitive inheritance: Set(Exercises.Vector2D)
+[debug] 	> 
+[debug] 	> 
+[debug]         
+[debug] New invalidations:
+[debug] 	Set()
+[debug] Initial set of included nodes: 
+[debug] Previously invalidated, but (transitively) depend on new invalidations:
+[debug] 	Set()
+[debug] No classes were invalidated.
