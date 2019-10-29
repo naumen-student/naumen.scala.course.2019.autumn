@@ -1,3 +1,5 @@
+import scala.collection.mutable.ListBuffer
+
 object Exercises {
 
     /*ПРИМЕР*/
@@ -10,19 +12,21 @@ object Exercises {
         } yield i
     }
 
-    def divBy3Or5(iFrom: Int, iTo: Int): Seq[Int] = {
-        for {i <- iFrom to iTo
-             if i % 3 == 0 || i % 5 == 0
-             } yield i
-    }
+
 
     /*ЗАДАНИЕ I*/
     /*Реализовать функцию, которая возвращает сумму всех целых чисел в заданном диапазоне (от iForm до iTo), которые делятся
     на 3 или на 5.*/
     /*Реализовать юнит-тесты в src/test/scala для данной функции.*/
     def sumOfDivBy3Or5(iFrom: Int, iTo: Int): Long = {
-        return divBy3Or5(iFrom, iTo).sum
+        var sum = 0
+        for {i <- iFrom to iTo
+             if i % 3 == 0 || i % 5 == 0
+        } sum+= i
+        sum
     }
+
+
 
     /*ЗАДАНИЕ II*/
     /*Реализовать функцию, которая вычисляет все различные простые множители целого числа отличные от 1.
@@ -30,18 +34,21 @@ object Exercises {
     Число 98 можно разложить на множители 1 * 2 * 7 * 7, результат выполнения функции => Seq(2, 7).*/
     /*Реализовать юнит-тесты в src/test/scala для данной функции.*/
     def primeFactor(number: Int): Seq[Int] = {
-      var n = number
-      var div = 2
-      var set = Set[Int]()
-      while (n > 1) {
-        while (n % div == 0) {
-          set += div
-          n /= div
+        var worker = number
+        val dividers = ListBuffer.empty[Int]
+        for (i <- 2 to number
+            if worker > 1){
+                if (worker % i == 0){
+                    dividers += i
+                    while (worker % i == 0){
+                        worker /= i
+                    }
+                }
         }
-        div += 1
-      }
-      return set.toSeq
+        dividers
     }
+
+
 
     /*ЗАДАНИЕ III*/
     /*Дано: класс двумерного вектора, а также функции вычисления модуля вектора (abs), вычисления скалярного произведения
@@ -51,24 +58,32 @@ object Exercises {
     Функция sumCosines должна вычислять сумму косинусов углов между парами векторов cosBetween(leftVec0, leftVec1) + cosBetween(rightVec0, rightVec1).*/
     /*Реализовать юнит-тесты в src/test/scala для функций sumScalars и sumCosines*/
     case class Vector2D(x: Double, y: Double)
+
     def abs(vec: Vector2D): Double = java.lang.Math.sqrt(vec.x * vec.x + vec.y * vec.y)
+
     def scalar(vec0: Vector2D, vec1: Vector2D): Double = vec0.x * vec1.x + vec0.y * vec1.y
+
     def cosBetween(vec0: Vector2D, vec1: Vector2D): Double = scalar(vec0, vec1) / abs(vec0) / abs(vec1)
-    def sumByFunc(leftVec0: Vector2D, leftVec1: Vector2D, summFunc: (Vector2D, Vector2D) => Double, rightVec0: Vector2D, rightVec1: Vector2D) = {
-        summFunc(leftVec0, leftVec1) + summFunc(rightVec0, rightVec1)
+
+    def sumByFunc(leftVec0: Vector2D, leftVec1: Vector2D, func :(Vector2D,Vector2D) =>
+        Double, rightVec0: Vector2D, rightVec1: Vector2D): Double = {
+        func(leftVec0, leftVec1) + func(rightVec0, rightVec1)
     }
-    
-    def sumScalars(leftVec0: Vector2D, leftVec1: Vector2D, rightVec0: Vector2D, rightVec1: Vector2D): Double =
+
+    def sumScalars(leftVec0: Vector2D, leftVec1: Vector2D, rightVec0: Vector2D, rightVec1: Vector2D): Double = {
         sumByFunc(leftVec0, leftVec1, scalar, rightVec0, rightVec1)
-    
-    def sumCosines(leftVec0: Vector2D, leftVec1: Vector2D, rightVec0: Vector2D, rightVec1: Vector2D): Double =
+    }
+
+    def sumCosines(leftVec0: Vector2D, leftVec1: Vector2D, rightVec0: Vector2D, rightVec1: Vector2D): Double = {
         sumByFunc(leftVec0, leftVec1, cosBetween, rightVec0, rightVec1)
+    }
+
 
     /*ЗАДАНИЕ IV*/
     /*Дано: коллекция металлических шариков balls, где каждый элемент представлен в виде (Name: String -> (radius: Int, density: Double).
     Здесь radius - радиус шарика [см], а density - плотность материала [г / (см^3)], из которого он изготовлен (например,
     для серебра в коллекции представлен шарик "Silver" радиуса 4 см и плотности 4.505 г / (см^3) )
-    Необходимо реализовать функцию sortByHeavyWeight, которая принимает коллекцию такого формата и возвращает список названий материалов шариков,
+    Необходимо реализовать функцию sortByHeavyweight, которая принимает коллекцию такого формата и возвращает список названий материалов шариков,
     упорядоченный в зависимости от массы шариков (первый элемент списка соответствует наиболее "лёгкому" шарику, последний - наиболее "тяжёлому").
     В качестве значения числа "Пи" можно использовать java.lang.Math.PI
     */
@@ -83,12 +98,24 @@ object Exercises {
             "Chrome" ->   (3,   7.18),   "Cesium" ->    (7,   1.873), "Zirconium" -> (3,   6.45)
         )
 
-    def calculateBallWeight(r: Int, d: Double): Double ={
-        Math.PI * Math.pow(r, 3) * d * 4 / 3  
-    }
+    def sortByHeavyweight(ballsArray: Map[String, (Int, Double)] = balls): Seq[String] = {
+        val sortedBallsList = ListBuffer.empty[String]
+        var unsortedBallsList = ballsArray.keys.toBuffer
 
-    def sortByHeavyWeight(ballsArray: Map[String, (Int, Double)] = balls): Seq[String] = {
-        val formattedMap = ballsArray map {case (k, v) => (k, calculateBallWeight(v._1, v._2))}
-        formattedMap.toSeq.sortBy(_._2).map(_._1)
+        while (unsortedBallsList.nonEmpty){
+            var lightestBallWeight = Double.MaxValue
+            var lightestBallName = ""
+
+            for (currentBall <- unsortedBallsList){
+                val currentWeight = 4 / 3 * Math.PI * Math.pow(ballsArray(currentBall)._1, 3) * ballsArray(currentBall)._2
+                if (currentWeight < lightestBallWeight) {
+                    lightestBallName = currentBall
+                    lightestBallWeight = currentWeight
+                }
+            }
+            unsortedBallsList -= lightestBallName
+            sortedBallsList += lightestBallName
+        }
+        sortedBallsList
     }
 }
