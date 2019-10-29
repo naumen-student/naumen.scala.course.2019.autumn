@@ -1,7 +1,0 @@
-[debug] Checking for meta build source updates
-[warn] build source files have changed
-[warn] deleted files: 
-[warn]   D:\Dropbox\GitHub\naumen.scala.course.2019.autumn\homeworks\homework_2\build.sbt
-[warn] Apply these changes by running `reload`.
-[warn] Automatically reload the build when source changes are detected by setting `Global / onChangedBuildSource := ReloadOnSourceChanges`.
-[warn] Disable this warning by setting `Global / onChangedBuildSource := IgnoreSourceChanges`.
