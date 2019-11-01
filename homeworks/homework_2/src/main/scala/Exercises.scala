@@ -19,11 +19,10 @@ object Exercises {
     на 3 или на 5.*/
     /*Реализовать юнит-тесты в src/test/scala для данной функции.*/
     def sumOfDivBy3Or5(iFrom: Int, iTo: Int): Long = {
-        var sum = 0
-        for {i <- iFrom to iTo
+        val seq =for {i <- iFrom to iTo
              if (i % 3 == 0 || i % 5 == 0)
-             } sum += i
-        sum
+             } yield i
+        seq.sum
     }
 
 
@@ -90,11 +89,8 @@ object Exercises {
         )
 
     def sortByHeavyweight(ballsArray: Map[String, (Int, Double)] = balls): Seq[String] = {
-      val weightF =(radius: Int, density: Double)  => 4 / 3 * Math.PI * Math.pow(radius, 3) * density
-      def ballWeight (tuple: (Int, Double)) : Double = {
-        val (r, d) = tuple
-        weightF(r, d)}
-      ballsArray.mapValues(ballWeight).toSeq.sortBy(_._2).map(_._1)
+      val weightF =(ball : (Int, Double))  => 4 / 3 * Math.PI * Math.pow(ball._1, 3) * ball._2
+      ballsArray.mapValues(weightF).toSeq.sortBy(_._2).map(_._1)
     }
 
 }
