@@ -44,6 +44,8 @@ object Exercises {
                     changedNumber /= i
             }
         }
+        if(mulList.isEmpty)
+            mulList.append(number)
         return mulList
     }
 
