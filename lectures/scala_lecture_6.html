@@ -111,6 +111,7 @@
         -->
         <section>
             <h2>IntBox</h2>
+            <br>
             <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
                  data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
                 <div class="sl-block-style" style="z-index: 10;">
@@ -132,6 +133,7 @@
 
         <section>
             <h2>StringBox</h2>
+            <br>
             <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
                  data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
                 <div class="sl-block-style" style="z-index: 10;">
@@ -153,6 +155,7 @@
 
         <section>
             <h2>BooleanBox</h2>
+            <br>
             <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
                  data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
                 <div class="sl-block-style" style="z-index: 10;">
@@ -190,6 +193,7 @@
         -->
         <section>
             <h2>Box[T]</h2>
+            <br>
             <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
                  data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
                 <div class="sl-block-style" style="z-index: 10;">
@@ -305,6 +309,7 @@
         -->
         <section>
             <h2>Несколько параметров</h2>
+            <br>
             <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
                  data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
                 <div class="sl-block-style" style="z-index: 10;">
@@ -492,6 +497,7 @@
         -->
         <section>
             <h2>Параметры функций</h2>
+            <br>
             <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
                  data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
                 <div class="sl-block-style" style="z-index: 10;">
@@ -518,6 +524,7 @@
         -->
         <section>
             <h2>Область видимости</h2>
+            <br>
             <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
                  data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
                 <div class="sl-block-style" style="z-index: 10;">
@@ -566,6 +573,7 @@
         -->
         <section>
             <h2>Конкретный параметр</h2>
+            <br>
             <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
                  data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
                 <div class="sl-block-style" style="z-index: 10;">
@@ -591,6 +599,7 @@
         -->
         <section>
             <h2>Игнорируем параметр</h2>
+            <br>
             <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
                  data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
                 <div class="sl-block-style" style="z-index: 10;">
@@ -689,7 +698,7 @@
             Пусть у нас определена следующая иерархия типов.
         -->
         <section>
-            <h2>Bounds</h2>
+            <h2>Upper Bounds</h2>
         </section>
 
         <section>
@@ -721,13 +730,109 @@
                          data-has-custom-html=""
                          style="z-index: 10; text-align: left; border-width: 1px; font-size: 95%;" dir="ui">
                         <span style=' font-family: "Courier New"; font-variant: normal; color: black; font-weight: bold; font-style: normal;'>
-                            def shortestName(<br>&nbsp;&nbsp;animals: List[Animal]<br>): Option[Animal] =<br>
-                                &nbsp;&nbsp;animals.sortBy(_.name.length).headOption<br>
+                            def shortestName(<br>&nbsp;&nbsp;&nbsp;&nbsp;animals: List[Animal]<br>): Option[Animal] =<br>
+                                &nbsp;&nbsp;animals.sortBy(_.name.length).headOption
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
+                 data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
+                <div class="sl-block-style" style="z-index: 10;">
+                    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text"
+                         data-has-custom-html=""
+                         style="z-index: 10; text-align: left; border-width: 1px; font-size: 95%;" dir="ui">
+                        <span style=' font-family: "Courier New"; font-variant: normal; color: black; font-weight: bold; font-style: normal;'>
+                            def sayMeow(cat: Cat): String =<br>
+                            &nbsp;&nbsp;cat.name + " says meow."<br>
                             <br>
                             val cats: List[Cat] = List(<br>&nbsp;&nbsp;Cat("Garfield"),<br>&nbsp;&nbsp;Cat("Lucy"),<br>&nbsp;&nbsp;Cat("Kuzya")<br>)<br>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
+                 data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
+                <div class="sl-block-style" style="z-index: 10;">
+                    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text"
+                         data-has-custom-html=""
+                         style="z-index: 10; text-align: left; border-width: 1px; font-size: 95%;" dir="ui">
+                        <span style=' font-family: "Courier New"; font-variant: normal; color: black; font-weight: bold; font-style: normal;'>
+                            val cats: List[Cat] = ...<br>
                             <br>
-                            scala> shortestName(cats)<br>
-                            res0: Option[Animal] = Some(Cat(Lucy))
+                            scala> val s = shortestName(cats)<br>
+                            s: Option[Animal] = Some(Cat(Lucy))<br>
+                            <br>
+                            scala> s.map(cat => sayMeow(cat))<br>
+                            &lt;console>:19: error: type mismatch;<br>
+                            &nbsp;found&nbsp;&nbsp;&nbsp;: Animal<br>
+                            &nbsp;required: Cat
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
+                 data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
+                <div class="sl-block-style" style="z-index: 10;">
+                    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text"
+                         data-has-custom-html=""
+                         style="z-index: 10; text-align: left; border-width: 1px; font-size: 95%;" dir="ui">
+                        <span style=' font-family: "Courier New"; font-variant: normal; color: black; font-weight: bold; font-style: normal;'>
+                            scala> s.map { cat =><br>&nbsp;&nbsp;sayMeow(cat.asInstanceOf[Cat])<br>}<br>
+                            <br>
+                            res7: Option[String] =<br>&nbsp;&nbsp;Some(Lucy says meow.)<br>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            Грязный код.<br>
+            Потенциальные ошибки.
+        </section>
+
+        <section>
+            <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
+                 data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
+                <div class="sl-block-style" style="z-index: 10;">
+                    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text"
+                         data-has-custom-html=""
+                         style="z-index: 10; text-align: left; border-width: 1px; font-size: 95%;" dir="ui">
+                        <span style=' font-family: "Courier New"; font-variant: normal; color: black; font-weight: bold; font-style: normal;'>
+                            scala> val s =<br>&nbsp;&nbsp;shortestName(List(Dog("Goofy")))<br>
+                            s: Option[Animal] = Some(Dog(Goofy))<br>
+                            <br>
+                            scala> s.map { cat =><br>&nbsp;&nbsp;sayMeow(cat.asInstanceOf[Cat])<br>}<br>
+                            <br>
+                            java.lang.ClassCastException:<br>&nbsp;&nbsp;Dog cannot be cast to Cat<br>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            Ошибка во время исполнения.
+        </section>
+
+        <section>
+            <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
+                 data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
+                <div class="sl-block-style" style="z-index: 10;">
+                    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text"
+                         data-has-custom-html=""
+                         style="z-index: 10; text-align: left; border-width: 1px; font-size: 95%;" dir="ui">
+                        <span style=' font-family: "Courier New"; font-variant: normal; color: black; font-weight: bold; font-style: normal;'>
+                            def shortestName[T](<br>&nbsp;&nbsp;&nbsp;&nbsp;animals: List[T]<br>): Option[T] =<br>
+                                &nbsp;&nbsp;animals.sortBy(_.name.length).headOption<br>
+                            <br>
+                            &lt;console>:11: error: value name is not a member of type parameter T
                         </span>
                     </div>
                 </div>
@@ -745,7 +850,8 @@
             Такое ограничение называется верхней границей или upper bound.
         -->
         <section>
-            <h2>Upper Bound</h2>
+            <h4>Upper Bound</h4>
+            <br>
             <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
                  data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
                 <div class="sl-block-style" style="z-index: 10;">
@@ -753,7 +859,7 @@
                          data-has-custom-html=""
                          style="z-index: 10; text-align: left; border-width: 1px; font-size: 95%;" dir="ui">
                         <span style=' font-family: "Courier New"; font-variant: normal; color: black; font-weight: bold; font-style: normal;'>
-                            def shortestName[T &lt;: Animal](<br>&nbsp;&nbsp;animals: List[T]<br>): Option[T] =<br>
+                            def shortestName[T &lt;: Animal](<br>&nbsp;&nbsp;&nbsp;&nbsp;animals: List[T]<br>): Option[T] =<br>
                                 &nbsp;&nbsp;animals.sortBy(_.name.length).headOption<br>
                         </span>
                     </div>
@@ -769,9 +875,75 @@
                          data-has-custom-html=""
                          style="z-index: 10; text-align: left; border-width: 1px; font-size: 95%;" dir="ui">
                         <span style=' font-family: "Courier New"; font-variant: normal; color: black; font-weight: bold; font-style: normal;'>
-                            scala> shortestName(<br>&nbsp;&nbsp;List(<br>&nbsp;&nbsp;&nbsp;&nbsp;Cat("Garfield"),<br>&nbsp;&nbsp;&nbsp;&nbsp;Cat("Lucy"),<br>&nbsp;&nbsp;&nbsp;&nbsp;Cat("Kuzya")<br>&nbsp;&nbsp;)<br>)<br>
+                            scala> val s = shortestName(cats)<br>
+                            s: Option[Cat] = Some(Cat(Lucy))<br>
                             <br>
-                            res0: Option[Cat] = Some(Cat(Lucy))
+                            scala> s.map(sayMeow)<br>
+                            res11: Option[String] =<br>&nbsp;&nbsp;Some(Lucy says meow.)<br>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
+                 data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
+                <div class="sl-block-style" style="z-index: 10;">
+                    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text"
+                         data-has-custom-html=""
+                         style="z-index: 10; text-align: left; border-width: 1px; font-size: 95%;" dir="ui">
+                        <span style=' font-family: "Courier New"; font-variant: normal; color: black; font-weight: bold; font-style: normal;'>
+                            scala> val s =<br>&nbsp;&nbsp;shortestName(List(Dog("Goofy")))<br>
+                            s: Option[Dog] = Some(Dog(Goofy))<br>
+                            <br>
+                            scala> s.map(sayMeow)<br>
+                            &lt;console>:20: error: type mismatch;<br>
+                            &nbsp;found&nbsp;&nbsp;&nbsp;: Cat => String<br>
+                            &nbsp;required: Dog => ?
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Lower Bounds</h2>
+        </section>
+
+        <section>
+            <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
+                 data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
+                <div class="sl-block-style" style="z-index: 10;">
+                    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text"
+                         data-has-custom-html=""
+                         style="z-index: 10; text-align: left; border-width: 1px; font-size: 95%;" dir="ui">
+                        <span style=' font-family: "Courier New"; font-variant: normal; color: black; font-weight: bold; font-style: normal;'>
+                              def addToCats(<br>&nbsp;&nbsp;&nbsp;&nbsp;cats: List[Cat],<br>&nbsp;&nbsp;&nbsp;&nbsp;other: List[Animal]<br>): List[Animal] =<br>
+                                &nbsp;&nbsp;cats ++ other<br>
+                            <br>
+                            scala> addToCats(<br>&nbsp;&nbsp;List(Cat("Lucy")),<br>&nbsp;&nbsp;List(Cat("Kuzya"))<br>)<br>
+                            res13: List[Animal] =<br>&nbsp;&nbsp;List(Cat(Lucy), Cat(Kuzya))<br>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
+                 data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
+                <div class="sl-block-style" style="z-index: 10;">
+                    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text"
+                         data-has-custom-html=""
+                         style="z-index: 10; text-align: left; border-width: 1px; font-size: 95%;" dir="ui">
+                        <span style=' font-family: "Courier New"; font-variant: normal; color: black; font-weight: bold; font-style: normal;'>
+                              def addToCats[T](<br>&nbsp;&nbsp;&nbsp;&nbsp;cats: List[Cat],<br>&nbsp;&nbsp;&nbsp;&nbsp;other: List[T]<br>): List[T] =<br>
+                                &nbsp;&nbsp;cats ++ other<br>
+                            <br>
+                            &lt;console>:15: error: type mismatch;<br>
+                            &nbsp;found&nbsp;&nbsp;&nbsp;: List[Any]<br>
+                            &nbsp;required: List[T]
                         </span>
                     </div>
                 </div>
@@ -784,7 +956,8 @@
             коты, а в качестве результата получаем список такого же типа, что и второй.
         -->
         <section>
-            <h2>Lower Bound</h2>
+            <h4>Lower Bound</h4>
+            <br>
             <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
                  data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
                 <div class="sl-block-style" style="z-index: 10;">
@@ -839,6 +1012,7 @@
         -->
         <section>
             <h2>Type Class<br>(в следующих лекциях)</h2>
+            <br>
             <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
                  data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
                 <div class="sl-block-style" style="z-index: 10;">
@@ -851,6 +1025,10 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section>
+            <h2>Variance</h2>
         </section>
 
         <!--
@@ -868,7 +1046,6 @@
             параметру T.
         -->
         <section>
-            <h2>Variance</h2>
             <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
                  data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
                 <div class="sl-block-style" style="z-index: 10;">
@@ -880,7 +1057,20 @@
                             <br>
                             scala> val box = Box(Cat("Kuzya"))<br>
                             box: Box[Cat] = Box(Cat(Kuzya))<br>
-                            <br>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
+                 data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
+                <div class="sl-block-style" style="z-index: 10;">
+                    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text"
+                         data-has-custom-html=""
+                         style="z-index: 10; text-align: left; border-width: 1px; font-size: 90%;" dir="ui">
+                        <span style=' font-family: "Courier New"; font-variant: normal; color: black; font-weight: bold; font-style: normal;'>
                             scala> getName(box)<br>
                             &lt;console>:19: error: type mismatch;<br>
                             &nbsp;found&nbsp;&nbsp;&nbsp;: Box[Cat]<br>
@@ -898,6 +1088,7 @@
         -->
         <section>
             <h2>Invariance</h2>
+            <br>
             A =:= B => F[A] =:= F[B]<br>
             <br>
             <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
@@ -927,6 +1118,7 @@
         -->
         <section>
             <h2>Covariance</h2>
+            <br>
             A &lt;: B => F[A] &lt;: F[B]<br>
             <br>
             <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
@@ -959,6 +1151,7 @@
         -->
         <section>
             <h2>Contravariance</h2>
+            <br>
             B &lt;: A => F[A] &lt;: F[B]<br>
             <br>
             <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
@@ -1019,7 +1212,7 @@
                             <br>
                             Printer[Animal] - может печатать любых животных<br>
                             <br>
-                            Cat &lt;: Animal => Printer[Animal] &lt;: Printer[Cat]
+                            Cat &lt;: Animal =><br>&nbsp;&nbsp;Printer[Animal] &lt;: Printer[Cat]
                         </span>
                     </div>
                 </div>
@@ -1058,7 +1251,8 @@
             это и не позволяет некорректно задавать вариантность типового параметра.
          -->
         <section>
-            <h2>Posistion variance</h2>
+            <h2>Position variance</h2>
+            <br>
             <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
                  data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
                 <div class="sl-block-style" style="z-index: 10;">
@@ -1121,6 +1315,30 @@
                          data-has-custom-html=""
                          style="z-index: 10; text-align: left; border-width: 1px; font-size: 95%;" dir="ui">
                         <span style=' font-family: "Courier New"; font-variant: normal; color: black; font-weight: bold; font-style: normal;'>
+                            trait Function[?A, ?B] {<br>
+                            &nbsp;&nbsp;def apply(argument: A): B<br>
+                            }<br>
+                            <br>
+                            val name = new Function[Animal, String] {<br>
+                            &nbsp;&nbsp;override def apply(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;argument: Animal<br>&nbsp;&nbsp;): String =<br>&nbsp;&nbsp;&nbsp;&nbsp;argument.name<br>
+                            }<br>
+                            <br>
+                            scala> name(Cat("Kuzya"))<br>
+                            res15: String = Kuzya
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
+                 data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
+                <div class="sl-block-style" style="z-index: 10;">
+                    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text"
+                         data-has-custom-html=""
+                         style="z-index: 10; text-align: left; border-width: 1px; font-size: 95%;" dir="ui">
+                        <span style=' font-family: "Courier New"; font-variant: normal; color: black; font-weight: bold; font-style: normal;'>
                             trait Function[-A, +B] {<br>
                             &nbsp;&nbsp;def apply(argument: A): B<br>
                             }
@@ -1128,6 +1346,73 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section>
+            <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
+                 data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
+                <div class="sl-block-style" style="z-index: 10;">
+                    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text"
+                         data-has-custom-html=""
+                         style="z-index: 10; text-align: left; border-width: 1px; font-size: 95%;" dir="ui">
+                        <span style=' font-family: "Courier New"; font-variant: normal; color: black; font-weight: bold; font-style: normal;'>
+                            trait GetSet[?T] {<br>
+                            &nbsp;&nbsp;def get: T<br>
+                            <br>
+                            &nbsp;&nbsp;def set(value: T): Unit<br>
+                            }
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
+                 data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
+                <div class="sl-block-style" style="z-index: 10;">
+                    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text"
+                         data-has-custom-html=""
+                         style="z-index: 10; text-align: left; border-width: 1px; font-size: 95%;" dir="ui">
+                        <span style=' font-family: "Courier New"; font-variant: normal; color: black; font-weight: bold; font-style: normal;'>
+                            trait GetSet[T] {<br>
+                            &nbsp;&nbsp;def get: T<br>
+                            <br>
+                            &nbsp;&nbsp;def set(value: T): Unit<br>
+                            }
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
+                 data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
+                <div class="sl-block-style" style="z-index: 10;">
+                    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text"
+                         data-has-custom-html=""
+                         style="z-index: 10; text-align: left; border-width: 1px; font-size: 95%;" dir="ui">
+                        <span style=' font-family: "Courier New"; font-variant: normal; color: black; font-weight: bold; font-style: normal;'>
+                            trait Function[-A, +B] {<br>
+                            &nbsp;&nbsp;def apply(argument: A): B<br>
+                            <br>
+                            &nbsp;&nbsp;def andThen[C](<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f: Function[B, C]<br>&nbsp;&nbsp;): Function[A, C] = { argument: A =><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;f.apply(apply(argument))<br>
+                            &nbsp;&nbsp;}<br>
+                            }<br>
+                            <br>
+                            scala> val f = name.andThen(_.length)<br>
+                            scala> f(Cat("Garfield"))<br>
+                            res0: Int = 8
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Kind</h2>
         </section>
 
         <!--
@@ -1141,7 +1426,6 @@
             * -> * -> * - конструктор типа с двумя параметрами
         -->
         <section>
-            <h2>Kind</h2>
             <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
                  data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
                 <div class="sl-block-style" style="z-index: 10;">
@@ -1162,6 +1446,7 @@
 
         <section>
             <h2>Конкретный тип: *</h2>
+            <br>
             <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
                  data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
                 <div class="sl-block-style" style="z-index: 10;">
@@ -1184,6 +1469,7 @@
 
         <section>
             <h2>Конструктор типа с одним параметром: * -> *</h2>
+            <br>
             <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
                  data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
                 <div class="sl-block-style" style="z-index: 10;">
@@ -1204,6 +1490,7 @@
 
         <section>
             <h2>конструктор типа с двумя параметрами: * -> * -> *</h2>
+            <br>
             <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
                  data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
                 <div class="sl-block-style" style="z-index: 10;">
@@ -1225,6 +1512,7 @@
         -->
         <section>
             <h2>(* -> *) -> *</h2>
+            <br>
             ???
         </section>
 
@@ -1238,6 +1526,7 @@
         -->
         <section>
             <h2>Higher Kinds</h2>
+            <br>
             (* -> *) -> * (конструктор типа, который принимает в качестве аргумента другой конструктор типа)<br>
             <br>
             Флаг компилятора: &nbsp;-language:higherKinds<br>
@@ -1249,7 +1538,7 @@
                          data-has-custom-html=""
                          style="z-index: 10; text-align: left; border-width: 1px; font-size: 95%;" dir="ui">
                         <span style=' font-family: "Courier New"; font-variant: normal; color: black; font-weight: bold; font-style: normal;'>
-                            case class HigherKindedBox[A[_]](<br>&nbsp;&nbsp;&nbsp;&nbsp;value: A[Int]<br>)<br>
+                            case class HigherKindedBox[T[_]](<br>&nbsp;&nbsp;&nbsp;&nbsp;value: T[Int]<br>)<br>
                         </span>
                     </div>
                 </div>
@@ -1334,7 +1623,8 @@
                             &lt;console>:16: error: ...<br>
                             argument expression's type is not compatible with formal parameter type;<br>
                             <br>
-                            Box2[String, Int] = T[Int],<br>где T = Box2[String, *]
+                            T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= Box2[String, *]<br>
+                            T[Int] = Box2[String, Int]
                         </span>
                     </div>
                 </div>
