@@ -1,4 +1,5 @@
 package homework_3
+import scala.collection.generic.GenericCompanion
 
 object Exercises {
 
@@ -62,8 +63,25 @@ object Exercises {
      * Реализуйте на основе нее 3 варианта суммирования 2х чисел, отличающиеся способом передачи этих 2х чисел в функцию sumIntegers.
      * Как минимум одна из реализаций должна использовать тип данных (класс) написанный вами самостоятельно.
      */ 
-    def sum1(x: Int, y: Int): Int = sumIntegers(???)
-    def sum2(x: Int, y: Int): Int = sumIntegers(???)
-    def sum3(x: Int, y: Int): Int = sumIntegers(???)
+    def sum1(x: Int, y: Int): Int = sumIntegers(Seq(x, y))
+    def sum2(x: Int, y: Int): Int = sumIntegers(new MyCollection(x, y))
+    def sum3(x: Int, y: Int): Int = sumIntegers(new Point(x, y))
 
+    class MyCollection(val items: Int*) extends Iterable[Int] {
+        override def iterator: Iterator[Int] = items.iterator
+    }
+
+    class Point(val x: Int, val y: Int) extends Iterable[Int] {
+        override def iterator: Iterator[Int] = new PointIterator
+
+        class PointIterator extends Iterator[Int] {
+            var currentPoint = 0
+
+            override def hasNext: Boolean = currentPoint < 2
+            override def next(): Int = {
+                currentPoint += 1
+                if (currentPoint == 1) x else y
+            }
+        }
+    }
 }
