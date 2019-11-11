@@ -18,14 +18,16 @@ object Exercises {
         case _ => x.toString
     }
 
-    def prettyBooleanFormatter2(x: Any): String = {
-        if (x.isInstanceOf[Boolean]) if (x==true) "правда" else "ложь"
-        else x.toString
+    def prettyBooleanFormatter2(x: Any): String = x match {
+        case _ if x.isInstanceOf[Boolean] && x == true => "правда"
+        case _ if x.isInstanceOf[Boolean] && x == false => "ложь"
+        case _ => x.toString
     }
 
-    def prettyBooleanFormatter3(x: Any): String = {
-        if (x.getClass().getSimpleName() == "Boolean") if (x==true) "правда" else "ложь"
-        else x.toString
+    def prettyBooleanFormatter3(x: Any): String = x match {
+        case _ if x.getClass().getSimpleName() == "Boolean" && x == true => "правда"
+        case _ if x.getClass().getSimpleName() == "Boolean" && x == false => "ложь"
+        case _ => x.toString
     }
 
 
@@ -63,6 +65,6 @@ object Exercises {
         val t = Seq[Int](this.x, this.y)
     }
     def sum1(x: Int, y: Int): Int = sumIntegers(Iterable[Int](x, y))
-    def sum2(x: Int, y: Int): Int = sumIntegers(x :: y :: Nil)
+    def sum2(x: Int, y: Int): Int = sumIntegers(x :: y:: Nil)
     def sum3(x: Int, y: Int): Int = sumIntegers(new Compare(x,y).t)
 }
