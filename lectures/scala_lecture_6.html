@@ -618,7 +618,8 @@
         </section>
 
         <section>
-            Написать функцию swap, которая принимает пару (Box2) и возвращает ее с переставленными местами элементами<br>
+            Написать функцию swap, которая принимает пару (Box2) и возвращает ее с переставленными местами
+            элементами<br>
             <br>
             ???
         </section>
@@ -667,7 +668,8 @@
         </section>
 
         <section>
-            Написать метод класса Box - map, который принимает функцию и возвращает новый Box с результатом применения этой функции к хранящемуся в старом Box значению<br>
+            Написать метод класса Box - map, который принимает функцию и возвращает новый Box с результатом применения
+            этой функции к хранящемуся в старом Box значению<br>
             <br>
             ???
         </section>
@@ -1020,7 +1022,24 @@
                          data-has-custom-html=""
                          style="z-index: 10; text-align: left; border-width: 1px; font-size: 95%;" dir="ui">
                         <span style=' font-family: "Courier New"; font-variant: normal; color: black; font-weight: bold; font-style: normal;'>
-                              def someFunction[T: TypeClass] = ...
+                              def func[T: TypeClass] = ...
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Несколько ограничений одновременно</h2>
+            <br>
+            <div class="sl-block" data-block-type="text" style="height: auto; width: 914px; left: 23px; top: 239px;"
+                 data-block-id="881b21bf7e3dbcdcf0e6d8b768583429">
+                <div class="sl-block-style" style="z-index: 10;">
+                    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text"
+                         data-has-custom-html=""
+                         style="z-index: 10; text-align: left; border-width: 1px; font-size: 95%;" dir="ui">
+                        <span style=' font-family: "Courier New"; font-variant: normal; color: black; font-weight: bold; font-style: normal;'>
+                              def func[T >: Cat &lt;: Animal with CanMove: Decoder: Encoder] = ...
                         </span>
                     </div>
                 </div>
