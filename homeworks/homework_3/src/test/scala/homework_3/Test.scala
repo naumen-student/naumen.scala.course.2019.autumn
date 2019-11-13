@@ -30,37 +30,37 @@ object Test extends TestSuite{
         'test_max1 - {
             assert(Exercises.max1(Seq(22, 25)) == 25)
             assert(Exercises.max1(Seq()) == -1)
-            assert(Exercises.max1(Seq(25, 28, -30)) == 28)
+            assert(Exercises.max1(Seq(25, 67, -30)) == 67)
         }
 
         'test_max2 - {
             assert(Exercises.max2(Seq(22, 25)) == Seq(25))
             assert(Exercises.max2(Seq()) == Seq())
-            assert(Exercises.max2(Seq(25, 28, -30)) == Seq(28))
+            assert(Exercises.max2(Seq(25, 67, -30)) == Seq(67))
         }
 
         'test_max3 - {
             assert(Exercises.max3(Seq(22, 25)).contains(25))
             assert(Exercises.max3(Seq()).isEmpty)
-            assert(Exercises.max3(Seq(25, 28, -30)).contains(28))
+            assert(Exercises.max3(Seq(25, 67, -30)).contains(67))
         }
 
         'test_sum1 - {
-            assert(Exercises.sum1(10, 20) == 30)
-            assert(Exercises.sum1(2, 2) == 4)
-            assert(Exercises.sum1(50100, 19320) == 69420)
+            assert(Exercises.sum1(33, 54) == 87)
+            assert(Exercises.sum1(7, 7) == 14)
+            assert(Exercises.sum1(10003, 29000) == 39003)
         }
 
         'test_sum2 - {
-            assert(Exercises.sum2(10, 20) == 30)
-            assert(Exercises.sum2(2, 2) == 4)
-            assert(Exercises.sum2(50100, 19320) == 69420)
+            assert(Exercises.sum2(33, 54) == 87)
+            assert(Exercises.sum2(7, 7) == 14)
+            assert(Exercises.sum2(10003, 29000) == 39003)
         }
 
         'test_sum3 - {
-            assert(Exercises.sum3(10, 20) == 30)
-            assert(Exercises.sum3(2, 2) == 4)
-            assert(Exercises.sum3(50100, 19320) == 69420)
+            assert(Exercises.sum3(33, 54) == 87)
+            assert(Exercises.sum3(7, 7) == 14)
+            assert(Exercises.sum3(10003, 29000) == 39003)
         }
     }
 }
