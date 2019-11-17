@@ -1,19 +1,31 @@
-# Чистый код
+# Scala collection
 ---
-## Что такое чистый код
+## Коллекции
+
+* списки
+* множества
+* наборы
+* массивы
+* вектора
+* Option
+
+
+
 ---
-### Списи. List
+### Списки. List
 
  * однородны
-    ** List[String] не может содержать элементы Int
+   * List[String] не может содержать элементы Int
  * ковариантны
-    ** если T подтип S, то и List[T] подтип List[S]
+   * если T подтип S, то и List[T] подтип List[S]
     
     
     
 ---
-### List. Создание
+### List. Создание 1
 ```scala 
+val list0 = List()
+
 val list1 = List(1,2,3)
 
 val list2 = List.range(1,5)
@@ -26,13 +38,16 @@ val list2 = List.tabulate
 
 
 ---
-### List. Создание
+### List. Создание 2
 
 ```scala
 val list = 3 :: 2 :: 1 :: Nil
 ```
-```shell script
-
+```scala
+val d = Nil
+val c = 3 :: d
+val b = 2 :: c
+val a = 1 :: b
 ```
 
 
@@ -100,6 +115,7 @@ isEmpty
 ### sortWith, ~~sorted~~ 
 
 
+
 ---
 ### Чего же есть другого?
 
@@ -160,3 +176,55 @@ while (it.hasNext)
 
 ---
 ### mutable immutable
+
+
+
+---
+
+### сортируем пузырьком
+
+```
+ ЦИКЛ ДЛЯ J=1 ДО N-1 ШАГ 1
+   F=0 
+   ЦИКЛ ДЛЯ I=1 ДО N-J-1 ШАГ 1 
+     ЕСЛИ A[I] > A[I+1] ТО ОБМЕН A[I],A[I+1]:F=1
+   СЛЕДУЮЩЕЕ I  
+   ЕСЛИ F=0 ТО ВЫХОД ИЗ ЦИКЛА
+ СЛЕДУЮЩЕЕ J         
+```
+
+---
+### Scala в лоб
+
+
+```scala
+def bubbleSort(arr:Array[Int])={
+var temp=0
+for(i<- 1 until arr.length-1 ; j<- 1 until (arr.length-1-i)){
+  if(arr(j-1)>arr(j)) {
+    temp=arr(j-1)
+    arr(j-1)=arr(j)
+    arr(j)=temp 
+   }
+ }
+ arr
+}
+```
+---
+### Scala, огда не убъют
+```scala
+def bubblesort[A <% Ordered[A]](list: List[A]): List[A] = {
+  def sort(as: List[A], bs: List[A]): List[A] =
+    if (as.isEmpty) bs
+    else bubble(as, Nil, bs)
+
+  def bubble(as: List[A], zs: List[A], bs: List[A]): List[A] = as match {
+    case h1 :: h2 :: t =>
+      if (h1 > h2) bubble(h1 :: t, h2 :: zs, bs)
+      else bubble(h2 :: t, h1 :: zs, bs)
+    case h1 :: Nil => sort(zs, h1 :: bs)
+  }
+
+  sort(list, Nil)
+}
+```
