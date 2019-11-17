@@ -24,30 +24,44 @@
 ---
 ### List. Создание 1
 ```scala 
-val list0 = List()
+val list0 = List() 
+//list0: List[Nothing] = List()
 
-val list1 = List(1,2,3)
+val list1 = List(1, 2, 3) 
+//list1: List[Int] = List(1, 2, 3)
 
-val list2 = List.range(1,5)
+val list2 = List.range(1,5) 
+//list2: List[Int] = List(1, 2, 3, 4)
+val list2a = List.range(1, 5, 2) 
+//list2a: List[Int] = List(1, 3)
 
-val list2 = List.fill('lol')(5)
+val list3 = List.fill(5)("lol") 
+//list3: List[String] = List("lol", "lol", "lol", "lol", "lol")
 
-val list2 = List.tabulate
- 
+val list4 = List.tabulate(5)(n => n/2.0) 
+//list4: List[Double] = List(0.0, 0.5, 1.0, 1.5, 2.0)
+
 ```
 
 
 ---
 ### List. Создание 2
 
+- Nil - пустой список
 ```scala
-val list = 3 :: 2 :: 1 :: Nil
+val list = 3 :: 2 :: 1 :: Nil 
+//list: List[Int] = List(3, 2, 1)
 ```
 ```scala
-val d = Nil
-val c = 3 :: d
-val b = 2 :: c
-val a = 1 :: b
+val d = Nil 
+//d: Nil.type = List()
+val c = 3 :: d 
+//c: List[Int] = List(3)
+val b = 2 :: c 
+//b: List[Int] = List(2, 3)
+val a = 1 :: b 
+//a: List[Int] = List(1, 2, 3)
+
 ```
 
 
@@ -112,34 +126,28 @@ isEmpty
 
 
 ---
-### sortWith, ~~sorted~~ 
+### sortWith ~~sorted~~ 
 
+```scala
+val sort1 = List(10, 5, 8, 1, 7).sortWith(_ > _) 
+//res22: List[Int] = List(10, 8, 7, 5, 1)
 
+val sort2 = List("banana", "pear", "apple", "orange").sortWith(_ < _) 
+//sort2: List[String] = List("apple", "banana", "orange", "pear")
 
----
-### Чего же есть другого?
-
-
----
-### Array
-
-
----
-### Set, Map
-
-* Set - множество ункальных значений
-* Map - можество уникальных ключей
+val sort3 = List("banana", "pear", "apple", "orange").sortWith(_.length < _.length) 
+//sort3: List[String] = List("pear", "apple", "banana", "orange")
+```
 
 ---
-### TreeSet, TreeMap
-SortedSet
-
-
-
-SortedMap
+### sorted
+```scala
+val a = List(10, 5, 8, 1, 7).sorted
+//sort4: List[Int] = List(1, 5, 7, 8, 10)
+```
 
 ---
-### не всё умеет Sorted*
+### не всё умеет sorted*
 
 ```scala
 case class Cat (name: String, age: Int)
@@ -164,6 +172,28 @@ case class Cat (name: String, age: String) extends Ordered [Cat] {
 ```
 
 ---
+### Чего же есть другого?
+
+
+---
+### Array
+
+
+---
+### Set, Map
+
+* Set - множество ункальных значений
+* Map - можество уникальных ключей
+
+---
+### TreeSet, TreeMap
+SortedSet
+
+
+
+SortedMap
+
+---
 ### iterator
 
 просто для понимания, что это основной тип
@@ -181,6 +211,68 @@ while (it.hasNext)
 
 ---
 
+### Равенство
+* Set
+* Map
+* Seq
+
+
+
+### Равенство
+```
+Set(1, 2, 3) != List(1, 2, 3)
+
+Set(1,3,2) == Set(1,2,3)
+
+```
+
+---
+### Равенство
+
+- mutable
+- immutable
+- НЕ-ВА-ЖНО
+
+---
+### Scala <=> Java
+
+
+```
+import collection.JavaConverters._
+// import scala.jdk.CollectionConverters._
+val j1 = java.util.Arrays.asList("hey", "lol")
+j1.asScala
+
+vl s1 = List("one", "dva")
+s1.asJava
+```
+
+
+---
+### Scala <=> Java
+```
+Iterator               <=>     java.util.Iterator
+Iterator               <=>     java.util.Enumeration
+Iterable               <=>     java.lang.Iterable
+Iterable               <=>     java.util.Collection
+mutable.Buffer         <=>     java.util.List
+mutable.Set            <=>     java.util.Set
+mutable.Map            <=>     java.util.Map
+mutable.ConcurrentMap  <=>     java.util.concurrent.ConcurrentMap
+```
+
+
+
+### Scala => Java
+
+```
+Seq           =>    java.util.List
+mutable.Seq   =>    java.util.List
+Set           =>    java.util.Set
+Map           =>    java.util.Map
+```
+
+---
 ### сортируем пузырьком
 
 ```
@@ -198,16 +290,18 @@ while (it.hasNext)
 
 
 ```scala
-def bubbleSort(arr:Array[Int])={
-var temp=0
-for(i<- 1 until arr.length-1 ; j<- 1 until (arr.length-1-i)){
-  if(arr(j-1)>arr(j)) {
-    temp=arr(j-1)
-    arr(j-1)=arr(j)
-    arr(j)=temp 
-   }
- }
- arr
+def bubblesort[A <% Ordered[A]](arr: Array[A]) : Array[A] {
+  
+  for (j <- 1 to arr.length-1) {
+    for (i <- 0 to (arr.length-1-j)) {
+      if (arr(i) > arr(i+1)){
+        var t = arr(i)
+        arr(i) = arr(i+1)
+        arr(i+1) = t
+      }
+    }
+  }
+  arr
 }
 ```
 ---
