@@ -47,12 +47,15 @@ val list4 = List.tabulate(5)(n => n/2.0)
 ---
 ### List. Создание 2
 
-- Nil - пустой список
+Nil - пустой список
 ```scala
+val empty = Nil 
+//empty: Nil.type = List()
+
+
 val list = 3 :: 2 :: 1 :: Nil 
 //list: List[Int] = List(3, 2, 1)
-```
-```scala
+
 val d = Nil 
 //d: Nil.type = List()
 val c = 3 :: d 
@@ -68,20 +71,53 @@ val a = 1 :: b
 ---
 ### List. Шаблоны
 ```scala
-val List(a, b, c) = List(1, 2, 3)
-val a :: b :: c = List(1, 2, 3)
+val List(a, b, c) = List(1, 2, 3) 
+//a: Int = 1
+//b: Int = 2
+//c: Int = 3
+
+val x :: y :: z = List(1, 2, 3) 
+//x: Int = 1
+//y: Int = 2
+//z: List[Int] = List(3)
+```
+
+
+---
+### List. Шаблоны
+```scala
+val List(a, b, c) = List(1, 2, 3, 4) 
+//scala.MatchError: List(1, 2, 3, 4) (of class 
+//  scala.collection.immutable.$colon$colon)
+//  ammonite.$sess.cmd33$.<clinit>(cmd33.sc:1)
+
+val x :: y :: z = List(1, 2, 3, 4, 5) 
+//x: Int = 1
+//y: Int = 2
+//z: List[Int] = List(3, 4, 5)
+
+val x :: y :: z = List(1, 2) 
+//x: Int = 1
+//y: Int = 2
+//z: List[Int] = List()
+
 ```
 
 
 ---
 ### Методы. head, tail, isEmpty
 ```scala
-head
+val head = List(1, 2, 3, 4, 5).head 
+//head: Int = 1
 
-tail
+val tail = List(1, 2, 3, 4, 5).tail 
+//tail: List[Int] = List(2, 3, 4, 5)
 
-isEmpty
+val isEmpty = List(1, 2, 3, 4, 5).isEmpty 
+//isEmpty: Boolean = false
 
+val isEmptyNil = Nil.isEmpty 
+//isEmptyNil: Boolean = true
 ```
 
 ---
@@ -94,8 +130,17 @@ isEmpty
  Методы, которе не принимают никаких параметоров
 
 ---
-### map, flatMap, foreach
+### map, foreach
+```scala
+val abc = List(97 ,98, 99).map(_.toChar) 
+//abc: List[Char] = List('a', 'b', 'c')
 
+abc.foreach(println)
+//a
+//b
+//c
+
+```
 
 
 ---
@@ -126,7 +171,7 @@ isEmpty
 
 
 ---
-### sortWith ~~sorted~~ 
+### sortWith
 
 ```scala
 val sort1 = List(10, 5, 8, 1, 7).sortWith(_ > _) 
@@ -156,7 +201,7 @@ val s = collection.SortedSet(Cat("Мурзик", 2), Cat("Murka", 1))
 ```
 
 ---
-### *sorted по максимому
+### sorted по максимому
 
 ```scala
 case class Cat (name: String, age: String) extends Ordered [Cat] {
@@ -166,7 +211,7 @@ case class Cat (name: String, age: String) extends Ordered [Cat] {
         else if (this.name > that.name)
             1
         else 
-           −1
+            0−1 //ammonite ломается
     }
 }
 ```
@@ -235,16 +280,18 @@ Set(1,3,2) == Set(1,2,3)
 
 ---
 ### Scala <=> Java
-
-
-```
+```scala
 import collection.JavaConverters._
-// import scala.jdk.CollectionConverters._
-val j1 = java.util.Arrays.asList("hey", "lol")
-j1.asScala
+// import scala.jdk.CollectionConverters._ //2.13.0
 
-vl s1 = List("one", "dva")
-s1.asJava
+val j1 = java.util.Arrays.asList("hey", "lol")
+val j1s = j1.asScala
+//j1s: collection.mutable.Buffer[String] = Buffer("hey", "lol")
+
+val s1 = Seq("one", "dva")
+val s1j = s1.asJava
+//java.util.List[String] = SeqWrapper(List("one", "dva"))
+
 ```
 
 
