@@ -122,14 +122,225 @@ val isEmptyNil = Nil.isEmpty
 
 ---
 ### List. много других методов
- Scala предоставляет множество методов для работы с коллекциями
+* Scala предоставляет множество методов для работы с коллекциями
+* Начнем с методов первого порядка
+
+---
+### ::: Объединение списков
+
+```scala
+val `2list1` = List(1, 2) ::: List(3, 4, 5) 
+//`2list1`: List[Int] = List(1, 2, 3, 4, 5)
+
+val `2list2` = List(1, 2) ::: List(3, 4, 5) 
+//`2list2`: List[Int] = List(1, 2, 3, 4, 5)
+```
+
+---
+### length, indices
+
+```scala
+val len1 = List(1, 2, 3).length
+//len1: Int = 3
+
+val len2 = List().length 
+//len2: Int = 0
+
+val len3 = Nil.length 
+//len3: Int = 0
+
+val idx1 = List(1, 2, 3).indices 
+//idx1: Range = Range(0, 1, 2)
+
+val idx2 = Nil.indices 
+//idx2: Range = Range()
+```
+
+
+
+---
+###  init, last. Конец и начало
+
+```scala
+val abcde = List('a', 'b', 'c', 'd', 'e') 
+//abcde: List[Char] = List('a', 'b', 'c', 'd', 'e')
+
+val last1 = abcde.last 
+//last1: Char = 'e'
+
+val init1 = abcde.init 
+//init1: List[Char] = List('a', 'b', 'c', 'd')
+
+List().init 
+//java.lang.UnsupportedOperationException: init of empty list
+//  scala.collection.immutable.Nil$.init(List.scala:596)
+//  ...
+
+List().last 
+//java.util.NoSuchElementException: last of empty list
+//  scala.collection.immutable.Nil$.last(List.scala:595)
+//  ...
+```
+
+
+---
+### reverse
+
+
+```scala
+val edcba = List("e", "d", "c", "b", "a") 
+//edcba: List[String] = List("e", "d", "c", "b", "a")
+
+val reverse1 = edcba.reverse 
+//reverse1: List[String] = List("a", "b", "c", "d", "e")
+```
+
+
+---
+### reverse для внимательных
+
+```
+lst.reverse.init <=> lst.tail.reverse
+lst.reverse.tail <=> lst.init.reverse
+lst.reverse.head <=> lst.last
+lst.reverse.last <=> lst.head
+```
+
+
+---
+### drop, take и splitAt
+
+```scala
+val teke1 = abcde.take(2) 
+//teke1: List[Char] = List('a', 'b')
+
+val drop1 = abcde.drop(2) 
+//drop1: List[Char] = List('c', 'd', 'e')
+
+val splitat1 = abcde.splitAt(2) 
+//splitat1: (List[Char], List[Char]) = (List('a', 'b'), List('c', 'd', 'e'))
+
+```
+
+
+---
+###  flatten
+
+```scala
+val flatten1 = List(List(1, 2), List(3), List(), List(4,5)).flatten 
+//flatten1: List[Int] = List(1, 2, 3, 4, 5)
+
+val flatten2 = List(1, 2, 3).flatten 
+//cmd22.sc:1: No implicit view available from Int => scala.collection.IterableOnce[B].
+//val flatten2 = List(1, 2, 3).flatten                                                                                                                  
+//                             ^
+//Compilation Failed
+
+val flatten3 = List(List(List(), List(1)), List(List(2))).flatten 
+//flatten3: List[List[Int]] = List(List(), List(1), List(2))
+```
+
+
+---
+### zip и unzip
+
+```scala
+val abcde = List('a', 'b', 'c', 'd', 'e') 
+
+val zip1 = abcde.indices.zip(abcde) 
+//zip1: IndexedSeq[(Int, Char)] = Vector((0, 'a'), (1, 'b'), (2, 'c'), (3, 'd'), (4, 'e'))
+
+val zip2 = abcde.zip(List(1, 2, 3)) 
+//zip2: List[(Char, Int)] = List(('a', 1), ('b', 2), ('c', 3))
+
+val zipIdx = abcde.zipWithIndex 
+/zipIdx: List[(Char, Int)] = List(('a', 0), ('b', 1), ('c', 2), ('d', 3), ('e', 4))
+
+val unzip = zip2.unzip 
+//unzip: (List[Char], List[Int]) = (List('a', 'b', 'c'), List(1, 2, 3))
+```
+
+
+---
+### toString
+
+```scala
+val abcde = List('a', 'b', 'c', 'd', 'e') 
+val abcStr = abcde.toString 
+//abcStr: String = "List(a, b, c, d, e)"
+
+val list = List(1, 2, 3, 4, 5)
+val lstStr = list.toString 
+lstStr: String = "List(1, 2, 3, 4, 5)"
+
+```
+
+
+---
+### mkSting
+
+```scala
+val str1 = abcde.mkString ("[", ",", "]") 
+//str1: String = "[a,b,c,d,e]"
+
+val str2 = abcde.mkString ("", ",", "") 
+//str2: String = "a,b,c,d,e"
+
+val str3 = abcde.mkString (",") 
+//str3: String = "a,b,c,d,e"
+
+val str4 = abcde.mkString (",", "]") 
+//cmd37.sc:1: overloaded method value mkString with alternatives:
+//val str4 = abcde.mkString (",", "]")
+//                 ^
+//Compilation Failed
+```
 
 
 ---
 ### List. методы высшего порядка
- Методы, которе не принимают никаких параметоров
+ 
+ У многих операций над списками схожая структура. Раз за разом
+используются несколько схем. К подобным примерам можно
+отнести какое-либо преобразование каждого элемента списка,
+проверку того, что свойство соблюдается для всех элементов
+списка, извлечение из списка элементов, удовлетворяющих каким-
+то критериям, или объединение элементов списка с
+использованием какого-нибудь оператора. В Java подобные схемы
+будут, как правило, созданы идиоматическими комбинациями
+циклов for или while. В Scala они могут быть выражены короче и
+непосредственнее за счет использования операторов высшего
+порядка103, которые реализуются в виде методов, определенных в
+классе List. Этим операторам высшего порядка и посвящен
+данный раздел.
+
+ 
+---
+### 
+
+```scala
+
+
+```
+
 
 ---
+### 
+
+```scala
+
+
+```
+
+
+---
+### 
+
+
+
+
+---
+
 ### map, foreach
 ```scala
 val abc = List(97 ,98, 99).map(_.toChar) 
@@ -146,28 +357,65 @@ abc.foreach(println)
 ---
 ### filter, partition
 
+```scala
+val filter1 = List(1, 2, 3, 4, 5).filter(_ % 2 == 0) 
+//filter1: List[Int] = List(2, 4)
 
+val filter2 = List(1, 2, 3, 4, 5).filter(_ < 0)  
+/filter2: List[Int] = List()
+
+val partition1 = List(1, 2, 3, 4, 5).partition(_ % 2 == 0) 
+//partition1: (List[Int], List[Int]) = (List(2, 4), List(1, 3, 5))
+
+val partition2 = List(1, 2, 3, 4, 5).partition(_ < 0) 
+//partition2: (List[Int], List[Int]) = (List(), List(1, 2, 3, 4, 5))
+
+```
 
 ---
 ### find
 
+```scala
+val find1 = List(1, 2, 3, 4, 5).find(_ % 2 == 0) 
+//find1: Option[Int] = Some(2)
 
+val find2 = List(1, 2, 3, 4, 5).find(_ <= 0) 
+//find2: Option[Int] = None
+```
 
 ---
 ### takeWhile, dropWhile
 
+```scala
+
+
+```
 
 
 ---
 ### span
 
+```scala
+
+
+```
 
 ---
 ### forAll, exist, contains
 
+```scala
+
+
+```
+
 
 ---
 ### :\ /:
+
+```scala
+
+
+```
 
 
 ---
@@ -186,6 +434,7 @@ val sort3 = List("banana", "pear", "apple", "orange").sortWith(_.length < _.leng
 
 ---
 ### sorted
+
 ```scala
 val a = List(10, 5, 8, 1, 7).sorted
 //sort4: List[Int] = List(1, 5, 7, 8, 10)
@@ -264,7 +513,7 @@ while (it.hasNext)
 
 
 ### Равенство
-```
+```scala
 Set(1, 2, 3) != List(1, 2, 3)
 
 Set(1,3,2) == Set(1,2,3)
@@ -337,7 +586,7 @@ Map           =>    java.util.Map
 
 
 ```scala
-def bubblesort[A <% Ordered[A]](arr: Array[A]) : Array[A] {
+def bubblesort[A <: Ordered[A]](arr: Array[A]) : Array[A] {
   
   for (j <- 1 to arr.length-1) {
     for (i <- 0 to (arr.length-1-j)) {
@@ -351,10 +600,14 @@ def bubblesort[A <% Ordered[A]](arr: Array[A]) : Array[A] {
   arr
 }
 ```
+
+
+
 ---
 ### Scala, огда не убъют
+
 ```scala
-def bubblesort[A <% Ordered[A]](list: List[A]): List[A] = {
+def bubblesort[A <: Ordered[A]](list: List[A]): List[A] = {
   def sort(as: List[A], bs: List[A]): List[A] =
     if (as.isEmpty) bs
     else bubble(as, Nil, bs)
