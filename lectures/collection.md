@@ -471,22 +471,77 @@ case class Cat (name: String, age: String) extends Ordered [Cat] {
 
 ---
 ### Array
+```scala
+val arr1 = new Array[Int](5) 
+//arr1: Array[Int] = Array(0, 0, 0, 0, 0)
 
+val arr2 = Array(5, 4, 3, 2, 1) 
+//arr2: Array[Int] = Array(5, 4, 3, 2, 1)
+
+val arr3 = Array(5) 
+arr3: Array[Int] = Array(5)
+
+```
 
 ---
 ### Set, Map
 
 * Set - множество ункальных значений
-* Map - можество уникальных ключей
+* Map - можество уникальных отображений
+
+
+---
+### Set
+
+```scala
+val str = "Беги Лола, беги!" 
+//str: String = "Беги Лола, беги!"
+
+val split = str.toLowerCase.split("[ !,]+") 
+//split: Array[String] = Array("беги", "лола", "беги")
+
+var set = collection.mutable.Set.empty[String] 
+//set: collection.mutable.Set[String] = HashSet()
+
+for (word <- split)
+    set += word 
+//set: collection.mutable.Set[String] = HashSet("беги", "лола")
+```
+
+
+---
+### Map
+
+```scala
+val map1 = Map("one" -> 1, "two" -> 2) 
+//map1: Map[String, Int] = Map("one" -> 1, "two" -> 2)
+
+val map2 = Map("one" -> 1, "two" -> 3, "three" -> 3, "two" -> 2) 
+//map2: Map[String, Int] = Map("one" -> 1, "two" -> 2, "three" -> 3)
+
+
+```
+
 
 ---
 ### TreeSet, TreeMap
 SortedSet
+```scala
+import scala.collection.immutable.TreeSet
+val tSet1 = TreeSet(9, 4, 5, 3, 2, 5, 8) 
+//tSet1: TreeSet[Int] = TreeSet(2, 3, 4, 5, 8, 9)
 
+val tSet2 = TreeSet('h', 'e', 'l', 'l', 'o') 
+//tSet2: TreeSet[Char] = TreeSet('e', 'h', 'l', 'o')
+```
 
 
 SortedMap
-
+```scala
+import scala.collection.immutable.TreeMap
+var tMap = TreeMap(3 -> 'c', 1 -> 'b', 4 -> 'a') 
+//tMap: TreeMap[Int, Char] = TreeMap(1 -> 'b', 3 -> 'c', 4 -> 'a')
+```
 ---
 ### iterator
 
@@ -500,11 +555,42 @@ while (it.hasNext)
 
 ---
 ### mutable immutable
+* scala.collection
+  - immutable
+  - mutable
+  - generic
+  - concurrent
 
+  
+```scala
+scala.collection.immutable.List 
+scala.List                     
+List                                                
+```
 
 
 ---
+### 
 
+<center>
+![collection](img/collection/collections-diagram.svg)
+</center>
+
+---
+### 
+
+<center>
+![immutable](img/collection/collections-immutable-diagram.svg)
+</center>
+
+---
+### span
+
+<center>
+![mutable](img/collection/collections-mutable-diagram.svg)
+</center>
+
+---
 ### Равенство
 * Set
 * Map
@@ -546,7 +632,7 @@ val s1j = s1.asJava
 
 ---
 ### Scala <=> Java
-```
+```sh
 Iterator               <=>     java.util.Iterator
 Iterator               <=>     java.util.Enumeration
 Iterable               <=>     java.lang.Iterable
@@ -561,7 +647,7 @@ mutable.ConcurrentMap  <=>     java.util.concurrent.ConcurrentMap
 
 ### Scala => Java
 
-```
+```sh
 Seq           =>    java.util.List
 mutable.Seq   =>    java.util.List
 Set           =>    java.util.Set
@@ -571,7 +657,7 @@ Map           =>    java.util.Map
 ---
 ### сортируем пузырьком
 
-```
+```sh
  ЦИКЛ ДЛЯ J=1 ДО N-1 ШАГ 1
    F=0 
    ЦИКЛ ДЛЯ I=1 ДО N-J-1 ШАГ 1 
@@ -604,7 +690,7 @@ def bubblesort[A <: Ordered[A]](arr: Array[A]) : Array[A] {
 
 
 ---
-### Scala, огда не убъют
+### Scala, когда не убъют
 
 ```scala
 def bubblesort[A <: Ordered[A]](list: List[A]): List[A] = {
