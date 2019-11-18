@@ -1,1 +1,0 @@
-<script src="https://scastie.scala-lang.org/AleksXatiko/OTFX8IOXTRaqAD3lrtYgyQ.js"></script>
