@@ -1,10 +1,9 @@
-# Scala collection
+﻿# Scala collection
 ---
 ## Коллекции
 
 * списки
 * множества
-* наборы
 * массивы
 * вектора
 * Option
@@ -300,47 +299,9 @@ val str4 = abcde.mkString (",", "]")
 ---
 ### List. методы высшего порядка
  
- У многих операций над списками схожая структура. Раз за разом
-используются несколько схем. К подобным примерам можно
-отнести какое-либо преобразование каждого элемента списка,
-проверку того, что свойство соблюдается для всех элементов
-списка, извлечение из списка элементов, удовлетворяющих каким-
-то критериям, или объединение элементов списка с
-использованием какого-нибудь оператора. В Java подобные схемы
-будут, как правило, созданы идиоматическими комбинациями
-циклов for или while. В Scala они могут быть выражены короче и
-непосредственнее за счет использования операторов высшего
-порядка103, которые реализуются в виде методов, определенных в
-классе List. Этим операторам высшего порядка и посвящен
-данный раздел.
 
  
 ---
-### 
-
-```scala
-
-
-```
-
-
----
-### 
-
-```scala
-
-
-```
-
-
----
-### 
-
-
-
-
----
-
 ### map, foreach
 ```scala
 val abc = List(97 ,98, 99).map(_.toChar) 
@@ -387,7 +348,11 @@ val find2 = List(1, 2, 3, 4, 5).find(_ <= 0)
 ### takeWhile, dropWhile
 
 ```scala
+val takeWhile1 = List(1, 2, 3, -4, 5).takeWhile(_ > 0)  
+//takeWhile1: List[Int] = List(1, 2, 3)
 
+val dropWhile1 = List("banana", "pear", "apple", "orange"). dropWhile(_.startsWith("b")) 
+//dropWhile2: List[String] = List("pear", "apple", "orange")
 
 ```
 
@@ -396,26 +361,78 @@ val find2 = List(1, 2, 3, 4, 5).find(_ <= 0)
 ### span
 
 ```scala
+val lst = List(1, 2, 3, -4, 5)
+val span1 = lst.span(_ > 0) 
+//span1: (List[Int], List[Int]) = (List(1, 2, 3), List(-4, 5))
 
-
+val span2 = (lst.takeWhile(_ > 0), lst.dropWhile(_ > 0)  ) 
+//span2: (List[Int], List[Int]) = (List(1, 2, 3), List(-4, 5))
 ```
 
 ---
-### forAll, exist, contains
+### forall, exist, contains
 
 ```scala
+val forall1 = List(1, 2, 3).forall( _ > 0) 
+//forall1: Boolean = true
 
+val forall2 = List(1, 2,-3).forall( _ > 0) 
+//forall2: Boolean = false
+
+val exists1 = List(1, 2,-3).forall( _ < 0) 
+//exists1: Boolean = false
+
+val exists2 = List(1, 2, 3).forall( _ < 0) 
+//exists2: Boolean = false
+
+val contains1 = List(1, 2, 3).contains(3) 
+//contains1: Boolean = true
+
+val contains2 = List(1, 2, 3).contains(0) 
+//contains2: Boolean = false
 
 ```
 
 
 ---
-### :\ /:
+### foldLeft fildRight
 
 ```scala
+val num = List(1, 2, 3)
+val foldLeft1 = num.foldLeft(0)(_ + _) 
+//foldLeft1: Int = 6
 
+val foldLeft2 = num.foldLeft(-6)(_ + _) 
+//foldLeft2: Int = 0
+
+val foldRight1 = num.foldRight(0)(_ + _) 
+//foldRight1: Int = 6
+
+val foldRight2 = num.foldRight(-6)(_ + _) 
+//foldRight2: Int = 0
+```
+
+
+---
+### foldLeft fildRight. нагляднее
+
+```scala
+val lst = List("a", "b", "c", "d")
+
+val foldLeft1 = lst.foldLeft("z")(_ + _)  
+//foldLeft1: String = "zabcd"
+
+val foldRight1 = lst.foldRight("z")(_ + _)  
+//foldRight1: String = "abcdz"
+
+val foldLeft2 = lst.tail.foldLeft(lst.head)(_ + " " + _) 
+//foldLeft2: String = "a b c d"
+
+val foldRight2 = lst.tail.foldRight(lst.head)(_ + " " + _) 
+//foldRight2: String = "b c d a"
 
 ```
+
 
 
 ---
@@ -486,8 +503,8 @@ arr3: Array[Int] = Array(5)
 ---
 ### Set, Map
 
-* Set - множество ункальных значений
-* Map - можество уникальных отображений
+* Set - множество уникальных значений
+* Map - множество уникальных отображений
 
 
 ---
@@ -545,11 +562,14 @@ var tMap = TreeMap(3 -> 'c', 1 -> 'b', 4 -> 'a')
 ---
 ### iterator
 
-просто для понимания, что это основной тип
 ```scala
 val it = Iterator("су", "е", "фа")
 while (it.hasNext)
   println(it.next())
+//су
+//е
+//фа
+
 ```
 
 
@@ -644,7 +664,7 @@ mutable.ConcurrentMap  <=>     java.util.concurrent.ConcurrentMap
 ```
 
 
-
+---
 ### Scala => Java
 
 ```sh
@@ -672,14 +692,14 @@ Map           =>    java.util.Map
 
 
 ```scala
-def bubblesort[A <: Ordered[A]](arr: Array[A]) : Array[A] {
-  
-  for (j <- 1 to arr.length-1) {
-    for (i <- 0 to (arr.length-1-j)) {
-      if (arr(i) > arr(i+1)){
+def bubblesort[A](arr: Array[A])(implicit ord: Ordering[A]): Array[A] = {
+  import ord._
+  for (j <- 1 to arr.length - 1) {
+    for (i <- 0 to (arr.length - 1 - j)) {
+      if (arr(i) > arr(i + 1)) {
         var t = arr(i)
-        arr(i) = arr(i+1)
-        arr(i+1) = t
+        arr(i) = arr(i + 1)
+        arr(i + 1) = t
       }
     }
   }
@@ -693,7 +713,8 @@ def bubblesort[A <: Ordered[A]](arr: Array[A]) : Array[A] {
 ### Scala, когда не убъют
 
 ```scala
-def bubblesort[A <: Ordered[A]](list: List[A]): List[A] = {
+def bubblesort[A](list: List[A])(implicit ord: Ordering[A]): List[A] = {
+  import ord._
   def sort(as: List[A], bs: List[A]): List[A] =
     if (as.isEmpty) bs
     else bubble(as, Nil, bs)
