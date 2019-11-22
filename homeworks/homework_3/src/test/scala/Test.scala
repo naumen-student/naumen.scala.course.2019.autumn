@@ -57,4 +57,4 @@ object Test extends TestSuite{
       assert(Exercises.sum1(15, 15) == 30)
     }
   }
-}
+} 
