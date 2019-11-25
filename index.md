@@ -12,6 +12,7 @@ layout: default
 * Лекция 5. [Параметрический полиморфизм в Scala](lectures/scala_lecture_5.html)
 * Лекция 6. [Collection](lectures/scala_lecture_6.html)
 
+
 ### Домашние задания
 * [Задание 1](homeworks/homework_1/homework_1.md) [папка в GitHub](https://github.com/naumen-student/naumen.scala.course.2019.autumn/tree/master/homeworks/homework_1)
 * [Задание 2](homeworks/homework_2/homework_2.md) [папка в GitHub](https://github.com/naumen-student/naumen.scala.course.2019.autumn/tree/master/homeworks/homework_2)
