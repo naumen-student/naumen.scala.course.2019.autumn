@@ -1,0 +1,27 @@
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_221).
+Type in expressions for evaluation. Or try :help.
+
+scala> println("Hello Scala! This is _buzzon")
+Hello Scala! This is _buzzon
+
+scala> println("Guten tag Scala! This is _buzzon")
+Guten tag Scala! This is _buzzon
+
+scala> println("Hola! This is _buzzon")
+Hola! This is _buzzon
+
+scala> var nickname = "_buzzon"
+nickname: String = _buzzon
+
+scala> println("Hola! This is " + nickname.re)
+reduce             reduceOption        regionMatches   replaceAllLiterally   reverse
+reduceLeft         reduceRight         replace         replaceFirst          reverseIterator
+reduceLeftOption   reduceRightOption   replaceAll      repr                  reverseMap
+
+scala> println("Hola! This is " + nickname.reverse)
+reverse   reverseIterator   reverseMap
+
+scala> println("Hola! This is " + nickname.reverse)
+Hola! This is nozzub_
+
+scala>
