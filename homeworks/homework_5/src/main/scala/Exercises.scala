@@ -11,7 +11,7 @@ object Exercises {
   case class Shelter[+T <: Animal](val animals: List[T]) {
     def +[B >: T <: Animal](newAnimal: B): Shelter[B] = Shelter[B](newAnimal :: animals)
 
-    def ++[B >: T <: Animal](newAnimals: Shelter[B]): Shelter[B] = Shelter[B](newAnimals.animals ++ animals)
+    def ++[B >: T <: Animal](newAnimals: Shelter[B]): Shelter[B] = Shelter[B](newAnimals.animals ::: animals)
 
     def getNames(): List[String] = for (animal <- animals) yield animal.name
 
