@@ -1,0 +1,52 @@
+[0m[[0m[31merror[0m] [0m[0m/home/josephen/Documents/projects/naumen/naumen.scala.course.2019.autumn/homeworks/homework_6/src/test/scala/Test.scala:1:8: not found: object utest[0m
+[0m[[0m[31merror[0m] [0m[0mimport utest._[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/josephen/Documents/projects/naumen/naumen.scala.course.2019.autumn/homeworks/homework_6/src/test/scala/Test.scala:4:21: not found: type TestSuite[0m
+[0m[[0m[31merror[0m] [0m[0mobject Test extends TestSuite{[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/josephen/Documents/projects/naumen/naumen.scala.course.2019.autumn/homeworks/homework_6/src/test/scala/Test.scala:6:15: not found: value Tests[0m
+[0m[[0m[31merror[0m] [0m[0m  val tests = Tests{[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/josephen/Documents/projects/naumen/naumen.scala.course.2019.autumn/homeworks/homework_6/src/test/scala/Test.scala:7:14: value - is not a member of Symbol[0m
+[0m[[0m[31merror[0m] [0m[0m    'reverse - {[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/josephen/Documents/projects/naumen/naumen.scala.course.2019.autumn/homeworks/homework_6/src/test/scala/Test.scala:8:14: not found: value Exercises[0m
+[0m[[0m[31merror[0m] [0m[0m      assert(Exercises.reverse(Seq(1, 2, 3)) == Seq(3, 2, 1))[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/josephen/Documents/projects/naumen/naumen.scala.course.2019.autumn/homeworks/homework_6/src/test/scala/Test.scala:9:14: not found: value Exercises[0m
+[0m[[0m[31merror[0m] [0m[0m      assert(Exercises.reverse(Seq(-1, -2, -3)) == Seq(-3, -2, -1))[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/josephen/Documents/projects/naumen/naumen.scala.course.2019.autumn/homeworks/homework_6/src/test/scala/Test.scala:12:22: value - is not a member of Symbol[0m
+[0m[[0m[31merror[0m] [0m[0m    'fibonacci4Index - {[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/josephen/Documents/projects/naumen/naumen.scala.course.2019.autumn/homeworks/homework_6/src/test/scala/Test.scala:13:14: not found: value Exercises[0m
+[0m[[0m[31merror[0m] [0m[0m      assert(Exercises.fibonacci4Index(2) == 1)[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/josephen/Documents/projects/naumen/naumen.scala.course.2019.autumn/homeworks/homework_6/src/test/scala/Test.scala:14:14: not found: value Exercises[0m
+[0m[[0m[31merror[0m] [0m[0m      assert(Exercises.fibonacci4Index(5) == 5)[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/josephen/Documents/projects/naumen/naumen.scala.course.2019.autumn/homeworks/homework_6/src/test/scala/Test.scala:17:16: value - is not a member of Symbol[0m
+[0m[[0m[31merror[0m] [0m[0m    'fibonacci - {[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/josephen/Documents/projects/naumen/naumen.scala.course.2019.autumn/homeworks/homework_6/src/test/scala/Test.scala:18:14: not found: value Exercises[0m
+[0m[[0m[31merror[0m] [0m[0m      assert(Exercises.fibonacci(2) == Seq(0, 1, 1))[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/josephen/Documents/projects/naumen/naumen.scala.course.2019.autumn/homeworks/homework_6/src/test/scala/Test.scala:19:14: not found: value Exercises[0m
+[0m[[0m[31merror[0m] [0m[0m      assert(Exercises.fibonacci(5) == Seq(0, 1, 1, 2, 3, 5))[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/josephen/Documents/projects/naumen/naumen.scala.course.2019.autumn/homeworks/homework_6/src/test/scala/Test.scala:22:12: value - is not a member of Symbol[0m
+[0m[[0m[31merror[0m] [0m[0m    'morse - {[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/josephen/Documents/projects/naumen/naumen.scala.course.2019.autumn/homeworks/homework_6/src/test/scala/Test.scala:23:14: not found: value Exercises[0m
+[0m[[0m[31merror[0m] [0m[0m      assert(Exercises.morse("SOS") == "... --- ...")[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/josephen/Documents/projects/naumen/naumen.scala.course.2019.autumn/homeworks/homework_6/src/test/scala/Test.scala:24:14: not found: value Exercises[0m
+[0m[[0m[31merror[0m] [0m[0m      assert(Exercises.morse("Hello world!") == ".... . .-.. .-.. ---   .-- --- .-. .-.. -..!")[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/josephen/Documents/projects/naumen/naumen.scala.course.2019.autumn/homeworks/homework_6/src/test/scala/Test.scala:27:18: value - is not a member of Symbol[0m
+[0m[[0m[31merror[0m] [0m[0m    'wordReverse - {[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/josephen/Documents/projects/naumen/naumen.scala.course.2019.autumn/homeworks/homework_6/src/test/scala/Test.scala:28:14: not found: value Exercises[0m
+[0m[[0m[31merror[0m] [0m[0m      assert(Exercises.wordReverse("Зима!.. Крестьянин, торжествуя...") == "Амиз!.. Ниняьтсерк, яувтсежрот...")[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m17 errors found[0m
