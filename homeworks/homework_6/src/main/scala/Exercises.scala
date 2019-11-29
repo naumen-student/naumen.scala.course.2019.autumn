@@ -1,7 +1,14 @@
+import scala.collection.immutable
+
 object Exercises {
 
 
-  def reverse[T](seq: Seq[T]): Seq[T] = ???
+  def reverse[T](seq: Seq[T]): Seq[T] = {
+    var xs: immutable.Seq[T] = immutable.Nil
+    val it = iterator
+    while (it.hasNext) xs = it.next() :: xs
+    xs
+  }
 
   /**
    * https://ru.wikipedia.org/wiki/Числа_Фибоначчи
