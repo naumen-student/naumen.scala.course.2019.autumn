@@ -1,3 +1,5 @@
+import Exercises.Animal
+
 object Exercises {
   trait Animal {
     def name: String
@@ -9,15 +11,31 @@ object Exercises {
 
 
 
-  case class Shelter ...
+  case class Shelter[+T <: Animal](animals: List[T]){
+    def +[B >: T <: Animal](newcomer: B) : Shelter[B] = Shelter(animals :+ newcomer)
+
+    def ++[B >: T <: Animal](other: Shelter[B]) : Shelter[B] = Shelter(this.animals ++ other.animals)
+
+    def getNames : List[String] = for (animal <- animals ) yield animal.name
+
+    def feed(food : Food[T]) : List[String] = for (animal <- animals ) yield food.feed(animal)
+  }
 
 
 
-  trait Food ...
+  trait Food[-T <: Animal]{
+    def feed(animal: T) : String
+  }
 
-  case object Meat extends Food[Animal] ...
+  case object Meat extends Food[Animal]{
+    override def feed(animal: Animal): String = animal.name + " eats meat"
+  }
 
-  case object Milk extends Food[Cat] ...
+  case object Milk extends Food[Cat]{
+    override def feed(animal: Cat): String = animal.name + " eats milk"
+  }
 
-  case object Bread extends Food[Dog] ...
+  case object Bread extends Food[Dog]{
+    override def feed(animal: Dog): String = animal.name + " eats bread"
+  }
 }
