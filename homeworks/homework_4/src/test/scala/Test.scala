@@ -1,3 +1,4 @@
+import com.sun.tools.javac.util.Name.Table
 import utest._
 
 object Test extends TestSuite {
@@ -5,7 +6,8 @@ object Test extends TestSuite {
         'test_createTable - {
             val table = new Table(3, 3)
             for (i <- 0 until 9) {
-                assert(table.getCell(i / 3, i % 3).toString == Some("empty"))
+//                assert(table.getCell(i / 3, i % 3).toString == Some("empty"))
+                assert(table.getCell(i / 3, i % 3).toString == "Some(empty)")
             }
             assert(table.getCell(0, -1).map(_.toString) == None)
             assert(table.getCell(-1, 0).map(_.toString) == None)
