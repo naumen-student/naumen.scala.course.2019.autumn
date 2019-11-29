@@ -10,6 +10,8 @@ layout: default
 * Лекция 3. [Система типов в Scala](lectures/scala_lecture_3.html)
 * Лекция 4. [Классы и объекты в Scala.(PowerPoint)](lectures/scala_lecture_4.pptx)
 * Лекция 5. [Параметрический полиморфизм в Scala](lectures/scala_lecture_5.html)
+* Лекция 6. [Collection](lectures/scala_lecture_6.html)
+
 
 ### Домашние задания
 * [Задание 1](homeworks/homework_1/homework_1.md) [папка в GitHub](https://github.com/naumen-student/naumen.scala.course.2019.autumn/tree/master/homeworks/homework_1)
@@ -17,3 +19,4 @@ layout: default
 * [Задание 3](homeworks/homework_3/homework_3.md) [папка в GitHub](https://github.com/naumen-student/naumen.scala.course.2019.autumn/tree/master/homeworks/homework_3)
 * [Задание 4](homeworks/homework_4/homework_4.md) [папка в GitHub](https://github.com/naumen-student/naumen.scala.course.2019.autumn/tree/master/homeworks/homework_4)
 * [Задание 5](homeworks/homework_5/homework_5.md) [папка в GitHub](https://github.com/naumen-student/naumen.scala.course.2019.autumn/tree/master/homeworks/homework_5)
+* [Задание 6](homeworks/homework_6/homework_6.md) [папка в GitHub](https://github.com/naumen-student/naumen.scala.course.2019.autumn/tree/master/homeworks/homework_6)
