@@ -1,4 +1,4 @@
-package naumen.practice_1
+package naumen.practice_2
 
 import utest._
 
