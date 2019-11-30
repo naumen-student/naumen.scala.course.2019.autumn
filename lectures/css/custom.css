@@ -25,6 +25,15 @@
     overflow: hidden;
 }
 
+.reveal.lecture3 pre code {
+    font-size: 115%; 
+}
+
+.reveal.lecture3 p.left{
+    text-align: left;
+    margin-left: 30px;
+}
+
 .reveal .footer {
     font-size: 22pt;
     color: black;
