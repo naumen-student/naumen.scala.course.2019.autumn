@@ -9,15 +9,34 @@ object Exercises {
 
 
 
-  case class Shelter ...
+  case class Shelter[+A <: Animal] (val inhabitants: List[A])  {
+
+    def +[B >: A <: Animal] (newInhabitant:B) : Shelter[B] =
+      new Shelter[B](newInhabitant :: inhabitants)
+
+    def ++[B >: A <: Animal] (another: Shelter[B]) : Shelter[B] =
+      new Shelter[B](inhabitants ++ another.inhabitants)
+
+    def getNames : List[String] = inhabitants map (x => x.name)
+
+    def feed[B >: A <: Animal](food: Food[B]) : List[String] = inhabitants map (eater => food feed eater)
+  }
 
 
 
-  trait Food ...
+  trait Food[A <: Animal]{
 
-  case object Meat extends Food[Animal] ...
+    /*Определить для еды метод feed, который принимает животное того типа, которым параметризована эта еда,
+    и возвращает строку, содержащую “<имя животного=""> eats <название еды="" со="" строчной="" буквы="">". */
+    def feed (eater: A) : String = eater.name +  " eats " + name.toLowerCase
 
-  case object Milk extends Food[Cat] ...
+    def name : String = getClass.getSimpleName.replace('$', ' ').trim
+  }
 
-  case object Bread extends Food[Dog] ...
+  case object Meat extends Food[Animal]
+
+  case object Milk extends Food[Cat]
+
+  case object Bread extends Food[Dog]
+
 }
