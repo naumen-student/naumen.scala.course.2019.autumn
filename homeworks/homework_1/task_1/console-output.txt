@@ -1,0 +1,41 @@
+Microsoft Windows [Version 10.0.18362.418]
+(c) Корпорация Майкрософт (Microsoft Corporation), 2019. Все права защищены.
+
+C:\Users\Romich>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) Client VM, Java 1.8.0_191).
+Type in expressions for evaluation. Or try :help.
+
+scala> var a = "Roman Kochetov"
+a: String = Roman Kochetov
+
+scala> val b = "Hello Scala! This is "
+b: String = "Hello Scala! This is "
+
+scala> val c = "Guten Tag Scala! Das ist "
+c: String = "Guten Tag Scala! Das ist "
+
+scala> val d = "Greetings Scala! This is "
+d: String = "Greetings Scala! This is "
+
+scala> val e = a.reverse
+e: String = votehcoK namoR
+
+scala> println(b+a)
+Hello Scala! This is Roman Kochetov
+
+scala> println(c+a)
+Guten Tag Scala! Das ist Roman Kochetov
+
+scala> println(d+a)
+Greetings Scala! This is Roman Kochetov
+
+scala> println(b+e)
+Hello Scala! This is votehcoK namoR
+
+scala> println(c+e)
+Guten Tag Scala! Das ist votehcoK namoR
+
+scala> println(d+e)
+Greetings Scala! This is votehcoK namoR
+
+scala>

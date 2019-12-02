@@ -1,0 +1,5 @@
+[debug] [watch] [untitled / Compile / run] Found inputs: C:\Users\Romich\IdeaProjects\untitled\*.{java,scala},C:\Users\Romich\IdeaProjects\untitled\src\main\java\**\*.{java,scala},C:\Users\Romich\IdeaProjects\untitled\src\main\resources\**\*,C:\Users\Romich\IdeaProjects\untitled\src\main\scala\**\*.{java,scala},C:\Users\Romich\IdeaProjects\untitled\src\main\scala-2.13\**\*.{java,scala}
+[info] 1. Monitoring source files for untitled/run...
+[info]    Press <enter> to interrupt or '?' for more options.
+[debug] [watch] [debug] Received input event: Run().
+[debug] [watch] [debug] Received input event: Run().
