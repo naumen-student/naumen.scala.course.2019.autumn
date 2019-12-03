@@ -71,7 +71,7 @@
                         <span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">scala.collection.mutable</span>
                             
                         <span style="color: #008800; font-weight: bold">object</span> <span style="color: #BB0066; font-weight: bold">Sort</span> <span style="color: #333333">{</span>
-                          <span style="color: #008800; font-weight: bold">def</span> sortList<span style="color: #333333">(</span>input<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">mutable.ListBuffer</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">Int</span><span style="color: #333333">])</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Unit</span> <span style="color: #333333">=</span> <span style="color: #333333">{</span>
+                          <span style="color: #008800; font-weight: bold">def</span> bubble<span style="color: #333333">(</span>input<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">mutable.ListBuffer</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">Int</span><span style="color: #333333">])</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Unit</span> <span style="color: #333333">=</span> <span style="color: #333333">{</span>
                             <span style="color: #008800; font-weight: bold">if</span><span style="color: #333333">(</span>input<span style="color: #333333">.</span>isEmpty<span style="color: #333333">)</span> <span style="color: #333333">()</span>
                             <span style="color: #008800; font-weight: bold">else</span> <span style="color: #333333">{</span>
                               <span style="color: #008800; font-weight: bold">for</span><span style="color: #333333">(</span>i <span style="color: #008800; font-weight: bold">&lt;-</span> input<span style="color: #333333">.</span>indices<span style="color: #333333">)</span> <span style="color: #333333">{</span>
@@ -91,7 +91,7 @@
     
                         <span style="color: #008800; font-weight: bold">val</span> arr <span style="color: #008800; font-weight: bold">=</span> mutable<span style="color: #333333">.</span><span style="color: #BB0066; font-weight: bold">ListBuffer</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">3</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">6</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">4</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">6</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">)</span>  <span style="color: #888888">// ListBuffer(3, 2, 6, 4, 6, 1)</span>
     
-                        <span style="color: #BB0066; font-weight: bold">Sort</span><span style="color: #333333">.</span>sort<span style="color: #333333">(</span>arr<span style="color: #333333">)</span>
+                        <span style="color: #BB0066; font-weight: bold">Sort</span><span style="color: #333333">.</span>bubble<span style="color: #333333">(</span>arr<span style="color: #333333">)</span>
       
                         arr  <span style="color: #888888">// ListBuffer(1, 2, 3, 4, 6, 6)</span>
                     </pre>
@@ -100,10 +100,20 @@
         </div>
         <div class="slides">
             <section>
+                <img src="img/lecture_9/bubble_sort.png" />
+            </section>
+        </div>
+        <div class="slides">
+            <section>
                 <br><br>
                 <b>Функция в математике</b> — соответствие между элементами двух множеств, <br>
                 установленное по такому правилу, что каждому элементу одного множества соответствует<br>
                 один и только один элемент из другого множества.
+            </section>
+        </div>
+        <div class="slides">
+            <section>
+                <img src="img/lecture_9/function.png" />
             </section>
         </div>
         <div class="slides">
@@ -378,6 +388,12 @@
         <div class="slides">
             <section>
                 <h1>Рекурсивные функции</h1>
+                <img src="img/lecture_9/recursion.jpg" />
+            </section>
+        </div>
+        <div class="slides">
+            <section>
+                <h1>Рекурсивные функции</h1>
                 Функция называыется <b>рекурсивной</b>, если она вызывает сама себя.
                 <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
                     <pre style="margin: 0; line-height: 125%">
@@ -386,6 +402,18 @@
                         <span style="color: #008800; font-weight: bold">  else</span> <span style="color: #BB0066; font-weight: bold">Nil</span>
                     </pre>
                 </div>
+            </section>
+        </div>
+        <div class="slides">
+            <section>
+                Стек вызовов для списка из двух элементов<br>
+                <p><code>
+                    at map.appy<br>
+                    at map.appy<br>
+                    at map.appy<br>
+                    at map.appy<br>
+                    at map.appy<br>
+                </code></p>
             </section>
         </div>
         <div class="slides">
@@ -403,8 +431,8 @@
                           buffer
                         <span style="color: #333333">}</span>
 
-                        <span style="color: #555555; font-weight: bold">@tailrec</span>
                         <span style="color: #008800; font-weight: bold">def</span> tailMap<span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span>, <span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">](</span>f<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">A</span> <span style="color: #333333">=&gt;</span> B<span style="color: #333333">)(</span>list<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">])</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">]</span> <span style="color: #008800; font-weight: bold">=</span> <span style="color: #333333">{</span>
+                          <span style="color: #555555; font-weight: bold">@tailrec</span>
                           <span style="color: #008800; font-weight: bold">def</span> loop<span style="color: #333333">(</span>l<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">],</span> buffer<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">])</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">]</span> <span style="color: #008800; font-weight: bold">=</span> <span style="color: #008800; font-weight: bold">if</span><span style="color: #333333">(</span>l<span style="color: #333333">.</span>isEmpty<span style="color: #333333">)</span> <span style="color: #333333">{</span>
                             buffer
                           <span style="color: #333333">}</span> <span style="color: #008800; font-weight: bold">else</span> <span style="color: #333333">{</span>
@@ -418,6 +446,15 @@
                 </div>
 
             </section>
+        </div>
+        <div class="slides">
+                <section>
+                    Стек вызовов для списка из двух элементов<br>
+                    <p><code>
+                        at map.loop<br>
+                        at map.appy<br>
+                    </code></p>
+                </section>
         </div>
         <div class="slides">
             <section>
@@ -452,6 +489,11 @@
                     <tr>
                         <td>Сопоставление с xml</td>
                         <td>-</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>Завершения проверок после совпадения</td>
+                        <td>break</td>
                         <td>+</td>
                     </tr>
                     <tr><td>и много прочего</td><td>-</td><td>+</td></tr>
@@ -493,7 +535,7 @@
                     <pre style="margin: 0; line-height: 125%">
                         <span style="color: #008800; font-weight: bold">def</span> foo<span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">](</span>a<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Option[A]</span><span style="color: #333333">)</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">A</span> <span style="color: #333333">=</span> a <span style="color: #008800; font-weight: bold">match</span> <span style="color: #333333">{</span>
                           <span style="color: #008800; font-weight: bold">case</span> Some(x)<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">B</span> <span style="color: #333333">=&gt;</span> <span style="color: #333333">x</span> <span style="color: #888888">// x is A</span>
-                          <span style="color: #008800; font-weight: bold">case</span> _<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">B</span> <span style="color: #333333">=&gt;</span> <span style="color: #333333">A.default
+                          <span style="color: #008800; font-weight: bold">case</span> _ <span style="color: #333333">=&gt;</span> <span style="color: #333333">A.default
                         <span style="color: #333333">}</span>
                     </pre>
                 </div>
@@ -502,12 +544,12 @@
         <div class="slides">
             <section>
                 <h1>Собоставление с образцом</h1>
-                <h2>@-pattern</h2>
+                <h2>@-pattern (pattern binder)</h2>
                 <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
                     <pre style="margin: 0; line-height: 125%">
                         <span style="color: #008800; font-weight: bold">def</span> foo<span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">](</span>a<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Option[A]</span><span style="color: #333333">)</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">A</span> <span style="color: #333333">=</span> a <span style="color: #008800; font-weight: bold">match</span> <span style="color: #333333">{</span>
-                          <span style="color: #008800; font-weight: bold">case</span> some@Some(x) <span style="color: #333333">=&gt;</span> <span style="color: #333333">x</span> <span style="color: #888888">// x is A, box is Some[A]</span>
-                          <span style="color: #008800; font-weight: bold">case</span> _<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">B</span> <span style="color: #333333">=&gt;</span> <span style="color: #333333">A.default
+                          <span style="color: #008800; font-weight: bold">case</span> some@Some(x) <span style="color: #333333">=&gt;</span> <span style="color: #333333">x</span> <span style="color: #888888">// x is A, some is Some[A]</span>
+                          <span style="color: #008800; font-weight: bold">case</span> _ <span style="color: #333333">=&gt;</span> <span style="color: #333333">A.default
                         <span style="color: #333333">}</span>
                     </pre>
                 </div>
@@ -520,8 +562,8 @@
                 <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
                     <pre style="margin: 0; line-height: 125%">
                         <span style="color: #008800; font-weight: bold">def</span> foo<span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">](</span>a<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Option[A]</span><span style="color: #333333">)</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">A</span> <span style="color: #333333">=</span> a <span style="color: #008800; font-weight: bold">match</span> <span style="color: #333333">{</span>
-                          <span style="color: #008800; font-weight: bold">case</span> some@Some(x) <span style="color: #008800; font-weight: bold">if</span> x &gt; 0 <span style="color: #333333">=&gt;</span> <span style="color: #333333">x</span> <span style="color: #888888">// x is A, box is Some[A]</span>
-                          <span style="color: #008800; font-weight: bold">case</span> _<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">B</span> <span style="color: #333333">=&gt;</span> <span style="color: #333333">A.default
+                          <span style="color: #008800; font-weight: bold">case</span> some@Some(x) <span style="color: #008800; font-weight: bold">if</span> x &gt; 0 <span style="color: #333333">=&gt;</span> <span style="color: #333333">x</span> <span style="color: #888888">// x is A, some is Some[A]</span>
+                          <span style="color: #008800; font-weight: bold">case</span> _ <span style="color: #333333">=&gt;</span> <span style="color: #333333">A.default
                         <span style="color: #333333">}</span>
                     </pre>
                 </div>
@@ -531,8 +573,20 @@
             <section>
                 <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
                     <pre style="margin: 0; line-height: 125%">
-                        <span style="color: #555555; font-weight: bold">@tailrec</span>
                         <span style="color: #008800; font-weight: bold">def</span> tailMap<span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span>, <span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">](</span>f<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">A</span> <span style="color: #333333">=&gt;</span> B<span style="color: #333333">)(</span>list<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">])</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">]</span> <span style="color: #008800; font-weight: bold">=</span> <span style="color: #333333">{</span>
+                          <span style="color: #555555; font-weight: bold">@tailrec</span>
+                          <span style="color: #008800; font-weight: bold">def</span> loop<span style="color: #333333">(</span>l<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">],</span> buffer<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">])</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">]</span> <span style="color: #008800; font-weight: bold">=</span> <span style="color: #008800; font-weight: bold">if</span><span style="color: #333333">(</span>l<span style="color: #333333">.</span>isEmpty<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+                            buffer
+                          <span style="color: #333333">}</span> <span style="color: #008800; font-weight: bold">else</span> <span style="color: #333333">{</span>
+                            <span style="color: #008800; font-weight: bold">val</span> head <span style="color: #008800; font-weight: bold">=</span> l<span style="color: #333333">.</span>head
+                            <span style="color: #008800; font-weight: bold">val</span> tail <span style="color: #008800; font-weight: bold">=</span> l<span style="color: #333333">.</span>tail
+                            loop<span style="color: #333333">(</span>tail<span style="color: #333333">,</span> buffer <span style="color: #333333">:+</span> f<span style="color: #333333">(</span>head<span style="color: #333333">))</span>
+                          <span style="color: #333333">}</span>
+                          loop<span style="color: #333333">(</span>list<span style="color: #333333">,</span> <span style="color: #BB0066; font-weight: bold">List</span><span style="color: #333333">.</span>empty)
+                        <span style="color: #333333">}</span>
+
+                        <span style="color: #008800; font-weight: bold">def</span> newTailMap<span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span>, <span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">](</span>f<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">A</span> <span style="color: #333333">=&gt;</span> B<span style="color: #333333">)(</span>list<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">])</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">]</span> <span style="color: #008800; font-weight: bold">=</span> <span style="color: #333333">{</span>
+                          <span style="color: #555555; font-weight: bold">@tailrec</span>
                           <span style="color: #008800; font-weight: bold">def</span> loop<span style="color: #333333">(</span>l<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">],</span> buffer<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">])</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">]</span> <span style="color: #008800; font-weight: bold">=</span> l <span style="color: #008800; font-weight: bold">match</span> <span style="color: #333333">{</span>
                             <span style="color: #008800; font-weight: bold">case</span> head <span style="color: #333333">::</span> tail <span style="color: #008800; font-weight: bold">=&gt;</span> loop<span style="color: #333333">(</span>tail<span style="color: #333333">,</span> buffer <span style="color: #333333">:+</span> f<span style="color: #333333">(</span>head<span style="color: #333333">))</span>
                             <span style="color: #008800; font-weight: bold">case</span> <span style="color: #008800; font-weight: bold">_</span>            <span style="color: #008800; font-weight: bold">=&gt;</span> buffer
@@ -563,14 +617,26 @@
             <section>
                 <h1>Algebraic data type</h1>
                 <h2>Сумма:</h2>
-                type Option[T] = Option[T] | None
+                type Option[T] = None | Some[T]<br>
+                type List[T] = Nil | ::[T]<br>
+                type Boolean = True | False<br>
+                ...
                 <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
                     <pre style="margin: 0; line-height: 125%">
-                        <span style="color: #008800; font-weight: bold">sealed</span> <span style="color: #008800; font-weight: bold">trait</span> <span style="color: #BB0066; font-weight: bold">Option</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">+T</span><span style="color: #333333">]</span>
+                        <span style="color: #008800; font-weight: bold">sealed</span> <span style="color: #008800; font-weight: bold">trait</span> <span style="color: #BB0066; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">+T</span><span style="color: #333333">]</span>
                         
-                        <span style="color: #BB0066; font-weight: bold">final</span> <span style="color: #008800; font-weight: bold">case</span> <span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">Some</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">+T</span><span style="color: #333333">](</span>t<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">T</span><span style="color: #333333">)</span> <span style="color: #008800; font-weight: bold">extends</span> <span style="color: #BB0066; font-weight: bold">Option</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">T</span><span style="color: #333333">]</span>
+                        <span style="color: #BB0066; font-weight: bold">final</span> <span style="color: #008800; font-weight: bold">case</span> <span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">::</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">+T</span><span style="color: #333333">](</span>head<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">T</span><span style="color: #333333">, tail: <span style="color: #BB0066; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">T</span><span style="color: #333333">]</span>)</span> <span style="color: #008800; font-weight: bold">extends</span> <span style="color: #BB0066; font-weight: bold">Option</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">T</span><span style="color: #333333">]</span>
 
-                        <span style="color: #008800; font-weight: bold">case</span> <span style="color: #008800; font-weight: bold">object</span> <span style="color: #BB0066; font-weight: bold">None</span> <span style="color: #008800; font-weight: bold">extends</span> <span style="color: #BB0066; font-weight: bold">Option</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">Nothing</span><span style="color: #333333">]</span>
+                        <span style="color: #008800; font-weight: bold">case</span> <span style="color: #008800; font-weight: bold">object</span> <span style="color: #BB0066; font-weight: bold">Nil</span> <span style="color: #008800; font-weight: bold">extends</span> <span style="color: #BB0066; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">Nothing</span><span style="color: #333333">]</span>
+                    </pre>
+                </div>
+                <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                    <pre style="margin: 0; line-height: 125%">
+                        <span style="color: #008800; font-weight: bold">sealed</span> <span style="color: #008800; font-weight: bold">trait</span> <span style="color: #BB0066; font-weight: bold">Boolean</span>
+                        
+                        <span style="color: #008800; font-weight: bold">case</span> <span style="color: #008800; font-weight: bold">object</span> <span style="color: #BB0066; font-weight: bold">True</span> <span style="color: #008800; font-weight: bold">extends</span> <span style="color: #BB0066; font-weight: bold">Boolean</span></span>
+
+                        <span style="color: #008800; font-weight: bold">case</span> <span style="color: #008800; font-weight: bold">object</span> <span style="color: #BB0066; font-weight: bold">False</span> <span style="color: #008800; font-weight: bold">extends</span> <span style="color: #BB0066; font-weight: bold">Boolean</span></span>
                     </pre>
                 </div>
             </section>
@@ -580,20 +646,63 @@
                 <h1>Algebraic data type</h1>
                 <h2>Произведение:</h2>
                 type StandAloneApp = Host & Port<br>
-                type BasicAppEnvironment = HasDatabase & StandAloneApp<br>
-                BasicAppEnvironment &asymp; HasDatabase & (Host & Port)<br>
-                BasicAppEnvironment &asymp; HasDatabase & Host & Port<br>
+                type BasicAppEnvironment = Database & StandAloneApp<br>
+                BasicAppEnvironment &asymp; Database & (Host & Port)<br>
+                BasicAppEnvironment &asymp; Database & Host & Port<br>
+                ...
                 <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
                     <pre style="margin: 0; line-height: 125%">
-                        <span style="color: #008800; font-weight: bold">trait</span> <span style="color: #BB0066; font-weight: bold">HasDatabase</span> <span style="color: #333333">{</span>
-                          <span style="color: #008800; font-weight: bold">def</span> database<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Database</span>
+                        <span style="color: #008800; font-weight: bold">case</span> <span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">Database</span><span style="color: #333333">(</span>url<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">String</span><span style="color: #333333">,</span> username<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">String</span><span style="color: #333333">,</span> password<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">String</span><span style="color: #333333">)</span>
+                        <span style="color: #008800; font-weight: bold">case</span> <span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">StandAloneApp</span><span style="color: #333333">(</span>socketConf<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333333">(</span><span style="color: #333399; font-weight: bold">Host</span><span style="color: #333333">,</span> <span style="color: #333399; font-weight: bold">Port</span><span style="color: #333333">))</span>
+
+                        <span style="color: #008800; font-weight: bold">case</span> <span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">BasicAppEnvironment</span><span style="color: #333333">(</span>appConf<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">StandAloneApp</span><span style="color: #333333">,</span> db<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Database</span><span style="color: #333333">)</span>
+                    </pre>
+                </div>
+            </section>
+        </div>
+        <div class="slides">
+            <section>
+                <h1>Algebraic data type</h1>
+                <h2>И Pattern Matching</h2>
+                Сопоставление с образцом - один из способов извлечения данных из алгебраического типа.
+            </section>
+        </div>
+        <div class="slides">
+            <section>
+                <h1>Algebraic data type</h1>
+                <h2>И Pattern Matching</h2>
+                Для произведения типов Extractor-pattern
+                <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                    <pre style="margin: 0; line-height: 125%">
+                        <span style="color: #008800; font-weight: bold">def</span> startApp<span style="color: #333333">(</span>
+                          hostAllowed<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Host</span><span style="color: #333333">,</span> 
+                          listenPort<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Port</span><span style="color: #333333">,</span>
+                          db<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Database</span><span style="color: #333333">)</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Unit</span>
+
+                        <span style="color: #008800; font-weight: bold">def</span> run<span style="color: #333333">(</span>env<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">BasicAppEnvironment</span><span style="color: #333333">)</span> <span style="color: #008800; font-weight: bold">=</span> env <span style="color: #008800; font-weight: bold">match</span> <span style="color: #333333">{</span>
+                          <span style="color: #008800; font-weight: bold">case</span> <span style="color: #BB0066; font-weight: bold">BasicAppEnvironment</span><span style="color: #333333">(</span><span style="color: #BB0066; font-weight: bold">StandAloneApp</span><span style="color: #333333">((</span>host<span style="color: #333333">,</span> port<span style="color: #333333">)),</span> db<span style="color: #333333">))</span> <span style="color: #008800; font-weight: bold">=&gt;</span>
+                            startApp<span style="color: #333333">(</span>host<span style="color: #333333">,</span> port<span style="color: #333333">,</span> db<span style="color: #333333">)</span>
                         <span style="color: #333333">}</span>
-  
-                        <span style="color: #008800; font-weight: bold">trait</span> <span style="color: #BB0066; font-weight: bold">StandaloneApp</span> <span style="color: #333333">{</span>
-                          <span style="color: #008800; font-weight: bold">def</span> socketConfig<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333333">(</span><span style="color: #333399; font-weight: bold">Host</span><span style="color: #333333">,</span> <span style="color: #333399; font-weight: bold">Port</span><span style="color: #333333">)</span>
+                    </pre>
+                </div>
+            </section>
+        </div>
+        <div class="slides">
+            <section>
+                <h1>Algebraic data type</h1>
+                <h2>И Pattern Matching</h2>
+                Для суммы типов Type-pattern и/или Extractor-pattern
+                <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                    <pre style="margin: 0; line-height: 125%">
+                        <span style="color: #008800; font-weight: bold">def</span> describeValue<span style="color: #333333">(</span>opt<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Option</span><span style="color: #333333">[</span><span style="color: #008800; font-weight: bold">_</span><span style="color: #333333">])</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">String</span> <span style="color: #333333">=</span> opt <span style="color: #008800; font-weight: bold">match</span> <span style="color: #333333">{</span>
+                          <span style="color: #008800; font-weight: bold">case</span> <span style="color: #BB0066; font-weight: bold">Some</span><span style="color: #333333">(</span>value<span style="color: #333333">)</span> <span style="color: #008800; font-weight: bold">=&gt;</span> s<span style="background-color: #fff0f0">&quot;There is a \&quot;${value.toString}\&quot;&quot;</span>
+                          <span style="color: #008800; font-weight: bold">case</span> <span style="color: #BB0066; font-weight: bold">None</span> <span style="color: #008800; font-weight: bold">=&gt;</span> <span style="background-color: #fff0f0">&quot;There is nothing&quot;</span>
                         <span style="color: #333333">}</span>
-  
-                        <span style="color: #008800; font-weight: bold">trait</span> <span style="color: #BB0066; font-weight: bold">BasicAppEnvironment</span> <span style="color: #008800; font-weight: bold">extends</span> <span style="color: #BB0066; font-weight: bold">StandaloneApp</span> <span style="color: #008800; font-weight: bold">with</span> <span style="color: #BB0066; font-weight: bold">HasDatabase</span>
+
+                        <span style="color: #008800; font-weight: bold">def</span> describe<span style="color: #333333">(</span>opt<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Option</span><span style="color: #333333">[</span><span style="color: #008800; font-weight: bold">_</span><span style="color: #333333">])</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">String</span> <span style="color: #333333">=</span> opt <span style="color: #008800; font-weight: bold">match</span> <span style="color: #333333">{</span>
+                          <span style="color: #008800; font-weight: bold">case</span> <span style="color: #008800; font-weight: bold">_:</span> <span style="color: #333399; font-weight: bold">Some</span><span style="color: #333333">[</span><span style="color: #008800; font-weight: bold">_</span><span style="color: #333333">]</span> <span style="color: #008800; font-weight: bold">=&gt;</span> <span style="background-color: #fff0f0">&quot;There is something&quot;</span>
+                          <span style="color: #008800; font-weight: bold">case</span> <span style="color: #008800; font-weight: bold">_</span> <span style="color: #008800; font-weight: bold">=&gt;</span> <span style="background-color: #fff0f0">&quot;There is nothing&quot;</span>
+                        <span style="color: #333333">}</span>
                     </pre>
                 </div>
             </section>
@@ -612,7 +721,6 @@
                     <li>можно (и нужно) отказаться от переменных;</li>
                     <li>можно тестировать по принципу черного ящика;</li>
                     <li>огромные возможности для распараллеливания;</li>
-                    <li>схожее поведение с математичискими функциями;</li>
                     <li>оптимизация на этапе компиляции;</li>
                     <li>продолжать можно долго...</li>
                 </ul>

@@ -36,6 +36,25 @@ object Test extends TestSuite {
             assert(digitalRootImpl(12345) == 6)
         }
 
+        'booleanAlgebra - {
+            val t = BooleanAlgebra.True
+            val f = BooleanAlgebra.False
+
+            def toBool(ba: BooleanAlgebra) = ba match {
+                case `t` => true
+                case _   => false
+            }
+
+            def check: Boolean = Seq(t -> f, f -> t, t -> t, f -> f)
+                .map { tuple =>
+                    toBool(BooleanAlgebra.and(tuple)) == toBool(tuple._1) && toBool(tuple._2) &&
+                        toBool(BooleanAlgebra.or(tuple)) == toBool(tuple._1) || toBool(tuple._2)
+                }.reduce(_ && _) &&
+                BooleanAlgebra.not(t) == f &&
+                BooleanAlgebra.not(f) == t
+
+            assert(check)
+        }
 
     }
 
