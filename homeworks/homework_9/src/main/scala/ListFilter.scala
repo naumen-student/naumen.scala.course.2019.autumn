@@ -17,20 +17,19 @@ trait ListFilter {
 
     /**
       * Реализовать функцию фильтрации используя хвостовую рекурсию.
-      * note: любой цикл можно переписать в хвостовую рекурсию,
-      *   если переместить изменяемую переменную в параметры функции
+
       */
     @tailrec
     private def filterLoop[A](condition: A => Boolean, inputList: Seq[A], buffer: Seq[A]): Seq[A] = ???
 
     def tailrecFilter[A](condition: A => Boolean): Seq[A] => Seq[A] = { input =>
-        //TODO
-        val initBufferValue: Seq[A] = ???
+
+        val initBufferValue: Seq[A] = ??? // TODO
 
         filterLoop(
             condition = condition,
             inputList = input,
-            buffer = ???
+            buffer = ??? // TODO
         )
     }
 

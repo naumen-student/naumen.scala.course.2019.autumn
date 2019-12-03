@@ -11,7 +11,6 @@ trait DigitalRoot {
 
     /**
       * Функция не должна содержать переменных и циклов
-      * @return
       */
     def findRoot(n: Int): Int = ???
 }
