@@ -1,5 +1,4 @@
 import scala.collection.immutable.List
-import scala.util.matching.Regex
 
 object Exercises {
 
