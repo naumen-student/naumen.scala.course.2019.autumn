@@ -1,0 +1,40 @@
+[error] D:\homeworks\naumen.scala.course.2019.autumn\homeworks\homework_5\src\test\scala\Test.scala:1:8: not found: object Exercises
+[error] import Exercises._
+[error]        ^
+[error] D:\homeworks\naumen.scala.course.2019.autumn\homeworks\homework_5\src\test\scala\Test.scala:2:8: not found: object utest
+[error] import utest._
+[error]        ^
+[error] D:\homeworks\naumen.scala.course.2019.autumn\homeworks\homework_5\src\test\scala\Test.scala:4:21: not found: type TestSuite
+[error] object Test extends TestSuite {
+[error]                     ^
+[error] D:\homeworks\naumen.scala.course.2019.autumn\homeworks\homework_5\src\test\scala\Test.scala:6:15: not found: value Tests
+[error]   val tests = Tests {
+[error]               ^
+[error] D:\homeworks\naumen.scala.course.2019.autumn\homeworks\homework_5\src\test\scala\Test.scala:10:13: not found: type Shelter
+[error]     val s1: Shelter[Cat] = Shelter(List(Cat("Garfield")))
+[error]             ^
+[error] D:\homeworks\naumen.scala.course.2019.autumn\homeworks\homework_5\src\test\scala\Test.scala:10:28: not found: value Shelter
+[error]     val s1: Shelter[Cat] = Shelter(List(Cat("Garfield")))
+[error]                            ^
+[error] D:\homeworks\naumen.scala.course.2019.autumn\homeworks\homework_5\src\test\scala\Test.scala:10:41: not found: value Cat
+[error]     val s1: Shelter[Cat] = Shelter(List(Cat("Garfield")))
+[error]                                         ^
+[error] D:\homeworks\naumen.scala.course.2019.autumn\homeworks\homework_5\src\test\scala\Test.scala:12:13: not found: type Shelter
+[error]     val s2: Shelter[Dog] = Shelter(List(Dog("Goofy")))
+[error]             ^
+[error] D:\homeworks\naumen.scala.course.2019.autumn\homeworks\homework_5\src\test\scala\Test.scala:12:28: not found: value Shelter
+[error]     val s2: Shelter[Dog] = Shelter(List(Dog("Goofy")))
+[error]                            ^
+[error] D:\homeworks\naumen.scala.course.2019.autumn\homeworks\homework_5\src\test\scala\Test.scala:12:41: not found: value Dog
+[error]     val s2: Shelter[Dog] = Shelter(List(Dog("Goofy")))
+[error]                                         ^
+[error] D:\homeworks\naumen.scala.course.2019.autumn\homeworks\homework_5\src\test\scala\Test.scala:14:13: not found: type Shelter
+[error]     val s3: Shelter[Animal] = s1 ++ s2
+[error]             ^
+[error] D:\homeworks\naumen.scala.course.2019.autumn\homeworks\homework_5\src\test\scala\Test.scala:20:13: not found: type Shelter
+[error]     val s5: Shelter[Animal] = s1 + Dog("Barbos")
+[error]             ^
+[error] D:\homeworks\naumen.scala.course.2019.autumn\homeworks\homework_5\src\test\scala\Test.scala:24:13: not found: type Shelter
+[error]     val s6: Shelter[Dog] = s2 + Dog("Barbos")
+[error]             ^
+[error] 13 errors found
