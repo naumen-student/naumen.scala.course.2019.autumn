@@ -14,17 +14,19 @@ object Exercises {
    */
   def fibonacci4Index(idx: Int): Int = idx match {
     case _ if idx <= 1 => idx
-    case _ => fibonacci4Index(idx-1) + fibonacci4Index(idx-2)
+    case _ => fibonacci4Index(idx - 1) + fibonacci4Index(idx - 2)
   }
 
-  def fibonacci(idx: Int): Seq[Int] = for (i <- 0 until idx+1) yield fibonacci4Index(i)
+  def fibonacci(idx: Int): Seq[Int] = for (i <- 0 until idx + 1) yield fibonacci4Index(i)
 
   lazy val MORSE = Map("A" -> ".-", "B" -> "-...", "C" -> "-.-.", "D" -> "-..", "E" -> ".", "F" -> "..-.",
-                       "G" -> "--.", "H" -> "....", "I" -> "..", "J" -> ".---", "K" -> "-.-", "L" -> ".-..",
-                       "M" -> "--", "N" -> "-.", "O" -> "---", "P" -> ".--.", "Q" -> "--.-", "R" -> ".-.",
-                       "S" -> "...", "T" -> "-", "U" -> "..-", "V" -> "...-", "W" -> ".--", "X" -> "-..-",
-                       "Y" -> "-.--", "Z" -> "--..")
+    "G" -> "--.", "H" -> "....", "I" -> "..", "J" -> ".---", "K" -> "-.-", "L" -> ".-..",
+    "M" -> "--", "N" -> "-.", "O" -> "---", "P" -> ".--.", "Q" -> "--.-", "R" -> ".-.",
+    "S" -> "...", "T" -> "-", "U" -> "..-", "V" -> "...-", "W" -> ".--", "X" -> "-..-",
+    "Y" -> "-.--", "Z" -> "--..")
+
   def checker(text: String) = if (text.length > 1) " " else ""
+
   def morse(text: String): String = {
     @tailrec
     def morsehelper(word: String, morses: String = ""): String = {
@@ -38,24 +40,24 @@ object Exercises {
           ) + checker(word)
         )
     }
+
     morsehelper(text)
   }
 
 
-  def wordReverse(text: String): String = {
-    var result = text
-    for(word <- text.split("[.,!?: ]+")) {
-      result = result.replaceFirst(word, reverseHelper(word))
-    }
-    result
-  }
+  def wordReverse(string: String): String = {
+    def revCap(s: String): String =
+      s.headOption match {
+        case Some(c) if c.isUpper =>
+          (c.toLower +: s.drop(1)).reverse.capitalize
+        case Some(c) if c.isLower =>
+          s.reverse
+        case _ => s
+      }
 
-  private def reverseHelper(word: String): String = {
-    var result = new StringBuilder(word)
-    if (word.head.isUpper) {
-      result.setCharAt(0, word.head.toLower)
-      result.setCharAt(word.length - 1, word.last.toUpper)
-    }
-    result.reverse.result()
+    string
+      .split("\\b")
+      .map(revCap)
+      .mkString("")
   }
 }
