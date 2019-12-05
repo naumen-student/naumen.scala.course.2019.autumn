@@ -1,7 +1,10 @@
+import scala.annotation.tailrec
+
 object Exercises {
 
 
-  def reverse[T](seq: Seq[T]): Seq[T] = ???
+  def reverse[T](seq: Seq[T]): Seq[T] =
+    (for (i <- seq.length until 0 by -1) yield seq(i - 1))
 
   /**
    * https://ru.wikipedia.org/wiki/Числа_Фибоначчи
@@ -9,19 +12,52 @@ object Exercises {
    * @param idx
    * @return
    */
-  def fibonacci4Index(idx: Int): Int = ???
+  def fibonacci4Index(idx: Int): Int = idx match {
+    case _ if idx <= 1 => idx
+    case _ => fibonacci4Index(idx - 1) + fibonacci4Index(idx - 2)
+  }
 
-  def fibonacci(idx: Int): Seq[Int] = ???
+  def fibonacci(idx: Int): Seq[Int] = for (i <- 0 until idx + 1) yield fibonacci4Index(i)
 
   lazy val MORSE = Map("A" -> ".-", "B" -> "-...", "C" -> "-.-.", "D" -> "-..", "E" -> ".", "F" -> "..-.",
-                       "G" -> "--.", "H" -> "....", "I" -> "..", "J" -> ".---", "K" -> "-.-", "L" -> ".-..",
-                       "M" -> "--", "N" -> "-.", "O" -> "---", "P" -> ".--.", "Q" -> "--.-", "R" -> ".-.",
-                       "S" -> "...", "T" -> "-", "U" -> "..-", "V" -> "...-", "W" -> ".--", "X" -> "-..-",
-                       "Y" -> "-.--", "Z" -> "--..")
+    "G" -> "--.", "H" -> "....", "I" -> "..", "J" -> ".---", "K" -> "-.-", "L" -> ".-..",
+    "M" -> "--", "N" -> "-.", "O" -> "---", "P" -> ".--.", "Q" -> "--.-", "R" -> ".-.",
+    "S" -> "...", "T" -> "-", "U" -> "..-", "V" -> "...-", "W" -> ".--", "X" -> "-..-",
+    "Y" -> "-.--", "Z" -> "--..")
 
-  def morse(text: String): String = ???
+  def checker(text: String) = if (text.length > 1) " " else ""
+
+  def morse(text: String): String = {
+    @tailrec
+    def morsehelper(word: String, morses: String = ""): String = {
+      if (word.isEmpty) morses
+      else
+        morsehelper(
+          word.tail,
+          morses + MORSE.getOrElse(
+            word.toUpperCase.head.toString,
+            word.head.toString
+          ) + checker(word)
+        )
+    }
+
+    morsehelper(text)
+  }
 
 
-  def wordReverse(text: String): String = ???
+  def wordReverse(string: String): String = {
+    def revCap(s: String): String =
+      s.headOption match {
+        case Some(c) if c.isUpper =>
+          (c.toLower +: s.drop(1)).reverse.capitalize
+        case Some(c) if c.isLower =>
+          s.reverse
+        case _ => s
+      }
 
+    string
+      .split("\\b")
+      .map(revCap)
+      .mkString("")
+  }
 }
