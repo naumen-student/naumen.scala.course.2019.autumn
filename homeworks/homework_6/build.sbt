@@ -1,4 +1,4 @@
-name := "homework_5"
+name := "homework_6"
 
 version := "0.1"
 

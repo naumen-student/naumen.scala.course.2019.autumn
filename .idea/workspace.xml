@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c4c8d480-ef60-4a4b-91bb-03e8e44db230" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/homeworks/homework_5/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homeworks/homework_5/build.sbt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homeworks/homework_5/homework_5.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homeworks/homework_5/project/build.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homeworks/homework_5/src/main/scala/Exercises.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homeworks/homework_5/src/test/scala/Test.scala" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="homework_5" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1SCTaiSrzf44ivpxxvldZReZhBP" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/homeworks/homework_6" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/homeworks" />
+      <recent name="$PROJECT_DIR$/homeworks/homework_1/task_3/homework/src/main/scala" />
+      <recent name="$PROJECT_DIR$/homeworks/homework_1/task_1/src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/homeworks/homework_1/task_3" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Scala Console.Scala Console">
+    <configuration name="Run" type="SbtRunConfiguration" factoryName="sbt Task" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="naumen.scala.course.2019.autumn" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="tasks" value="~run" />
+      <option name="useSbtShell" value="false" />
+      <option name="vmparams" value="-Xms512M -Xmx1024M -Xss1M -XX:+CMSClassUnloadingEnabled" />
+      <option name="workingDir" value="$PROJECT_DIR$/homeworks/homework_1/task_3/homework" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scala Console" type="ScalaScriptConsoleRunConfiguration" factoryName="Scala Console" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="naumen.scala.course.2019.autumn" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="javaOptions" value="-Djline.terminal=NONE" />
+      <option name="myConsoleArgs" value="" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Scala Console.Scala Console" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c4c8d480-ef60-4a4b-91bb-03e8e44db230" name="Default Changelist" comment="" />
+      <created>1571066642798</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571066642798</updated>
+      <workItem from="1571066646448" duration="2378000" />
+      <workItem from="1573573411455" duration="280000" />
+      <workItem from="1573574289952" duration="595000" />
+      <workItem from="1573574903099" duration="472000" />
+      <workItem from="1574439081839" duration="26000" />
+      <workItem from="1574439110963" duration="376000" />
+      <workItem from="1574439843770" duration="59000" />
+      <workItem from="1574440159245" duration="76000" />
+      <workItem from="1574440257761" duration="6000" />
+      <workItem from="1575044480610" duration="97000" />
+      <workItem from="1575644816042" duration="100000" />
+    </task>
+    <task id="LOCAL-00001" summary="Homework1">
+      <created>1571070363095</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571070363095</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Homework1">
+      <created>1571070495088</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571070495088</updated>
+    </task>
+    <task id="LOCAL-00003" summary="delete homework 1">
+      <created>1573575140684</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573575140684</updated>
+    </task>
+    <task id="LOCAL-00004" summary="delete homework 13">
+      <created>1574440167293</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1574440167294</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Homework1" />
+    <MESSAGE value="delete homework 1" />
+    <MESSAGE value="delete homework 13" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete homework 13" />
+  </component>
+</project>
