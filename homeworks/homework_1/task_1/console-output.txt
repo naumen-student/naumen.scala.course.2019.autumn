@@ -1,0 +1,28 @@
+C:\Users\enjir>scala
+Welcome to Scala 2.12.10 (OpenJDK 64-Bit Server VM, Java 1.8.0_202-release).
+Type in expressions for evaluation. Or try :help.
+
+scala>  val a = "Hello Scala! This is Tanya"
+a: String = Hello Scala! This is Tanya
+
+scala> println(a)
+Hello Scala! This is Tanya
+
+scala> a=" Scala! This is "
+a: String = " Scala! This is "
+
+scala> val name="Tanya"
+name: String = Tanya
+
+scala> val greetings=List("Hello", "Hola", "Guten tag")
+greetings: List[String] = List(Hello, Hola, Guten tag)
+
+scala> for(greeting <-greetings){println(greeting+a+name)}
+Hello Scala! This is Tanya
+Hola Scala! This is Tanya
+Guten tag Scala! This is Tanya
+
+scala> for(greeting <-greetings){println(greeting+a+name.reverse)}
+Hello Scala! This is aynaT
+Hola Scala! This is aynaT
+Guten tag Scala! This is aynaT
