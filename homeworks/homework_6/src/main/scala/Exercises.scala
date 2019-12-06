@@ -61,7 +61,7 @@ object Exercises {
       else
         newText += letter.toString + " "
     }
-    return newText
+    return newText.reverse.tail.reverse
   }
 
 
