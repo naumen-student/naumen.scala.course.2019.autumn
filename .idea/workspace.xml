@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19dadadc-b2b9-4539-9f38-667a5dc049ce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/homeworks/homework_5/src/main/scala/Exercises.scala" beforeDir="false" afterPath="$PROJECT_DIR$/homeworks/homework_5/src/main/scala/Exercises.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homeworks/homework_6/src/main/scala/Exercises.scala" beforeDir="false" afterPath="$PROJECT_DIR$/homeworks/homework_6/src/main/scala/Exercises.scala" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,19 +17,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/homeworks/homework_5/src/main/scala/Exercises.scala">
+        <entry file="file://$PROJECT_DIR$/homeworks/homework_6/src/main/scala/Exercises.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="58" lean-forward="true" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/homeworks/homework_5/src/test/scala/Test.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+            <state relative-caret-position="315">
+              <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -53,6 +45,7 @@
         <option value="$PROJECT_DIR$/homeworks/homework_4/src/main/scala/StringCell.scala" />
         <option value="$PROJECT_DIR$/homeworks/homework_4/src/test/scala/Test.scala" />
         <option value="$PROJECT_DIR$/homeworks/homework_5/src/main/scala/Exercises.scala" />
+        <option value="$PROJECT_DIR$/homeworks/homework_6/src/main/scala/Exercises.scala" />
       </list>
     </option>
   </component>
@@ -66,6 +59,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -128,13 +122,59 @@
             <path>
               <item name="naumen.scala.course.2019.autumn" type="b2602c69:ProjectViewProjectNode" />
               <item name="naumen.scala.course.2019.autumn" type="462c0819:PsiDirectoryNode" />
+              <item name="homeworks" type="462c0819:PsiDirectoryNode" />
+              <item name="homework_6" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="naumen.scala.course.2019.autumn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="naumen.scala.course.2019.autumn" type="462c0819:PsiDirectoryNode" />
+              <item name="homeworks" type="462c0819:PsiDirectoryNode" />
+              <item name="homework_6" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="naumen.scala.course.2019.autumn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="naumen.scala.course.2019.autumn" type="462c0819:PsiDirectoryNode" />
+              <item name="homeworks" type="462c0819:PsiDirectoryNode" />
+              <item name="homework_6" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="naumen.scala.course.2019.autumn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="naumen.scala.course.2019.autumn" type="462c0819:PsiDirectoryNode" />
+              <item name="homeworks" type="462c0819:PsiDirectoryNode" />
+              <item name="homework_6" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="naumen.scala.course.2019.autumn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="naumen.scala.course.2019.autumn" type="462c0819:PsiDirectoryNode" />
+              <item name="homeworks" type="462c0819:PsiDirectoryNode" />
+              <item name="homework_6" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="naumen.scala.course.2019.autumn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="naumen.scala.course.2019.autumn" type="462c0819:PsiDirectoryNode" />
+              <item name="homeworks" type="462c0819:PsiDirectoryNode" />
+              <item name="homework_6" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="naumen.scala.course.2019.autumn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="naumen.scala.course.2019.autumn" type="462c0819:PsiDirectoryNode" />
               <item name="lectures" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -249,11 +289,14 @@
       <workItem from="1573569021392" duration="878000" />
       <workItem from="1574441171001" duration="2614000" />
       <workItem from="1575008439144" duration="2241000" />
+      <workItem from="1575012841927" duration="31000" />
+      <workItem from="1575223382497" duration="43000" />
+      <workItem from="1575622128085" duration="1374000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13379000" />
+    <option name="totallyTimeSpent" value="14827000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -267,7 +310,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26308724" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2751678" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -407,7 +450,21 @@
     <entry file="file://$PROJECT_DIR$/homeworks/homework_5/src/main/scala/Exercises.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="58" lean-forward="true" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homeworks/homework_6/src/test/scala/Test.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homeworks/homework_6/src/main/scala/Exercises.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="28" />
         </state>
       </provider>
     </entry>
