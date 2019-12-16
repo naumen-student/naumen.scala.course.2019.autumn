@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Монады</title>
+
+    <meta name="description" content="Название">
+    <meta name="author" content="автор">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+    <link rel="stylesheet" href="css/hljs/vs.css" id="highlight-theme">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="footer">
+            <span class="corp-name"><b>NAUMEN </b></span>Яценко Иван
+        </div>
+
+        <div class="slides">
+            <section>
+                <h1>Монады</h1>
+                <div style="position: relative; right: 0;">Яценко Иван</div>
+            </section>
+        </div>
+        <div class="slides">
+            <section>
+                <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                    <pre style="margin: 0; line-height: 125%">
+                        <span style="color: #008800; font-weight: bold">def</span> mapList<span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span>, <span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">](</span>f<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">A</span> <span style="color: #333333">=&gt;</span> B<span style="color: #333333">)</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">]</span> <span style="color: #008800; font-weight: bold">=&gt;</span> <span style="color: #BB0066; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">]</span> <span style="color: #008800; font-weight: bold">=</span> <span style="color: #333333">{</span> <span style="color: #333333">(</span>listA<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">])</span> <span style="color: #008800; font-weight: bold">=&gt;</span>
+
+                          <span style="color: #008800; font-weight: bold">def</span> mapImpl<span style="color: #333333">(</span>input<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">],</span> buffer<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">])</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">List</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">]</span> <span style="color: #008800; font-weight: bold">=</span> input <span style="color: #008800; font-weight: bold">match</span> <span style="color: #333333">{</span>
+                            <span style="color: #008800; font-weight: bold">case</span> head <span style="color: #333333">::</span> tail <span style="color: #008800; font-weight: bold">=&gt;</span> mapImpl<span style="color: #333333">(</span>tail<span style="color: #333333">,</span> buffer <span style="color: #333333">:+</span> f<span style="color: #333333">(</span>head<span style="color: #333333">))</span>
+                            <span style="color: #008800; font-weight: bold">case</span> <span style="color: #008800; font-weight: bold">_</span>            <span style="color: #008800; font-weight: bold">=&gt;</span> buffer
+                          <span style="color: #333333">}</span>
+
+                          mapImpl<span style="color: #333333">(</span>listA<span style="color: #333333">,</span> <span style="color: #BB0066; font-weight: bold">Nil</span><span style="color: #333333">)</span>
+                        <span style="color: #333333">}</span>
+                    </pre>
+                </div>
+            </section>
+        </div>
+        <div class="slides">
+            <section>
+                <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                    <pre style="margin: 0; line-height: 125%">
+                        <span style="color: #008800; font-weight: bold">def</span> mapOption<span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span>, <span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">](</span>f<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">A</span> <span style="color: #333333">=&gt;</span> B<span style="color: #333333">)</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Option</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">]</span> <span style="color: #008800; font-weight: bold">=&gt;</span> <span style="color: #BB0066; font-weight: bold">Option</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">]</span> <span style="color: #008800; font-weight: bold">=</span> <span style="color: #333333">{</span>
+                          <span style="color: #008800; font-weight: bold">case</span> <span style="color: #BB0066; font-weight: bold">Some</span><span style="color: #333333">(</span>a<span style="color: #333333">)</span> <span style="color: #008800; font-weight: bold">=&gt;</span> <span style="color: #BB0066; font-weight: bold">Some</span><span style="color: #333333">(</span>f<span style="color: #333333">(</span>a<span style="color: #333333">))</span>
+                          <span style="color: #008800; font-weight: bold">case</span> <span style="color: #008800; font-weight: bold">_</span>       <span style="color: #008800; font-weight: bold">=&gt;</span> <span style="color: #BB0066; font-weight: bold">None</span>
+                        <span style="color: #333333">}</span>
+                    </pre>
+                </div>
+            </section>
+        </div>
+        <div class="slides">
+            <section>
+                <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                    <pre style="margin: 0; line-height: 125%">
+                        <span style="color: #008800; font-weight: bold">def</span> mapFuture<span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span>, <span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">](</span>f<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">A</span> <span style="color: #333333">=&gt;</span> B<span style="color: #333333">)</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Future</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">]</span> <span style="color: #008800; font-weight: bold">=&gt;</span> <span style="color: #BB0066; font-weight: bold">Future</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">]</span>
+                        <span class="fragment"><span style="color: #008800; font-weight: bold">def</span> mapTry<span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span>, <span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">](</span>f<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">A</span> <span style="color: #333333">=&gt;</span> B<span style="color: #333333">)</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Try</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">]</span> <span style="color: #008800; font-weight: bold">=&gt;</span> <span style="color: #BB0066; font-weight: bold">Try</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">]</span></span>
+                        <span class="fragment"><span style="color: #008800; font-weight: bold">def</span> mapReads<span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span>, <span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">](</span>f<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">A</span> <span style="color: #333333">=&gt;</span> B<span style="color: #333333">)</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Reads</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">]</span> <span style="color: #008800; font-weight: bold">=&gt;</span> <span style="color: #BB0066; font-weight: bold">Reads</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">]</span></span>
+                    </pre>
+                </div>
+            </section>
+        </div>
+        <div class="slides">
+            <section>
+                <h1>Функтор</h1>
+                <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                    <pre style="margin: 0; line-height: 125%">
+                        <span style="color: #008800; font-weight: bold">trait</span> <span style="color: #BB0066; font-weight: bold">Functor</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">F</span><span style="color: #333333">[</span><span style="color: #008800; font-weight: bold">_</span><span style="color: #333333">]]</span> <span style="color: #333333">{</span>
+                          <span style="color: #008800; font-weight: bold">def</span> map<span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span>, <span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">](</span>f<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">A</span> <span style="color: #333333">=&gt;</span> B<span style="color: #333333">)</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">F</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">]</span> <span style="color: #008800; font-weight: bold">=&gt;</span> F<span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">]</span>
+                        <span style="color: #333333">}</span>
+                    </pre>
+                </div>
+            </section>
+        </div>
+        <div class="slides">
+            <section>
+                <h1>Функтор</h1>
+                <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                    <pre style="margin: 0; line-height: 125%">
+                        <span style="color: #008800; font-weight: bold">implicit</span> <span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">FunctorDsl</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">F</span><span style="color: #333333">[</span><span style="color: #008800; font-weight: bold">_</span><span style="color: #333333">]</span>, <span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">](</span>fa<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">F</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">])(</span><span style="color: #008800; font-weight: bold">implicit</span> functor<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Functor</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">F</span><span style="color: #333333">])</span> <span style="color: #333333">{</span>
+                          <span style="color: #008800; font-weight: bold">def</span> map<span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">](</span>f<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">A</span> <span style="color: #333333">=&gt;</span> B<span style="color: #333333">)</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">F</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">]</span> <span style="color: #008800; font-weight: bold">=</span> functor.</span>map<span style="color: #333333">(</span>f<span style="color: #333333">)(</span>fa<span style="color: #333333">)</span>
+                        <span style="color: #333333">}</span>
+
+                        <span style="color: #008800; font-weight: bold">implicit val</span> listFunctor<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Functor</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">List</span><span style="color: #333333">]</span>
+
+  
+                        <span style="color: #BB0066; font-weight: bold">List</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">3</span><span style="color: #333333">).</span>map<span style="color: #333333">(</span><span style="color: #008800; font-weight: bold">_</span><span style="color: #333333">.</span>toString<span style="color: #333333">)</span> <span style="color: #888888">// List(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;)</span>
+                    </pre>
+                </div>
+            </section>
+        </div>
+        <div class="slides">
+            <section>
+                <h1>Функтор</h1>
+                <ul>
+                    <li class="fragment">
+                        Identity low<br>
+                        <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                            <pre style="margin: 0; line-height: 125%">
+                                <span style="color: #008800; font-weight: bold">def</span> identity<span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">](</span>x<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">)</span><span style="color: #008800; font-weight: bold">:</span><span style="color: #333399; font-weight: bold">A</span> <span style="color: #333333">=</span> x
+
+                                <span style="color: #BB0066; font-weight: bold">List</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">3</span><span style="color: #333333">).</span>map<span style="color: #333333">(</span>identity<span style="color: #333333">)</span> <span style="color: #333333">==</span> identity<span style="color: #333333">(</span><span style="color: #BB0066; font-weight: bold">List</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">3</span><span style="color: #333333">))</span> <span style="color: #333333"><span class="fragment">== <span style="color: #BB0066; font-weight: bold">List</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">3</span><span style="color: #333333">)</span></span></span>
+                            </pre>
+                        </div>
+                    </li>
+                    <li class="fragment">
+                        Associativity low
+                        <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                            <pre style="margin: 0; line-height: 125%">
+                                <span style="color: #008800; font-weight: bold">val</span> intToDouble<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Int</span> <span style="color: #333333">=&gt;</span> <span style="color: #BB0066; font-weight: bold">Double</span>
+                                <span style="color: #008800; font-weight: bold">val</span> doubleToString<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Double</span> <span style="color: #333333">=&gt;</span> <span style="color: #BB0066; font-weight: bold">String</span>
+
+                                <span style="color: #BB0066; font-weight: bold">List</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">3</span><span style="color: #333333">).</span>map<span style="color: #333333">(</span>intToDouble<span style="color: #333333">).</span>map<span style="color: #333333">(</span>doubleToString<span style="color: #333333">)</span> 
+                                  <span style="color: #333333">==</span> <span style="color: #BB0066; font-weight: bold">List</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">,</span> <span style="color: #0000DD; font-weight: bold">3</span><span style="color: #333333">).</span>map<span style="color: #333333">(</span>intToDouble andThen doubleToString<span style="color: #333333">)</span> 
+                                  <span style="color: #333333">==</span> <span style="color: #BB0066; font-weight: bold">List</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">&quot;1.0&quot;</span><span style="color: #333333">,</span> <span style="background-color: #fff0f0">&quot;2.0&quot;</span><span style="color: #333333">,</span> <span style="background-color: #fff0f0">&quot;3.0&quot;</span><span style="color: #333333">)</span>
+                            </pre>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="slides">
+            <section>
+                <h1>Функтор</h1>
+                <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                    <pre style="margin: 0; line-height: 125%">
+                        <span style="color: #008800; font-weight: bold">sealed</span> <span style="color: #008800; font-weight: bold">trait</span> <span style="color: #BB0066; font-weight: bold">Try</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">+T</span><span style="color: #333333">]</span>
+                        <span style="color: #BB0066; font-weight: bold">final</span> <span style="color: #008800; font-weight: bold">case</span> <span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">Success</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">+T</span><span style="color: #333333">](</span>value<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">T</span><span style="color: #333333">)</span> <span style="color: #008800; font-weight: bold">extends</span> <span style="color: #BB0066; font-weight: bold">Try</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">T</span><span style="color: #333333">]</span>
+                        <span style="color: #008800; font-weight: bold">final</span> <span style="color: #008800; font-weight: bold">case</span> <span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">Failure</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">+T</span><span style="color: #333333">](</span>exception<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Exception</span><span style="color: #333333">)</span> <span style="color: #008800; font-weight: bold">extends</span> <span style="color: #BB0066; font-weight: bold">Try</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">T</span><span style="color: #333333">]</span>
+                        <div class="fragment">
+                        <span style="color: #008800; font-weight: bold">def</span> divide<span style="color: #333333">(</span>a<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Int</span><span style="color: #333333">,</span> b<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Int</span><span style="color: #333333">)</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Try</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">Int</span><span style="color: #333333">]</span> <span style="color: #008800; font-weight: bold">=</span> 
+                          <span style="color: #008800; font-weight: bold">try</span> <span style="color: #BB0066; font-weight: bold">Success</span><span style="color: #333333">(</span>a <span style="color: #333333">/</span> b<span style="color: #333333">)</span> <span style="color: #008800; font-weight: bold">catch</span> <span style="color: #333333">{</span>
+                            <span style="color: #008800; font-weight: bold">case</span> <span style="color: #BB0066; font-weight: bold">NonFatal</span><span style="color: #333333">(</span>e<span style="color: #333333">)</span> <span style="color: #008800; font-weight: bold">=&gt;</span> <span style="color: #BB0066; font-weight: bold">Failure</span><span style="color: #333333">(</span>e<span style="color: #333333">)</span>
+                          <span style="color: #333333">}</span>
+                        </div>
+                    </pre>
+                </div>
+            </section>
+        </div>
+        <div class="slides">
+            <section>
+                <h1>Функтор</h1>
+                <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                    <pre style="margin: 0; line-height: 125%">
+                        <span style="color: #008800; font-weight: bold">def</span> divide2<span style="color: #333333">(</span>a<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Int</span><span style="color: #333333">,</span> b1<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Int</span><span style="color: #333333">,</span> b2<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Int</span><span style="color: #333333">)</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Try</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">Try</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">Int</span><span style="color: #333333">]]</span> <span style="color: #008800; font-weight: bold">=</span> 
+                          divide<span style="color: #333333">(</span>a<span style="color: #333333">,</span> b1<span style="color: #333333">).</span>map<span style="color: #333333">(</span>divide<span style="color: #333333">(</span><span style="color: #008800; font-weight: bold">_</span><span style="color: #333333">,</span> b2<span style="color: #333333">))</span>
+                    
+                        <span class="fragment" ><span style="color: #008800; font-weight: bold">def</span> sequentialDivision<span style="color: #333333">(</span>a<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Int</span><span style="color: #333333">,</span> b1<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Int</span><span style="color: #333333">,</span> bs<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Int</span> <span style="color: #333399; font-weight: bold">*</span><span style="color: #333333">)</span> <span style="color: #008800; font-weight: bold">=</span> bs <span style="color: #008800; font-weight: bold">match</span> <span style="color: #333333">{</span>
+                          <span style="color: #008800; font-weight: bold">case</span> head <span style="color: #333333">::</span> tail <span style="color: #008800; font-weight: bold">=&gt;</span> divide<span style="color: #333333">(</span>a<span style="color: #333333">,</span> b1<span style="color: #333333">).</span>map<span style="color: #333333">(</span>sequentialDivision<span style="color: #333333">(</span><span style="color: #008800; font-weight: bold">_</span><span style="color: #333333">,</span> head<span style="color: #333333">,</span> tail<span style="color: #333333">))</span>
+                          <span style="color: #008800; font-weight: bold">case</span> <span style="color: #008800; font-weight: bold">_</span> <span style="color: #008800; font-weight: bold">=&gt;</span> divide<span style="color: #333333">(</span>a<span style="color: #333333">,</span> b1<span style="color: #333333">)</span>
+                        <span style="color: #333333">}</span></span>
+                    </pre>
+                </div>
+            </section>
+        </div>
+        <div class="slides">
+            <section>
+                <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                    <pre style="margin: 0; line-height: 125%">
+                        <span style="color: #008800; font-weight: bold">def</span> <span style="color: #BB0066; font-weight: bold">Binder</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">F</span><span style="color: #333333">[</span><span style="color: #008800; font-weight: bold">_</span><span style="color: #333333">]]</span> <span style="color: #333333">{</span>
+                          <span style="color: #008800; font-weight: bold">def</span> <span style="color: #333333">&gt;&gt;=[</span><span style="color: #333399; font-weight: bold">A</span>, <span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">](</span>f<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">A</span> <span style="color: #333333">=&gt;</span> F<span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">])</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">F</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">]</span> <span style="color: #008800; font-weight: bold">=&gt;</span> F<span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">]</span>
+                          <span class="fragment"><span style="color: #008800; font-weight: bold">def</span> flatMap<span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span>, <span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">](</span>f<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">A</span> <span style="color: #333333">=&gt;</span> F<span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">])</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">F</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">A</span><span style="color: #333333">]</span> <span style="color: #008800; font-weight: bold">=&gt;</span> F<span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">B</span><span style="color: #333333">]</span></span>
+                        <span style="color: #333333">}</span>
+                        <div class="fragment">
+                        <span style="color: #008800; font-weight: bold">def</span> sequentialDivision<span style="color: #333333">(</span>a<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Int</span><span style="color: #333333">,</span> b1<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Int</span><span style="color: #333333">,</span> bs<span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Int</span> <span style="color: #333399; font-weight: bold">*</span><span style="color: #333333">)</span><span style="color: #008800; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Try</span><span style="color: #333333">[</span><span style="color: #333399; font-weight: bold">Int</span><span style="color: #333333">]</span> <span style="color: #008800; font-weight: bold">=</span> bs <span style="color: #008800; font-weight: bold">match</span> <span style="color: #333333">{</span>
+                          <span style="color: #008800; font-weight: bold">case</span> head <span style="color: #333333">::</span> tail <span style="color: #008800; font-weight: bold">=&gt;</span> divide<span style="color: #333333">(</span>a<span style="color: #333333">,</span> b1<span style="color: #333333">).</span>flatMap<span style="color: #333333">(</span>sequentialDivision<span style="color: #333333">(</span><span style="color: #008800; font-weight: bold">_</span><span style="color: #333333">,</span> head<span style="color: #333333">,</span> tail<span style="color: #333333">))</span>
+                          <span style="color: #008800; font-weight: bold">case</span> <span style="color: #008800; font-weight: bold">_</span> <span style="color: #008800; font-weight: bold">=&gt;</span> divide<span style="color: #333333">(</span>a<span style="color: #333333">,</span> b1<span style="color: #333333">)</span>
+                        <span style="color: #333333">}</span></div>
+                    </pre>
+                </div>
+            
+            </section>
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: false,
+            progress: true,
+            history: true,
+            center: true,
+            slideNumber: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+                {
+                    src: 'lib/js/classList.js', condition: function () {
+                        return !document.body.classList;
+                    }
+                },
+                {
+                    src: 'plugin/markdown/marked.js', condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: 'plugin/markdown/markdown.js', condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: 'plugin/highlight/highlight.js', async: true, condition: function () {
+                        return !!document.querySelector('pre code');
+                    }, callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                },
+                { src: 'plugin/zoom-js/zoom.js', async: true },
+                { src: 'plugin/notes/notes.js', async: true }
+            ]
+        });
+
+        window.addEventListener("mousedown", handleClick, false);
+        window.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        }, false);
+
+        function handleClick(e) {
+            e.preventDefault();
+            if (e.button === 0) Reveal.next();
+            if (e.button === 2) Reveal.prev();
+        }
+    </script>
+
+</body>
+
+</html>
