@@ -1,0 +1,29 @@
+Microsoft Windows [Version 10.0.18362.418]
+(c) Корпорация Майкрософт (Microsoft Corporation), 2019. Все права защищены.
+
+C:\Users\newda>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_221).
+Type in expressions for evaluation. Or try :help.
+
+scala> println("Hello Scala! This is Denis Podkhvatilin")
+Hello Scala! This is Denis Podkhvatilin
+
+scala> var s = "Hola Scala! This is Denis Podkhvatilin"
+s: String = Hola Scala! This is Denis Podkhvatilin
+
+scala> println(s)
+Hola Scala! This is Denis Podkhvatilin
+
+scala> var a = "Guten tag Scala! This is "
+a: String = "Guten tag Scala! This is "
+
+scala> var b = "Denis Podkhvatilin"
+b: String = Denis Podkhvatilin
+
+scala> b.reverse
+res2: String = nilitavhkdoP sineD
+
+scala> println(a + b.reverse)
+Guten tag Scala! This is nilitavhkdoP sineD
+
+scala>
