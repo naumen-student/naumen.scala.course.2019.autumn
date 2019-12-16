@@ -1,0 +1,38 @@
+C:\Users\Petr9>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_221).
+Type in expressions for evaluation. Or try :help.
+
+scala> val name = "Petr"
+name: String = Petr
+
+scala> val hello = "Hello"
+hello: String = Hello
+
+scala> val hi = "Hi"
+hi: String = Hi
+
+scala> val hola = "Hola"
+hola: String = Hola
+
+scala> val stroka = " Skala! This is "
+stroka: String = " Skala! This is "
+
+scala> println(hello + stroka + name)
+Hello Skala! This is Petr
+
+scala> println(hi + stroka + name)
+Hi Skala! This is Petr
+
+scala> println(hola + stroka + name)
+Hola Skala! This is Petr
+
+scala> println(hello + stroka + name.reverse)
+Hello Skala! This is rteP
+
+scala> println(hi + stroka + name.reverse)
+Hi Skala! This is rteP
+
+scala> println(hola + stroka + name.reverse)
+Hola Skala! This is rteP
+
+scala>
