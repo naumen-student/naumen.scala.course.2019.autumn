@@ -1,0 +1,33 @@
+[debug] [watch] [sbt_project / Compile / run] Found inputs: C:\Users\newda\IdeaProjects\sbt_project\*.{java,scala},C:\Users\newda\IdeaProjects\sbt_project\src\main\java\**\*.{java,scala},C:\Users\newda\IdeaProjects\sbt_project\src\main\resources\**\*,C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\**\*.{java,scala},C:\Users\newda\IdeaProjects\sbt_project\src\main\scala-2.13\**\*.{java,scala}
+[info] 1. Monitoring source files for sbt_project/run...
+[info]    Press <enter> to interrupt or '?' for more options.
+[debug] sbt_project / Compile / run - Accepted event for C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala
+[debug] Received Update(C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] sbt_project / Compile / run - Accepted event for C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala
+[debug] Received Update(C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] Received event for path C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala
+[debug] Received event for path C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala
+[debug] sbt_project / Compile / run - Accepted event for C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala
+[debug] Received Update(C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] Creating update event for modified C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala (previous stamp: Hash(c38f064478f8b8c319bdaf89c07fca57e8ae0afb), current stamp: Hash(c90393ec7b8211610e3809bff8b6eaadf5dd7c32))
+[debug] Received file event actions: C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala -> Trigger. Returning: (Update(C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala, 2019-окт-13 20:21:49.326 YEKT),Trigger)
+[info] Build triggered by C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala. Running 'run'.
+[debug] [watch] [debug] Received file event Trigger for Update(C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala, 2019-окт-13 20:21:49.326 YEKT).
+[info] 2. Monitoring source files for sbt_project/run...
+[info]    Press <enter> to interrupt or '?' for more options.
+[debug] Discarding entry for recently updated path C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala. This event occurred 6 ms since the last event for this path.
+[debug] sbt_project / Compile / run - Accepted event for C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala
+[debug] Received Update(C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] Received event for path C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala
+[debug] Received event for path C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala
+[debug] Creating update event for modified C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala (previous stamp: Hash(c90393ec7b8211610e3809bff8b6eaadf5dd7c32), current stamp: Hash(5ad0c833bcb86a4da1a61bbe21530a3acfae2dd1))
+[debug] sbt_project / Compile / run - Accepted event for C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala
+[debug] Received file event actions: C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala -> Trigger. Returning: (Update(C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala, 2019-окт-13 20:24:24.891 YEKT),Trigger)
+[debug] Received Update(C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] sbt_project / Compile / run - Accepted event for C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala
+[debug] Received Update(C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[info] Build triggered by C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala. Running 'run'.
+[debug] [watch] [debug] Received file event Trigger for Update(C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala, 2019-окт-13 20:24:24.891 YEKT).
+[info] 3. Monitoring source files for sbt_project/run...
+[info]    Press <enter> to interrupt or '?' for more options.
+[debug] Discarding entry for recently updated path C:\Users\newda\IdeaProjects\sbt_project\src\main\scala\example\Main.scala. This event occurred 2 ms since the last event for this path.
