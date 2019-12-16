@@ -1,0 +1,24 @@
+PS E:\Share\Projects\Scala\sbt3test> sbt run
+[info] Loading global plugins from C:\Users\buzzon\.sbt\1.0\plugins
+[info] Loading project definition from E:\Share\Projects\Scala\sbt3test\project
+[info] Loading settings for project sbt3test from build.sbt ...
+[info] Set current project to sbt3test (in build file:/E:/Share/Projects/Scala/sbt3test/)
+[info] Compiling 1 Scala source to E:\Share\Projects\Scala\sbt3test\target\scala-2.13\classes ...
+╨╜╨╛╤П 11, 2019 11:11:00 PM lmcoursier.internal.shaded.coursier.cache.shaded.org.jline.utils.Log logr
+WARNING: Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+...
+  100,0% [##########] 3,0 KiB (3,0 KiB / s)
+...
+  100,0% [##########] 2,7 KiB (23,2 KiB / s)
+...
+  100,0% [##########] 2,5 KiB (8,5 KiB / s)
+[info] Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.1. Compiling...
+8 warnings found
+[info]   Compilation completed in 12.953s.
+[info] running Main
+Hello Scala! This is _buzzon
+Guten tag Scala! This is _buzzon
+banana This is _buzzon
+Hola This is nozzub_
+[success] Total time: 21 s, completed 11.11.2019 23:11:18
+PS E:\Share\Projects\Scala\sbt3test>
