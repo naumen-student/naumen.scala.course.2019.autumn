@@ -1,0 +1,41 @@
+Microsoft Windows [Version 10.0.18362.418]
+(c) Корпорация Майкрософт (Microsoft Corporation), 2019. Все права защищены.
+
+C:\Users\hacks>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) Client VM, Java 1.8.0_221).
+Type in expressions for evaluation. Or try :help.
+
+scala> val a = "Hello Scala! This is Vyacheslav V"
+a: String = Hello Scala! This is Vyacheslav V
+
+scala> println (a)
+Hello Scala! This is Vyacheslav V
+
+scala> var b = "Salam Scala! This is Vyacheslav V"
+b: String = Salam Scala! This is Vyacheslav V
+
+scala> var c = "Sup Scala! This is Vyacheslav V"
+c: String = Sup Scala! This is Vyacheslav V
+
+scala> println (c)
+Sup Scala! This is Vyacheslav V
+
+scala> var d = "Hello Scala! This is vasehcayV V"
+d: String = Hello Scala! This is vasehcayV V
+
+scala> println (d)
+Hello Scala! This is vasehcayV V
+
+scala> b.replaceAll("Vyacheslav","valsehcayV")
+res3: String = Salam Scala! This is valsehcayV V
+
+scala> println (res3)
+Salam Scala! This is valsehcayV V
+
+scala> c.replaceAll("Vyacheslav","valsehcayV")
+res5: String = Sup Scala! This is valsehcayV V
+
+scala> println (res5)
+Sup Scala! This is Vyachesav V
+
+scala> :quit
