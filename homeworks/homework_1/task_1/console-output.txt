@@ -1,0 +1,40 @@
+C:\Users\klabu>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_221).
+Type in expressions for evaluation. Or try :help.
+
+scala> val my_name = "Alexander"
+my_name: String = Alexander
+
+scala> def welcome(my_name: String, hello: String) = { println(hello + " Scala! This is " + my_name) }
+welcome: (my_name: String, hello: String)Unit
+
+scala> welcome(my_name, "Hello")
+Hello Scala! This is Alexander
+
+scala> welcome(my_name, "Hola")
+Hola Scala! This is Alexander
+
+scala> welcome(my_name, "Guten tag")
+Guten tag Scala! This is Alexander
+
+scala> my_name = my_name.reverse
+<console>:12: error: reassignment to val
+       my_name = my_name.reverse
+               ^
+
+scala> var my_name = "Alexander"
+my_name: String = Alexander
+
+scala> my_name = my_name.reverse
+my_name: String = rednaxelA
+
+scala> welcome(my_name, "Hello")
+Hello Scala! This is rednaxelA
+
+scala> welcome(my_name, "Hola")
+Hola Scala! This is rednaxelA
+
+scala> welcome(my_name, "Guten tag")
+Guten tag Scala! This is rednaxelA
+
+scala>

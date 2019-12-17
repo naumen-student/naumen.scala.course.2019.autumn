@@ -1,0 +1,29 @@
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [hello-world / Compile / run] Found inputs: D:\Scala\hello-world\*.{java,scala},D:\Scala\hello-world\src\main\java\**\*.{java,scala},D:\Scala\hello-world\src\main\resources\**\*,D:\Scala\hello-world\src\main\scala\**\*.{java,scala},D:\Scala\hello-world\src\main\scala-2.13\**\*.{java,scala}[0m
+[0m[[0m[0minfo[0m] [0m[0m1. Monitoring source files for hello-world/run...[0m
+[0m[[0m[0minfo[0m] [0m[0m   Press <enter> to interrupt or '?' for more options.[0m
+[0m[[0m[0mdebug[0m] [0m[0mhello-world / Compile / run - Accepted event for D:\Scala\hello-world\src\main\scala\Main.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived Update(D:\Scala\hello-world\src\main\scala\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path D:\Scala\hello-world\src\main\scala\Main.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path D:\Scala\hello-world\src\main\scala\Main.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mhello-world / Compile / run - Accepted event for D:\Scala\hello-world\src\main\scala\Main.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived Update(D:\Scala\hello-world\src\main\scala\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreating update event for modified D:\Scala\hello-world\src\main\scala\Main.scala (previous stamp: Hash(9873385085224f89266e8173a800ab03bb216ea3), current stamp: Hash(317280490b08d7b461145429c3d8af55e018697b))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived file event actions: D:\Scala\hello-world\src\main\scala\Main.scala -> Trigger. Returning: (Update(D:\Scala\hello-world\src\main\scala\Main.scala, 2019-окт-15 17:13:46.392 YEKT),Trigger)[0m
+[0m[[0m[0minfo[0m] [0m[0mBuild triggered by D:\Scala\hello-world\src\main\scala\Main.scala. Running 'run'.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received file event Trigger for Update(D:\Scala\hello-world\src\main\scala\Main.scala, 2019-окт-15 17:13:46.392 YEKT).[0m
+[0m[[0m[0minfo[0m] [0m[0m2. Monitoring source files for hello-world/run...[0m
+[0m[[0m[0minfo[0m] [0m[0m   Press <enter> to interrupt or '?' for more options.[0m
+[0m[[0m[0mdebug[0m] [0m[0mDiscarding entry for recently updated path D:\Scala\hello-world\src\main\scala\Main.scala. This event occurred 65 ms since the last event for this path.[0m
+[0m[[0m[0mdebug[0m] [0m[0mhello-world / Compile / run - Accepted event for D:\Scala\hello-world\src\main\scala\Main.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived Update(D:\Scala\hello-world\src\main\scala\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path D:\Scala\hello-world\src\main\scala\Main.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path D:\Scala\hello-world\src\main\scala\Main.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreating update event for modified D:\Scala\hello-world\src\main\scala\Main.scala (previous stamp: Hash(317280490b08d7b461145429c3d8af55e018697b), current stamp: Hash(da39a3ee5e6b4b0d3255bfef95601890afd80709))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived file event actions: D:\Scala\hello-world\src\main\scala\Main.scala -> Trigger. Returning: (Update(D:\Scala\hello-world\src\main\scala\Main.scala, 2019-окт-15 17:14:02.698 YEKT),Trigger)[0m
+[0m[[0m[0minfo[0m] [0m[0mBuild triggered by D:\Scala\hello-world\src\main\scala\Main.scala. Running 'run'.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received file event Trigger for Update(D:\Scala\hello-world\src\main\scala\Main.scala, 2019-окт-15 17:14:02.698 YEKT).[0m
+[0m[[0m[0mdebug[0m] [0m[0mhello-world / Compile / run - Accepted event for D:\Scala\hello-world\src\main\scala\Main.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived Update(D:\Scala\hello-world\src\main\scala\Main.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))[0m
+[0m[[0m[0minfo[0m] [0m[0m3. Monitoring source files for hello-world/run...[0m
+[0m[[0m[0minfo[0m] [0m[0m   Press <enter> to interrupt or '?' for more options.[0m
+[0m[[0m[0mdebug[0m] [0m[0mDiscarding entry for recently updated path D:\Scala\hello-world\src\main\scala\Main.scala. This event occurred 35 ms since the last event for this path.[0m
