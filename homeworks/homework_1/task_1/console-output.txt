@@ -1,0 +1,30 @@
+Microsoft Windows [Version 10.0.18362.418]
+(c) Корпорация Майкрософт (Microsoft Corporation), 2019. Все права защищены.
+
+C:\Windows\System32>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_211).
+Type in expressions for evaluation. Or try :help.
+
+scala> println("Hello Scala! This is Eugene Podoinikov")
+Hello Scala! This is Eugene Podoinikov
+
+scala> var s = "Guten morgen meine liebe! This is Eugene Podoinikov"
+s: String = Guten morgen meine liebe! This is Eugene Podoinikov
+
+scala> println(s)
+Guten morgen meine liebe! This is Eugene Podoinikov
+
+scala> var a = "Hello Scala! This is "
+a: String = "Hello Scala! This is "
+
+scala> var b = "Guten morgen meine liebe! This is "
+b: String = "Guten morgen meine liebe! This is "
+
+scala> var revName = "Eugene Podoinikov".reverse
+revName: String = vokiniodoP eneguE
+
+scala> println(a + revName + "\n" + b + revName)
+Hello Scala! This is vokiniodoP eneguE
+Guten morgen meine liebe! This is vokiniodoP eneguE
+
+scala>
