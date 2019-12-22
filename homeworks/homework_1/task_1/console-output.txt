@@ -1,0 +1,37 @@
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_201).
+Type in expressions for evaluation. Or try :help.
+
+scala> println("Hello Scala")
+Hello Scala
+
+scala> println("Hello Scala, it's me, Aleksey Russkikh")
+Hello Scala, it's me, Aleksey Russkikh
+
+scala>   val WordsHello = Array("Salam", "Aloha", "Hola", "??", "Guten tag", "Здравствуйте")
+WordsHello: Array[String] = Array(Salam, Aloha, Hola, ??, Guten tag, ¦фЁртёЄтєщЄх)
+
+scala> val Name = "Aleksey Russkikh"
+Name: String = Aleksey Russkikh
+
+scala> val ReversedName = Name.reverse
+ReversedName: String = hkikssuR yeskelA
+
+scala> for (Hi <-WordsHello)
+     | println(Hi + " Scala! It's me, " + Name)
+Salam Scala! It's me, Aleksey Russkikh
+Aloha Scala! It's me, Aleksey Russkikh
+Hola Scala! It's me, Aleksey Russkikh
+?? Scala! It's me, Aleksey Russkikh
+Guten tag Scala! It's me, Aleksey Russkikh
+Здравствуйте Scala! It's me, Aleksey Russkikh
+
+scala> for (Hi <-WordsHello)
+     | println(Hi + " Scala! It's me, " + ReversedName)
+Salam Scala! It's me, hkikssuR yeskelA
+Aloha Scala! It's me, hkikssuR yeskelA
+Hola Scala! It's me, hkikssuR yeskelA
+?? Scala! It's me, hkikssuR yeskelA
+Guten tag Scala! It's me, hkikssuR yeskelA
+Здравствуйте Scala! It's me, hkikssuR yeskelA
+
+scala>
