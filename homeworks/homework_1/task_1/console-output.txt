@@ -1,0 +1,35 @@
+C:\WINDOWS\system32>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 13).
+Type in expressions for evaluation. Or try :help.
+
+scala> val myName = "Angelina"
+myName: String = Angelina
+
+scala> val helloFunc = (hello: String, name: String) => s"$hello Scala! This is $name"
+helloFunc: (String, String) => String = $$Lambda$1101/0x0000000801247840@542ff147
+
+scala> println(helloFunc("Hello", myName))
+Hello Scala! This is Angelina
+
+scala> println(helloFunc("Guten tag", myName))
+Guten tag Scala! This is Angelina
+
+scala> println(helloFunc("Привет", myName))
+Привет Scala! This is Angelina
+
+scala> val stringBuilder = new StringBuilder()
+stringBuilder: StringBuilder =
+
+scala> for(i <- myName.length - 1 to 0 by -1) stringBuilder.append(myName(i))
+
+scala> val myReverseName = stringBuilder.toString()
+myReverseName: String = anilegnA
+
+scala> println(helloFunc("Hello", myReverseName))
+Hello Scala! This is anilegnA
+
+scala> println(helloFunc("Guten tag", myReverseName))
+Guten tag Scala! This is anilegnA
+
+scala> println(helloFunc("Привет", myReverseName))
+Привет Scala! This is anilegnA
