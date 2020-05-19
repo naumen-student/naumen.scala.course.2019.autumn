@@ -11,8 +11,8 @@ layout: default
 * Лекция 4. [Классы и объекты в Scala.(PowerPoint)](lectures/scala_lecture_4.pptx)
 * Лекция 5. [Параметрический полиморфизм в Scala](lectures/scala_lecture_5.html)
 * Лекция 6. [Collection](lectures/scala_lecture_6.html)
-* Лекция 9. [Введение в функциональное программирование](lectures/scala_lecture_9.html)
-* Лекция 11. [Монады](lectures/scala_lecture_11.html)
+* Лекция 7. [Введение в функциональное программирование](lectures/scala_lecture_7.html)
+* Лекция 8. [Монады](lectures/scala_lecture_8.html)
 
 
 ### Домашние задания
