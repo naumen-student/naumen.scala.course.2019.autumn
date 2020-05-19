@@ -9,7 +9,8 @@ layout: default
 * Лекция 2. [Программирование на Scala. Базовые концепции.(PowerPoint)](lectures/scala_lecture_2.pptx)
 * Лекция 3. [Система типов в Scala](lectures/scala_lecture_3.html)
 * Лекция 4. [Классы и объекты в Scala.(PowerPoint)](lectures/scala_lecture_4.pptx)
-* Лекция 9. [Классы и объекты в Scala.(PowerPoint)](lectures/scala_lecture_9.html)
+* Лекция 9. [Введение в функциональное программирование](lectures/scala_lecture_9.html)
+* Лекция 11. [Монады](lectures/scala_lecture_11.html)
 
 ### Домашние задания
 * [Задание 1](homeworks/homework_1/homework_1.md) [папка в GitHub](https://github.com/naumen-student/naumen.scala.course.2019.autumn/tree/master/homeworks/homework_1)
